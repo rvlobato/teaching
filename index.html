@@ -131,9 +131,307 @@
 <h3>
 	  <a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Random things:</h3>
 <p>- <a href="https://en.wikipedia.org/wiki/List_of_unsolved_problems_in_physics#Plasma_physics">List of unsolved problems in physics</a>;
-  </p>
-	  <h3>
-	  <a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Copy of How to become a GOOD Theoretical Physicist:</h3>
+
+</p>
+<h3>
+  <a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Conventions, Definitions, Identities, and Formulas:</h3>
+<p>
+  <ol>
+    <li>Curvature Tensors;</li>
+    Consider a \(d+1\) dimensional spacetime \((\mathcal{M},g)\). The covariant derivative \(\nabla\) is metric-compatible with \(g\)
+    <ul>
+      <p>
+      <li>Christoffel Symbols
+	<p><center>\(
+	    \Gamma^{\lambda}_{\,\mu\nu} = \frac{1}{2} g^{\lambda \rho}\left(\partial_{\mu} g_{\rho \nu}
+        + \partial_{\nu} g_{\mu \rho} - \partial_{\rho} g_{\mu \nu}\right)
+	\)
+      </li>
+      <li>Riemann Tensor
+	<p><center>\(
+	    R^{\lambda}{}_{\mu\sigma\nu} = \partial_{\sigma} \Gamma^{\lambda}_{\, \mu\nu}  -
+		\partial_{\nu} \Gamma^{\lambda}_{\, \mu\sigma} +
+		\Gamma^{\kappa}_{\,\mu\nu} \Gamma^{\lambda}_{\, \kappa \sigma} -
+		\Gamma^{\kappa}_{\,\mu\sigma} \Gamma^{\lambda}_{\, \kappa \nu}	  
+	  \)
+      </li>
+
+      <li>Ricci Tensor
+	<p><center>\(
+	    R_{\mu\nu} = \delta^{\sigma}{}_{\lambda} R^{\lambda}{}_{\mu \sigma \nu}
+	    \)</li>
+      
+      <li> Schouten Tensor
+	<p><center>\(
+	    S_{\mu\nu} = \frac{1}{d-1} \, \left(R_{\mu\nu} - \frac{1}{2\,d}\,g_{\mu\nu} R \right)
+	    \)
+	    <p><center>\(
+		\nabla^{\nu} S_{\mu\nu} = \nabla_{\mu} S^{\nu}{}_{\nu} 
+		\)</li>
+
+      <li>Weyl Tensor
+	<p><center>\(
+	    C^{\lambda}{}_{\mu \sigma \nu} = R^{\lambda}{}_{\mu \sigma \nu} +
+   g^{\lambda}{}_{\nu} \, S_{\mu \sigma} - g^{\lambda}{}_{\sigma} \, S_{\mu\nu}
+   + g_{\mu\sigma} \, S^{\lambda}{}_{\nu} -  g_{\mu\nu} \, S^{\lambda}{}_{\sigma}
+	    \)</li>
+
+      <li>Commutators of Covariant Derivatives
+	<p><center>\(
+	    \left[ \nabla_{\mu}, \nabla_{\nu} \right] A_{\lambda} = R_{\lambda \sigma \mu \nu} A^{\sigma}
+	    \)
+	    <p><center>\(
+		\left[ \nabla_{\mu}, \nabla_{\nu} \right] A^{\lambda} = R^{\lambda}{}_{\sigma \mu \nu}
+		 A^{\sigma}
+		\)</li>
+
+            <li>Bianchi Identities
+	      <p><center>\(
+		  	  \nabla_{\kappa} R_{\lambda \mu \sigma \nu} - \nabla_{\lambda} R_{\kappa \mu \sigma \nu} + \nabla_{\mu} R_{\kappa \lambda \sigma \nu} = 0
+		  \)
+		  <p><center>\(
+		      \nabla^{\nu} R_{\lambda \mu \sigma \nu} = \nabla_{\mu} R_{\lambda \sigma} - \nabla_{\lambda} R_{\mu\sigma}
+	    \)
+		  
+		      <p><center>\(
+			  \nabla^{\nu} R_{\mu\nu} = \frac{1}{2} \, \nabla_{\mu} R
+			  \)</li>
+
+	                <li>Bianchi Identities for the Weyl Tensor 
+			  <p><center>\(
+			      \nabla^{\nu} C_{\lambda \mu \sigma \nu}  =  \, (d-2) \, \left( \nabla_{\mu} S_{\lambda \sigma} - \nabla_{\lambda} S_{\mu \sigma} \right)
+		  \)
+		  <p><center>\(
+\nabla^{\lambda} \nabla^{\sigma} C_{\lambda \mu \sigma \nu}  =  \frac{d-2}{d-1} \, \left[ \, \nabla^{2} R_{\mu\nu} - \frac{1}{2d} \, g_{\mu\nu} \nabla^{2} R - \frac{d-1}{2d} \, \nabla_{\mu} \nabla_{\nu} R \right. - \left. \left(\frac{d+1}{d-1}\right) \, R_{\mu}{}^{\lambda} R_{\nu \lambda} + C_{\lambda \mu \sigma \nu} R^{\lambda \sigma} + \frac{(d+1)}{d(d-1)} \, R \, R_{\mu\nu} + \frac{1}{d-1} \, g_{\mu\nu} \left(R^{\lambda\sigma} R_{\lambda \sigma} - \frac{1}{d} \, R^2 \right) \, \right]
+		
+		      \)</l>
+    </ul> 
+    
+    <li>Differential Forms</li>
+    <ul>
+      <li>p-Form Components
+	      <p><center>\(
+{\bf A}_{(p)} = \frac{1}{p!}\,A_{\mu_1 \ldots \mu_p}\,dx^{\mu_1} \land \ldots \land dx^{\mu_p}
+		  \)
+      </li>
+      <li>Exterior Derivative
+	      <p><center>\(
+\Big(d{\bf A}_{(p)}\Big)_{\mu_1 \ldots \mu_{p+1}} = (p+1)\,\partial_{\,[\,\mu_1} A_{\mu_2 \ldots \mu_{p+1}\,]\,}
+		  \)
+
+		  <p><center>\(
+B_{\,[\, \mu_1 \ldots \mu_n ]\,} := \frac{1}{n!}\,\Big(\,B_{\mu_1 \ldots \mu_n} + \textrm{permutations}\,\Big)
+		  \)
+      </li>
+      <li>Hodge-Star
+	<p><center>\(
+	    \Big( \star {\bf A}_{(p)}\Big)_{\mu_1 \ldots \mu_{d+1-p}} = \frac{1}{p!}\,\epsilon_{\mu_1 \ldots \mu_{d+1-p}}{}^{\nu_1 \ldots \nu_p}\,A_{\nu_1 \ldots \nu_p}
+		  \)
+
+	    <p><center>\(
+		\star \,\star = \big(-1 \,\big)^{p\,(d+1-p)+1}
+		  \)
+      </li>
+      <li>Wedge Product
+	      <p><center>\(
+\Big( {\bf A}_{(p)} \land {\bf B}_{(q)} \Big)_{\mu_1 \ldots \mu_{p+q}} = \frac{(p+q)!}{p!\,q!}\,A_{\,[\,\mu_1 \ldots \mu_p} \, B_{\mu_{p+1} \ldots \mu_{p+q} \,]}
+		  \)
+      </l>
+	     </ul> 
+
+<li>Euler Densities</li>
+Let \(\mathcal{M}\) be a manifold with dimension \(d+1 = 2n\) an even number. Our normalization gives \(\chi(S^{2n}) = 2\).
+<ul>
+  <li>Curvature Two-Form
+	      <p><center>\(
+\Big( {\bf A}_{(p)} \land {\bf B}_{(q)} \Big)_{\mu_1 \ldots \mu_{p+q}} = \frac{(p+q)!}{p!\,q!}\,A_{\,[\,\mu_1 \ldots \mu_p} \, B_{\mu_{p+1} \ldots \mu_{p+q} \,]}
+		  \)
+  </li>
+  <li>The elliptical orbits of planets. The many body system</li>
+  <li>The action principle. Hamilton’s equations. The Lagrangean</li>
+  <li>The harmonic oscillator. The pendulum</li>
+      <li>Poisson’s brackets</li>
+  <li>Wave equations. Liquids and gases. The Navier-Stokes equations. Viscosity and friction</li>
+</ul>
+
+    <li>Optics</li>
+    <ul>
+      <li>Fraction and reflection</li>
+      <li>Lenses and mirrors</li>
+      <li>The telescope and the microscope</li>
+      <li>Introduction to wave propagation</li>
+      <li>Doppler effect</li>
+      <li>Huijgens’ principle of wave superposition</li>
+      <li>Wave fronts</li>
+      <li>Caustics</li>
+    </ul>
+    
+<li>Statistical Mechanics & Thermodynamics</li>
+<ul>
+  <li>The first, second and third laws of thermodynamics</li>
+  <li>The Boltzmann distribution</li>
+      <li>The Carnot cycle. Entropy. Heat engines</li>
+  <li>Phase transitions. Thermodynamical models</li>
+  <li>The Ising Model (postpone techniques to solve the 2-dimensional Ising Model to later)</li>
+  <li>Planck’s radiation law (as a prelude to Quantum Mechanics)</li>
+</ul>
+
+<li>Electronics</li>
+<ul>
+  <li>Ohm’s law, capacitors, inductors, using complex numbers to calculate their effects</li>
+      <li>Transistors, diodes</li>
+</ul>
+
+<li>Electromagnetism</li>
+<ul>
+  <li>Maxwell’s Theory for electromagnetism: Homogeneous and inhomogeneous</li>
+  <li>Maxwell’s laws in a medium. Boundaries. Solving the equations in:
+    Vacumm and homogeneous medium (electromagnetic waves).
+	In a box (wave guides).
+    At boundaries (fraction and reflection)</li>
+  <li>The vector potential and gauge invariance (extremely important)</li>
+  <li>Emission and absorption on EM waves (antenna)</li>
+  <li>Light scattering against objects</li>
+    </ul>
+
+<li>Computational Physics</li>
+
+<li>Quantum Mechanics (Non-relativistic)</li>
+    <ul>
+      <li>Bohr’s atom</li>
+      <li>DeBroglie’s relations (Energy-frequency, momentum-wave number)</li>
+      <li>Schrödinger’s equation (with electric potential and magnetic field)</li>
+      <li>Ehrenfest’s theorem</li>
+      <li>A particle in a box</li>
+      <li>The hydrogen atom, solved systematically. The Zeeman effect. Stark effect</li>
+      <li>The quantum harmonic oscillator</li>
+      <li>Operators: energy, momentum, angular momentum, creation and annihilation operators</li>
+      <li>Their commutation rules</li>
+      <li>Introduction to quantum mechanical scattering. The S-matrix. Radio-active decay</li>
+    </ul>
+    
+<li>Atoms & Molecules</li>
+<ul>
+  <li>Chemical binding</li>
+  <li>Orbitals</li>
+  <li>Atomic and molecular spectra</li>
+  <li>Emission and absorption of light</li>
+  <li>Quantum selection rules</li>
+  <li>Magnetic moments</li>
+</ul>
+
+<li>Solid State Physics</li>
+    <ul>
+      <li>Crystal groups</li>
+      <li>Bragg reflection</li>
+      <li>Dielectric and diamagnetic constants</li>
+      <li>Bloch spectra</li>
+      <li>Fermi level</li>
+      <li>Conductors, semiconductors and insulators</li>
+      <li>Specific heat</li>
+      <li>Electrons and holes</li>
+      <li>The transistor</li>
+      <li>Superconductivity</li>
+      <li>Hall effect</li>
+    </ul>
+
+<li>Nuclear Physics</li>
+<ul>
+  <li>Isotopes. Radio-activity. Fission and Fusion</li>
+  <li>Droplet model</li>
+  <li>Nuclear quantum numbers</li>
+  <li>Magic nuclei</li>
+  <li>Isospin</li>
+  <li>Yukawa theory</li>
+</ul>
+
+<li>Plasma Physics</li>
+    <ul>
+      <li>Magnetohydrodynamics</li>
+      <li>Alfvén waves</li>
+    </ul>
+    
+<li>Advanced Mathematics</li>
+<ul>
+  <li>Group theory, and the linear representations of groups</li>
+  <li>Lie group theory</li>
+  <li>Vectors and tensors</li>
+  <li>More techniques to solve (partial) differential and integral equations</li>
+      <li>Extremum principle and approximation techniques based on that</li>
+      <li>Difference equations</li>
+  <li>Generating functions</li>
+      <li>Hilbert space</li>
+  <li>Introduction to the functional integral</li>
+    </ul>
+
+<li>Special Relativity</li>
+<ul>
+  <li>The Lorentz transformation</li>
+  <li>Lorentz contraction, time dilatation</li>
+  <li>\(E=mc^2\)</li>
+  <li>4-vectors and 4-tensors</li>
+  <li>Transformation rules for the Maxwell field</li>
+  <li>Relativistic Doppler effect</li>
+</ul> 
+
+<li>Advanced Quantum Mechanics</li>
+    <ul>
+      <li>Hilbert space</li>
+      <li>Atomic transitions</li>
+      <li>Emission and absorption of light</li>
+      <li>Stimulated emission</li>
+      <li>Density matrix</li>
+      <li>Interpretation of QM</li>
+      <li>The Bell inequalities</li>
+      <li>Towards relativistic QM: The Dirac equation, finestructure</li>
+      <li>Electrons and positrons</li>
+      <li>BCS theory for superconductivity</li>
+      <li>Quantum Hall effect</li>
+      <li>Advanced scattering theory</li>
+      <li>Dispersion relations</li>
+      <li>Perturbation expansion</li>
+      <li>WKB approximation, Extremum principle</li>
+      <li>Bose-Einstein condensation</li>
+      <li>Superliquid helium</li>
+    </ul>
+
+    <li>Phenomenology/Astroparticles</li>
+    <ul>
+      <li>Subatomic particles (mesons, baryons, photons, leptons, quarks) and cosmic rays</li>
+    </ul>
+
+    <li>General Relativity</li>
+    <ul>
+      <li>The metric tensor</li>
+      <li>Space-time curvature</li>
+      <li>Einstein’s gravity equation</li>
+      <li>The Schwarzschild black hole</li>
+      <li>Reissner-Nordström black hole</li>
+      <li>Periastron shift</li>
+      <li>Gravitational lensing</li>
+      <li>Cosmological models</li>
+      <li>Gravitational radiation</li>
+    </ul>
+
+<li>Cosmology</li>
+<li>Astrophysics</li>
+
+    <li>Quantum Field Theory</li>
+    <ul>
+      <li>Classical fields: Scalar, Dirac-spinor, Yang-Mills vector fields</li>
+      <li>Interactions, perturbation expansion. Spontaneous symmetry breaking, Goldstone mode, Higgs mechanism</li>
+      <li>Particles and fields: Fock space. Antiparticles. Feynman rules. The Gell-Mann-Lévy sigma model for pions and nuclei. Loop diagrams. Unitarity, Causality and dispersion relations. Renormalization (Pauli-Villars; dimensional ren.) Quantum gauge theory: Gauge fixing, Faddeev-Popov determinant, Slavnov identities, BRST symmetry. The renormalization group. Asymptotic freedom.</li>
+      <li>Solitons, Skyrmions. Magnetic monopoles and instantons. Permanent quark confinement mechanism. The 1/N expansion. Operator product expansion. Bethe-Salpeter equation. Construction of the Standard Model. P and CP violation. The CPT theorem. Spin and statistics connection. Supersymmetry.</li>
+    </ul>
+
+    <li>Supersymmetry/Supergravity</li>
+    
+</ol> 
+</p>
+
+</p>
+<h3>
+  <a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Copy of How to become a GOOD Theoretical Physicist:</h3>
 <p>
   <ol>
     <li>Languages;</li>
@@ -359,9 +657,35 @@
 	  <br>This open sourced site is hosted on <a href="https://github.com/rvlobato/rvlobato.github.io">GitHub</a>.
 	  <br> Please email me if you find any broken links or other errors on this site. Patches, suggestions and comments are welcome.
 <br>
-	  <script language="Javascript">
-document.write("This page was last modified on: " + document.lastModified +"");
-	  </SCRIPT>.
+	<script language="Javascript">
+	  function addZero(i) {
+  if (i < 10) {
+    i = "0" + i;
+  }
+  return i;
+}
+	  var derniereModif = document.lastModified;
+          var dateModif = new Date(derniereModif);
+	  var month = new Array(12);
+	  month[0] = "January";
+	  month[1] = "February";
+	  month[2] = "March";
+	  month[3] = "April";
+	  month[4] = "May";
+	  month[5] = "June";
+	  month[6] = "July";
+	  month[7] = "August";
+	  month[8] = "September";
+	  month[9] = "October";
+	  month[10] = "November";
+	  month[11] = "December";
+	  var jour = dateModif.getUTCDate();
+	  var mois = month[dateModif.getUTCMonth()];
+          var annee = dateModif.getUTCFullYear();
+          var heures = addZero(dateModif.getUTCHours());
+          var minutes = addZero(dateModif.getUTCMinutes());
+	  document.write("This main page was last modified on: "+ mois + "/"+ jour + "/" + annee + " at " + heures + ":" + minutes+" UTC");
+</SCRIPT>.
 </a></small>
       </div>
     </footer>
