@@ -70,7 +70,7 @@
 	    <br>- <a href="http://www.damtp.cam.ac.uk/user/tong/qhe.html">Lectures on the Quantum Hall Effect</a> by David Tong;
 	    <h3>
 
-	       <a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Landau and Lifshitz Course of Theoretical Physics:</h3>
+	       <a id="creating-pages-manually" class="anchor" href="#landau" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Landau and Lifshitz Course of Theoretical Physics:</h3>
 	  <p>- <a href="https://archive.org/details/Mechanics_541">Mechanics</a>;
 	    <br>- <a href="https://archive.org/details/TheClassicalTheoryOfFields">The Classical Theory of Fields</a>;
 	    <br>- <a href="https://archive.org/details/QuantumMechanics_104">Quantum Mechanics: Non-Relativistic Theory</a>;
@@ -88,7 +88,7 @@
 	    <br>- <a href="">Lectures on Nuclear Theory</a>;
 	    <h3>
 	      
-	      <a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Computation:</h3>
+	      <a id="creating-pages-manually" class="anchor" href="#computation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Computation:</h3>
 	  <p>- <a href="https://wiki.python.org/moin/PythonBooks">PythonBooks</a> (A variety of books about Python);
 	    <br>- <a href="http://www.fortrantutorial.com/">FORTRAN Tutorial</a>;
 	    <br>- <a href="http://fortranwiki.org/fortran/show/HomePage">Fortran Wiki</a> (Aspects of the Fortran programming language);
@@ -134,6 +134,76 @@
 
 </p>
 <h3>
+
+    <a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Special Relativity:</h3>
+<p>
+  <ol>
+    <li>Spacetime coordinates, 4-vectors, metric tensor \(g_{\mu \nu}\), etc;</li>
+    Spacetime is any mathematical model which fuses the three dimensions of space and the one dimension of time into a single four-dimensional continuum, within of special relativity it relies on the Minkowski's geometry
+    <ul>
+      <p>
+      <li>Spacetime Coordinates:
+	<p><center>\(
+	    x^{\mu} = (ct, \vec{x}); \qquad x_{\mu} = (ct, -\vec{x}); \qquad \vec{x} = (x^{1}, x^{2}, x^{3}) = (x,y,z) 
+	\)
+      </li>
+      <li>4-Momentum:
+	<p><center>\(
+	    p^{\mu} = (E/c,\vec{p}); \qquad p_{\mu} = (E/c,-\vec{p}); \qquad \vec{p} = (p^{1}, p^{2}, p^{3}) = (p_x,p_y,p_z)	  
+	  \)
+      </li>
+
+      <li>Ricci Tensor
+	<p><center>\(
+	    R_{\mu\nu} = \delta^{\sigma}{}_{\lambda} R^{\lambda}{}_{\mu \sigma \nu}
+	    \)</li>
+      
+      <li> Schouten Tensor
+	<p><center>\(
+	    S_{\mu\nu} = \frac{1}{d-1} \, \left(R_{\mu\nu} - \frac{1}{2\,d}\,g_{\mu\nu} R \right)
+	    \)
+	    <p><center>\(
+		\nabla^{\nu} S_{\mu\nu} = \nabla_{\mu} S^{\nu}{}_{\nu} 
+		\)</li>
+
+      <li>Weyl Tensor
+	<p><center>\(
+	    C^{\lambda}{}_{\mu \sigma \nu} = R^{\lambda}{}_{\mu \sigma \nu} +
+   g^{\lambda}{}_{\nu} \, S_{\mu \sigma} - g^{\lambda}{}_{\sigma} \, S_{\mu\nu}
+   + g_{\mu\sigma} \, S^{\lambda}{}_{\nu} -  g_{\mu\nu} \, S^{\lambda}{}_{\sigma}
+	    \)</li>
+
+      <li>Commutators of Covariant Derivatives
+	<p><center>\(
+	    \left[ \nabla_{\mu}, \nabla_{\nu} \right] A_{\lambda} = R_{\lambda \sigma \mu \nu} A^{\sigma}
+	    \)
+	    <p><center>\(
+		\left[ \nabla_{\mu}, \nabla_{\nu} \right] A^{\lambda} = R^{\lambda}{}_{\sigma \mu \nu}
+		 A^{\sigma}
+		\)</li>
+
+            <li>Bianchi Identities
+	      <p><center>\(
+		  	  \nabla_{\kappa} R_{\lambda \mu \sigma \nu} - \nabla_{\lambda} R_{\kappa \mu \sigma \nu} + \nabla_{\mu} R_{\kappa \lambda \sigma \nu} = 0
+		  \)
+		  <p><center>\(
+		      \nabla^{\nu} R_{\lambda \mu \sigma \nu} = \nabla_{\mu} R_{\lambda \sigma} - \nabla_{\lambda} R_{\mu\sigma}
+	    \)
+		  
+		      <p><center>\(
+			  \nabla^{\nu} R_{\mu\nu} = \frac{1}{2} \, \nabla_{\mu} R
+			  \)</li>
+
+	                <li>Bianchi Identities for the Weyl Tensor 
+			  <p><center>\(
+			      \nabla^{\nu} C_{\lambda \mu \sigma \nu}  =  \, (d-2) \, \left( \nabla_{\mu} S_{\lambda \sigma} - \nabla_{\lambda} S_{\mu \sigma} \right)
+		  \)
+		  <p><center>\(
+\nabla^{\lambda} \nabla^{\sigma} C_{\lambda \mu \sigma \nu}  =  \frac{d-2}{d-1} \, \left[ \, \nabla^{2} R_{\mu\nu} - \frac{1}{2d} \, g_{\mu\nu} \nabla^{2} R - \frac{d-1}{2d} \, \nabla_{\mu} \nabla_{\nu} R \right. - \left. \left(\frac{d+1}{d-1}\right) \, R_{\mu}{}^{\lambda} R_{\nu \lambda} + C_{\lambda \mu \sigma \nu} R^{\lambda \sigma} + \frac{(d+1)}{d(d-1)} \, R \, R_{\mu\nu} + \frac{1}{d-1} \, g_{\mu\nu} \left(R^{\lambda\sigma} R_{\lambda \sigma} - \frac{1}{d} \, R^2 \right) \, \right]
+		
+		      \)</l>
+    </ul> 
+  
   <a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Conventions, Definitions, Identities, and Formulas:</h3>
 <p>
   <ol>
