@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-04-11 Sun 18:33 -->
+<!-- 2021-04-11 Sun 18:35 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Data science reference guide:</title>
@@ -258,34 +258,34 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org05778ee">1. Machine learning</a>
+<li><a href="#org702df1e">1. Machine learning</a>
 <ul>
-<li><a href="#orgb327e24">1.1. Experimental design</a></li>
-<li><a href="#orgfccad00">1.2. Predictive modelling</a></li>
-<li><a href="#orgbd262da">1.3. Optimization</a></li>
-<li><a href="#orge38a0fc">1.4. Causal inference</a>
+<li><a href="#orge1ad9f8">1.1. Experimental design</a></li>
+<li><a href="#org3bef250">1.2. Predictive modelling</a></li>
+<li><a href="#org5cb28ea">1.3. Optimization</a></li>
+<li><a href="#org6184ea3">1.4. Causal inference</a>
 <ul>
-<li><a href="#orgf07987e">1.4.1. Regression \(y(t, f)\) and classification (metric) (te, ve, algorithm m1)</a></li>
-<li><a href="#org2a68cc5">1.4.2. Cluster, feature selection</a></li>
+<li><a href="#org1327469">1.4.1. Regression \(y(t, f)\) and classification (metric) (te, ve, algorithm m1)</a></li>
+<li><a href="#orge9c2d39">1.4.2. Cluster, feature selection</a></li>
 </ul>
 </li>
-<li><a href="#orgf53297d">1.5. Algorithms</a>
+<li><a href="#org0661f2a">1.5. Algorithms</a>
 <ul>
-<li><a href="#org51d2159">1.5.1. Linear regression and Logistic regression</a></li>
-<li><a href="#orgb48c6be">1.5.2. Linear SVM and Kernel SVM</a></li>
-<li><a href="#org60717be">1.5.3. Trees and ensemble trees</a></li>
-<li><a href="#org2d1a29f">1.5.4. Neural networks and deep learning</a></li>
-<li><a href="#org916e2bc">1.5.5. K-means/k-modes, GMM (Gaussian Mixture Model) Clustening</a></li>
-<li><a href="#orge25cbf0">1.5.6. DBSCAN</a></li>
-<li><a href="#org1bc0180">1.5.7. Hierarchical clustening</a></li>
-<li><a href="#org2fc6acc">1.5.8. PCA, SVD and LDA</a></li>
-<li><a href="#orgae25d1c">1.5.9. Feedforward neural networks, Multilayered logistic regression classifiers many layers separated by non-linearity</a></li>
-<li><a href="#org271ae1d">1.5.10. Convolution neural networks, vision based machine learn, image classification</a></li>
+<li><a href="#orgfb15ba9">1.5.1. Linear regression and Logistic regression</a></li>
+<li><a href="#orgef1af39">1.5.2. Linear SVM and Kernel SVM</a></li>
+<li><a href="#orgf97e3e9">1.5.3. Trees and ensemble trees</a></li>
+<li><a href="#orgb83cc6e">1.5.4. Neural networks and deep learning</a></li>
+<li><a href="#orgf536524">1.5.5. K-means/k-modes, GMM (Gaussian Mixture Model) Clustening</a></li>
+<li><a href="#orga863a8c">1.5.6. DBSCAN</a></li>
+<li><a href="#org440dc29">1.5.7. Hierarchical clustening</a></li>
+<li><a href="#org31c839e">1.5.8. PCA, SVD and LDA</a></li>
+<li><a href="#orgc45b175">1.5.9. Feedforward neural networks, Multilayered logistic regression classifiers many layers separated by non-linearity</a></li>
+<li><a href="#org749eaee">1.5.10. Convolution neural networks, vision based machine learn, image classification</a></li>
 </ul>
 </li>
-<li><a href="#org59aa952">1.6. Mineracao e big data</a>
+<li><a href="#orgadef94f">1.6. Mineracao e big data</a>
 <ul>
-<li><a href="#orgf38915d">1.6.1. Bit data:</a></li>
+<li><a href="#org6d49c13">1.6.1. Bit data:</a></li>
 </ul>
 </li>
 </ul>
@@ -295,74 +295,74 @@
 </div>
 
 
-<div id="outline-container-org05778ee" class="outline-2">
-<h2 id="org05778ee"><span class="section-number-2">1</span> Machine learning</h2>
+<div id="outline-container-org702df1e" class="outline-2">
+<h2 id="org702df1e"><span class="section-number-2">1</span> Machine learning</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgb327e24" class="outline-3">
-<h3 id="orgb327e24"><span class="section-number-3">1.1</span> Experimental design</h3>
+<div id="outline-container-orge1ad9f8" class="outline-3">
+<h3 id="orge1ad9f8"><span class="section-number-3">1.1</span> Experimental design</h3>
 </div>
-<div id="outline-container-orgfccad00" class="outline-3">
-<h3 id="orgfccad00"><span class="section-number-3">1.2</span> Predictive modelling</h3>
+<div id="outline-container-org3bef250" class="outline-3">
+<h3 id="org3bef250"><span class="section-number-3">1.2</span> Predictive modelling</h3>
 </div>
-<div id="outline-container-orgbd262da" class="outline-3">
-<h3 id="orgbd262da"><span class="section-number-3">1.3</span> Optimization</h3>
+<div id="outline-container-org5cb28ea" class="outline-3">
+<h3 id="org5cb28ea"><span class="section-number-3">1.3</span> Optimization</h3>
 </div>
-<div id="outline-container-orge38a0fc" class="outline-3">
-<h3 id="orge38a0fc"><span class="section-number-3">1.4</span> Causal inference</h3>
+<div id="outline-container-org6184ea3" class="outline-3">
+<h3 id="org6184ea3"><span class="section-number-3">1.4</span> Causal inference</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 Machine learning concepts
 </p>
 </div>
 
-<div id="outline-container-orgf07987e" class="outline-4">
-<h4 id="orgf07987e"><span class="section-number-4">1.4.1</span> Regression \(y(t, f)\) and classification (metric) (te, ve, algorithm m1)</h4>
+<div id="outline-container-org1327469" class="outline-4">
+<h4 id="org1327469"><span class="section-number-4">1.4.1</span> Regression \(y(t, f)\) and classification (metric) (te, ve, algorithm m1)</h4>
 </div>
-<div id="outline-container-org2a68cc5" class="outline-4">
-<h4 id="org2a68cc5"><span class="section-number-4">1.4.2</span> Cluster, feature selection</h4>
+<div id="outline-container-orge9c2d39" class="outline-4">
+<h4 id="orge9c2d39"><span class="section-number-4">1.4.2</span> Cluster, feature selection</h4>
 <div class="outline-text-4" id="text-1-4-2">
 </div>
 <ol class="org-ol">
-<li><a id="orgeb8e0e0"></a>Curse of dimensionality<br /></li>
-<li><a id="org81bfcaa"></a>Bias-variance tradeoff, neural networks, SVM, etc.<br /></li>
-<li><a id="orgcebf375"></a>Statistical language such as R, or Python-Python<br /></li>
-<li><a id="org82fdf76"></a>Scripting languages as python, sh, php, perl<br /></li>
+<li><a id="org65d7c36"></a>Curse of dimensionality<br /></li>
+<li><a id="orgf50f471"></a>Bias-variance tradeoff, neural networks, SVM, etc.<br /></li>
+<li><a id="org349b6ae"></a>Statistical language such as R, or Python-Python<br /></li>
+<li><a id="org481d46f"></a>Scripting languages as python, sh, php, perl<br /></li>
 </ol>
 </div>
 </div>
 
-<div id="outline-container-orgf53297d" class="outline-3">
-<h3 id="orgf53297d"><span class="section-number-3">1.5</span> Algorithms</h3>
+<div id="outline-container-org0661f2a" class="outline-3">
+<h3 id="org0661f2a"><span class="section-number-3">1.5</span> Algorithms</h3>
 <div class="outline-text-3" id="text-1-5">
 </div>
-<div id="outline-container-org51d2159" class="outline-4">
-<h4 id="org51d2159"><span class="section-number-4">1.5.1</span> Linear regression and Logistic regression</h4>
+<div id="outline-container-orgfb15ba9" class="outline-4">
+<h4 id="orgfb15ba9"><span class="section-number-4">1.5.1</span> Linear regression and Logistic regression</h4>
 </div>
-<div id="outline-container-orgb48c6be" class="outline-4">
-<h4 id="orgb48c6be"><span class="section-number-4">1.5.2</span> Linear SVM and Kernel SVM</h4>
+<div id="outline-container-orgef1af39" class="outline-4">
+<h4 id="orgef1af39"><span class="section-number-4">1.5.2</span> Linear SVM and Kernel SVM</h4>
 </div>
-<div id="outline-container-org60717be" class="outline-4">
-<h4 id="org60717be"><span class="section-number-4">1.5.3</span> Trees and ensemble trees</h4>
+<div id="outline-container-orgf97e3e9" class="outline-4">
+<h4 id="orgf97e3e9"><span class="section-number-4">1.5.3</span> Trees and ensemble trees</h4>
 </div>
-<div id="outline-container-org2d1a29f" class="outline-4">
-<h4 id="org2d1a29f"><span class="section-number-4">1.5.4</span> Neural networks and deep learning</h4>
+<div id="outline-container-orgb83cc6e" class="outline-4">
+<h4 id="orgb83cc6e"><span class="section-number-4">1.5.4</span> Neural networks and deep learning</h4>
 </div>
-<div id="outline-container-org916e2bc" class="outline-4">
-<h4 id="org916e2bc"><span class="section-number-4">1.5.5</span> K-means/k-modes, GMM (Gaussian Mixture Model) Clustening</h4>
+<div id="outline-container-orgf536524" class="outline-4">
+<h4 id="orgf536524"><span class="section-number-4">1.5.5</span> K-means/k-modes, GMM (Gaussian Mixture Model) Clustening</h4>
 </div>
-<div id="outline-container-orge25cbf0" class="outline-4">
-<h4 id="orge25cbf0"><span class="section-number-4">1.5.6</span> DBSCAN</h4>
+<div id="outline-container-orga863a8c" class="outline-4">
+<h4 id="orga863a8c"><span class="section-number-4">1.5.6</span> DBSCAN</h4>
 </div>
-<div id="outline-container-org1bc0180" class="outline-4">
-<h4 id="org1bc0180"><span class="section-number-4">1.5.7</span> Hierarchical clustening</h4>
+<div id="outline-container-org440dc29" class="outline-4">
+<h4 id="org440dc29"><span class="section-number-4">1.5.7</span> Hierarchical clustening</h4>
 </div>
-<div id="outline-container-org2fc6acc" class="outline-4">
-<h4 id="org2fc6acc"><span class="section-number-4">1.5.8</span> PCA, SVD and LDA</h4>
+<div id="outline-container-org31c839e" class="outline-4">
+<h4 id="org31c839e"><span class="section-number-4">1.5.8</span> PCA, SVD and LDA</h4>
 <div class="outline-text-4" id="text-1-5-8">
 </div>
 <ol class="org-ol">
-<li><a id="orga62da75"></a>PCA - Unsupervised method to understand global properties<br />
+<li><a id="org168fa21"></a>PCA - Unsupervised method to understand global properties<br />
 <div class="outline-text-5" id="text-1-5-8-1">
 <p>
 Use Scipy, sklearn
@@ -370,7 +370,7 @@ Use Scipy, sklearn
 </div>
 </li>
 
-<li><a id="orge89d4e3"></a>Least squares and polynomial fitting for datasets with low dimensions<br />
+<li><a id="orga2cf9ba"></a>Least squares and polynomial fitting for datasets with low dimensions<br />
 <div class="outline-text-5" id="text-1-5-8-2">
 <p>
 Use Numpy, scipy
@@ -378,7 +378,7 @@ Use Numpy, scipy
 </div>
 </li>
 
-<li><a id="orgb510977"></a>Constrained linear regression, weights do not misbehave<br />
+<li><a id="orge8c5d7b"></a>Constrained linear regression, weights do not misbehave<br />
 <div class="outline-text-5" id="text-1-5-8-3">
 <p>
 Use scikit-learn
@@ -386,7 +386,7 @@ Use scikit-learn
 </div>
 </li>
 
-<li><a id="org0931da1"></a>k-means, unsupervised clustering algorithm, expectation maximization algorithm<br />
+<li><a id="orgf3af696"></a>k-means, unsupervised clustering algorithm, expectation maximization algorithm<br />
 <div class="outline-text-5" id="text-1-5-8-4">
 <p>
 Use scikit-learn
@@ -394,7 +394,7 @@ Use scikit-learn
 </div>
 </li>
 
-<li><a id="orgd642499"></a>Logistic regression, nonlinearity (sigmoid function), classification<br />
+<li><a id="org2e22575"></a>Logistic regression, nonlinearity (sigmoid function), classification<br />
 <div class="outline-text-5" id="text-1-5-8-5">
 <p>
 Use scikit-learn
@@ -402,7 +402,7 @@ Use scikit-learn
 </div>
 </li>
 
-<li><a id="org91bc53f"></a>SVM, support vector machines, linear models-&gt;Loss function<br />
+<li><a id="org633430a"></a>SVM, support vector machines, linear models-&gt;Loss function<br />
 <div class="outline-text-5" id="text-1-5-8-6">
 <p>
 Use scikit-learn
@@ -412,8 +412,8 @@ Use scikit-learn
 </ol>
 </div>
 
-<div id="outline-container-orgae25d1c" class="outline-4">
-<h4 id="orgae25d1c"><span class="section-number-4">1.5.9</span> Feedforward neural networks, Multilayered logistic regression classifiers many layers separated by non-linearity</h4>
+<div id="outline-container-orgc45b175" class="outline-4">
+<h4 id="orgc45b175"><span class="section-number-4">1.5.9</span> Feedforward neural networks, Multilayered logistic regression classifiers many layers separated by non-linearity</h4>
 <div class="outline-text-4" id="text-1-5-9">
 <p>
 Use scikit-learn-&gt;Neural networks, keras
@@ -421,17 +421,17 @@ Use scikit-learn-&gt;Neural networks, keras
 </div>
 </div>
 
-<div id="outline-container-org271ae1d" class="outline-4">
-<h4 id="org271ae1d"><span class="section-number-4">1.5.10</span> Convolution neural networks, vision based machine learn, image classification</h4>
+<div id="outline-container-org749eaee" class="outline-4">
+<h4 id="org749eaee"><span class="section-number-4">1.5.10</span> Convolution neural networks, vision based machine learn, image classification</h4>
 </div>
 </div>
 
-<div id="outline-container-org59aa952" class="outline-3">
-<h3 id="org59aa952"><span class="section-number-3">1.6</span> Mineracao e big data</h3>
+<div id="outline-container-orgadef94f" class="outline-3">
+<h3 id="orgadef94f"><span class="section-number-3">1.6</span> Mineracao e big data</h3>
 <div class="outline-text-3" id="text-1-6">
 </div>
-<div id="outline-container-orgf38915d" class="outline-4">
-<h4 id="orgf38915d"><span class="section-number-4">1.6.1</span> Bit data:</h4>
+<div id="outline-container-org6d49c13" class="outline-4">
+<h4 id="org6d49c13"><span class="section-number-4">1.6.1</span> Bit data:</h4>
 <div class="outline-text-4" id="text-1-6-1">
 <ul class="org-ul">
 <li>Volume: grandes quantidades de dados</li>
@@ -441,7 +441,7 @@ Use scikit-learn-&gt;Neural networks, keras
 </div>
 
 <ol class="org-ol">
-<li><a id="org710499f"></a>Mineracao<br />
+<li><a id="org6518272"></a>Mineracao<br />
 <div class="outline-text-5" id="text-1-6-1-1">
 <p>
 Descobrir padroes usando
@@ -460,7 +460,7 @@ Para extrair information e gerar valor de negocio
 <li>Padroes de comportamento; tendencias ou predicao</li>
 <li>Etapas do KDD, knowledge discovery in databases</li>
 <li>Entendimento (conhecimento do negocio) do problema -&gt; extracao (idenficar as bases de dados i.e.,
-tableas, atributos, fontes) de dados-&gt;</li>
+tabelas, atributos, fontes) de dados-&gt;</li>
 </ul>
 </div>
 </li>
@@ -470,7 +470,7 @@ tableas, atributos, fontes) de dados-&gt;</li>
 </div>
 </div>
 <div id="postamble" class="status">
-Created by: Ronaldo V. Lobato on 2020-08-17. Last Updated: 2021-04-11 Sun 18:33
+Created by: Ronaldo V. Lobato on 2021-04-11. Last Updated: 2021-04-11 Sun 18:35
 </div>
 </body>
 </html>
