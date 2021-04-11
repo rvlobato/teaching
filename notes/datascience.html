@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-04-11 Sun 18:33 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Data science reference guide:</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Ronaldo V. Lobato" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+	     margin-bottom: .2em; }
+  .subtitle { text-align: center;
+	      font-size: medium;
+	      font-weight: bold;
+	      margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+	    padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+	 elem.classList.add("code-highlighted");
+	 target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+	 elem.classList.remove("code-highlighted");
+	 target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+	displayAlign: "center",
+	displayIndent: "0em",
+
+	"HTML-CSS": { scale: 100,
+			linebreaks: { automatic: "false" },
+			webFont: "TeX"
+		       },
+	SVG: {scale: 100,
+	      linebreaks: { automatic: "false" },
+	      font: "TeX"},
+	NativeMML: {scale: 100},
+	TeX: { equationNumbers: {autoNumber: "AMS"},
+	       MultLineWidth: "85%",
+	       TagSide: "right",
+	       TagIndent: ".8em"
+	     }
+});
+</script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="https://rvlobato.github.io/teaching"> UP </a>
+ |
+ <a accesskey="H" href="https://rvlobato.github.io/"> HOME </a>
+</div><div id="content">
+<h1 class="title">Data science reference guide:
+<br />
+<span class="subtitle">Tools, methods and so on.</span>
+</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org05778ee">1. Machine learning</a>
+<ul>
+<li><a href="#orgb327e24">1.1. Experimental design</a></li>
+<li><a href="#orgfccad00">1.2. Predictive modelling</a></li>
+<li><a href="#orgbd262da">1.3. Optimization</a></li>
+<li><a href="#orge38a0fc">1.4. Causal inference</a>
+<ul>
+<li><a href="#orgf07987e">1.4.1. Regression \(y(t, f)\) and classification (metric) (te, ve, algorithm m1)</a></li>
+<li><a href="#org2a68cc5">1.4.2. Cluster, feature selection</a></li>
+</ul>
+</li>
+<li><a href="#orgf53297d">1.5. Algorithms</a>
+<ul>
+<li><a href="#org51d2159">1.5.1. Linear regression and Logistic regression</a></li>
+<li><a href="#orgb48c6be">1.5.2. Linear SVM and Kernel SVM</a></li>
+<li><a href="#org60717be">1.5.3. Trees and ensemble trees</a></li>
+<li><a href="#org2d1a29f">1.5.4. Neural networks and deep learning</a></li>
+<li><a href="#org916e2bc">1.5.5. K-means/k-modes, GMM (Gaussian Mixture Model) Clustening</a></li>
+<li><a href="#orge25cbf0">1.5.6. DBSCAN</a></li>
+<li><a href="#org1bc0180">1.5.7. Hierarchical clustening</a></li>
+<li><a href="#org2fc6acc">1.5.8. PCA, SVD and LDA</a></li>
+<li><a href="#orgae25d1c">1.5.9. Feedforward neural networks, Multilayered logistic regression classifiers many layers separated by non-linearity</a></li>
+<li><a href="#org271ae1d">1.5.10. Convolution neural networks, vision based machine learn, image classification</a></li>
+</ul>
+</li>
+<li><a href="#org59aa952">1.6. Mineracao e big data</a>
+<ul>
+<li><a href="#orgf38915d">1.6.1. Bit data:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org05778ee" class="outline-2">
+<h2 id="org05778ee"><span class="section-number-2">1</span> Machine learning</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgb327e24" class="outline-3">
+<h3 id="orgb327e24"><span class="section-number-3">1.1</span> Experimental design</h3>
+</div>
+<div id="outline-container-orgfccad00" class="outline-3">
+<h3 id="orgfccad00"><span class="section-number-3">1.2</span> Predictive modelling</h3>
+</div>
+<div id="outline-container-orgbd262da" class="outline-3">
+<h3 id="orgbd262da"><span class="section-number-3">1.3</span> Optimization</h3>
+</div>
+<div id="outline-container-orge38a0fc" class="outline-3">
+<h3 id="orge38a0fc"><span class="section-number-3">1.4</span> Causal inference</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+Machine learning concepts
+</p>
+</div>
+
+<div id="outline-container-orgf07987e" class="outline-4">
+<h4 id="orgf07987e"><span class="section-number-4">1.4.1</span> Regression \(y(t, f)\) and classification (metric) (te, ve, algorithm m1)</h4>
+</div>
+<div id="outline-container-org2a68cc5" class="outline-4">
+<h4 id="org2a68cc5"><span class="section-number-4">1.4.2</span> Cluster, feature selection</h4>
+<div class="outline-text-4" id="text-1-4-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgeb8e0e0"></a>Curse of dimensionality<br /></li>
+<li><a id="org81bfcaa"></a>Bias-variance tradeoff, neural networks, SVM, etc.<br /></li>
+<li><a id="orgcebf375"></a>Statistical language such as R, or Python-Python<br /></li>
+<li><a id="org82fdf76"></a>Scripting languages as python, sh, php, perl<br /></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgf53297d" class="outline-3">
+<h3 id="orgf53297d"><span class="section-number-3">1.5</span> Algorithms</h3>
+<div class="outline-text-3" id="text-1-5">
+</div>
+<div id="outline-container-org51d2159" class="outline-4">
+<h4 id="org51d2159"><span class="section-number-4">1.5.1</span> Linear regression and Logistic regression</h4>
+</div>
+<div id="outline-container-orgb48c6be" class="outline-4">
+<h4 id="orgb48c6be"><span class="section-number-4">1.5.2</span> Linear SVM and Kernel SVM</h4>
+</div>
+<div id="outline-container-org60717be" class="outline-4">
+<h4 id="org60717be"><span class="section-number-4">1.5.3</span> Trees and ensemble trees</h4>
+</div>
+<div id="outline-container-org2d1a29f" class="outline-4">
+<h4 id="org2d1a29f"><span class="section-number-4">1.5.4</span> Neural networks and deep learning</h4>
+</div>
+<div id="outline-container-org916e2bc" class="outline-4">
+<h4 id="org916e2bc"><span class="section-number-4">1.5.5</span> K-means/k-modes, GMM (Gaussian Mixture Model) Clustening</h4>
+</div>
+<div id="outline-container-orge25cbf0" class="outline-4">
+<h4 id="orge25cbf0"><span class="section-number-4">1.5.6</span> DBSCAN</h4>
+</div>
+<div id="outline-container-org1bc0180" class="outline-4">
+<h4 id="org1bc0180"><span class="section-number-4">1.5.7</span> Hierarchical clustening</h4>
+</div>
+<div id="outline-container-org2fc6acc" class="outline-4">
+<h4 id="org2fc6acc"><span class="section-number-4">1.5.8</span> PCA, SVD and LDA</h4>
+<div class="outline-text-4" id="text-1-5-8">
+</div>
+<ol class="org-ol">
+<li><a id="orga62da75"></a>PCA - Unsupervised method to understand global properties<br />
+<div class="outline-text-5" id="text-1-5-8-1">
+<p>
+Use Scipy, sklearn
+</p>
+</div>
+</li>
+
+<li><a id="orge89d4e3"></a>Least squares and polynomial fitting for datasets with low dimensions<br />
+<div class="outline-text-5" id="text-1-5-8-2">
+<p>
+Use Numpy, scipy
+</p>
+</div>
+</li>
+
+<li><a id="orgb510977"></a>Constrained linear regression, weights do not misbehave<br />
+<div class="outline-text-5" id="text-1-5-8-3">
+<p>
+Use scikit-learn
+</p>
+</div>
+</li>
+
+<li><a id="org0931da1"></a>k-means, unsupervised clustering algorithm, expectation maximization algorithm<br />
+<div class="outline-text-5" id="text-1-5-8-4">
+<p>
+Use scikit-learn
+</p>
+</div>
+</li>
+
+<li><a id="orgd642499"></a>Logistic regression, nonlinearity (sigmoid function), classification<br />
+<div class="outline-text-5" id="text-1-5-8-5">
+<p>
+Use scikit-learn
+</p>
+</div>
+</li>
+
+<li><a id="org91bc53f"></a>SVM, support vector machines, linear models-&gt;Loss function<br />
+<div class="outline-text-5" id="text-1-5-8-6">
+<p>
+Use scikit-learn
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgae25d1c" class="outline-4">
+<h4 id="orgae25d1c"><span class="section-number-4">1.5.9</span> Feedforward neural networks, Multilayered logistic regression classifiers many layers separated by non-linearity</h4>
+<div class="outline-text-4" id="text-1-5-9">
+<p>
+Use scikit-learn-&gt;Neural networks, keras
+</p>
+</div>
+</div>
+
+<div id="outline-container-org271ae1d" class="outline-4">
+<h4 id="org271ae1d"><span class="section-number-4">1.5.10</span> Convolution neural networks, vision based machine learn, image classification</h4>
+</div>
+</div>
+
+<div id="outline-container-org59aa952" class="outline-3">
+<h3 id="org59aa952"><span class="section-number-3">1.6</span> Mineracao e big data</h3>
+<div class="outline-text-3" id="text-1-6">
+</div>
+<div id="outline-container-orgf38915d" class="outline-4">
+<h4 id="orgf38915d"><span class="section-number-4">1.6.1</span> Bit data:</h4>
+<div class="outline-text-4" id="text-1-6-1">
+<ul class="org-ul">
+<li>Volume: grandes quantidades de dados</li>
+<li>Velocidade: Analisar os dados em tempo satisfatorio</li>
+<li>Variedades: Diferentes tipos de dados</li>
+</ul>
+</div>
+
+<ol class="org-ol">
+<li><a id="org710499f"></a>Mineracao<br />
+<div class="outline-text-5" id="text-1-6-1-1">
+<p>
+Descobrir padroes usando
+</p>
+<ol class="org-ol">
+<li>Inteligencia artificial</li>
+<li>Aprendizado de maquina</li>
+<li>Estatisticas de sistema de bancos de dados</li>
+</ol>
+
+<p>
+Para extrair information e gerar valor de negocio
+</p>
+
+<ul class="org-ul">
+<li>Padroes de comportamento; tendencias ou predicao</li>
+<li>Etapas do KDD, knowledge discovery in databases</li>
+<li>Entendimento (conhecimento do negocio) do problema -&gt; extracao (idenficar as bases de dados i.e.,
+tableas, atributos, fontes) de dados-&gt;</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+Created by: Ronaldo V. Lobato on 2020-08-17. Last Updated: 2021-04-11 Sun 18:33
+</div>
+</body>
+</html>
