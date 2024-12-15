@@ -3,226 +3,55 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-05-06 Fri 10:38 -->
+<!-- 2024-12-14 Sat 21:37 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Theoretical Physics Reference guide based on:</title>
 <meta name="author" content="Ronaldo V. Lobato" />
 <meta name="generator" content="Org Mode" />
-<style>
-  #content { max-width: 60em; margin: auto; }
-  .title  { text-align: center;
-	     margin-bottom: .2em; }
-  .subtitle { text-align: center;
-	      font-size: medium;
-	      font-weight: bold;
-	      margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-	    padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #e6e6e6;
-    border-radius: 3px;
-    background-color: #f2f2f2;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: auto;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    top: -8px;
-    right: 12px;
-    padding: 3px;
-    color: #555;
-    background-color: #f2f2f299;
-  }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-authinfo::before { content: 'Authinfo'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-</style>
 <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
 <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/search.css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/search.js"></script>
 <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
 <style> #content{max-width:1800px;}</style>
 <style> p{max-width:1200px;}</style>
 <style> li{max-width:1200px;}</style>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-	displayAlign: "center",
-	displayIndent: "0em",
-
-	"HTML-CSS": { scale: 100,
-			linebreaks: { automatic: "false" },
-			webFont: "TeX"
-		       },
-	SVG: {scale: 100,
-	      linebreaks: { automatic: "false" },
-	      font: "TeX"},
-	NativeMML: {scale: 100},
-	TeX: { equationNumbers: {autoNumber: "AMS"},
-	       MultLineWidth: "85%",
-	       TagSide: "right",
-	       TagIndent: ".8em"
-	     }
-});
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="org-div-home-and-up">
@@ -238,285 +67,286 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgaf206c0">1. Languages</a>
+<li><a href="#org668b94b">1. Languages</a>
 <ul>
-<li><a href="#org6abe77a">1.1. <b>English</b>.</a></li>
-<li><a href="#org79c2bab">1.2. Some French, German, Spanish and Italian may be useful.</a></li>
+<li><a href="#org5486146">1.1. <b>English</b>.</a></li>
+<li><a href="#orga9dacb7">1.2. Some French, German, Spanish and Italian may be useful.</a></li>
 </ul>
 </li>
-<li><a href="#org1e710bb">2. Primary mathematics</a>
+<li><a href="#orgab3ede9">2. Primary mathematics</a>
 <ul>
-<li><a href="#org13d3c5a">2.1. Natural numbers.</a></li>
-<li><a href="#orgad64268">2.2. Integers.</a></li>
-<li><a href="#org296bdea">2.3. Rational numbers.</a></li>
-<li><a href="#orgbf35443">2.4. Real numbers.</a></li>
-<li><a href="#orgd6d7c4b">2.5. Complex numbers.</a></li>
-<li><a href="#org9a77430">2.6. Set theory: open sets, compacts spaces. Topology.</a></li>
-<li><a href="#org3a0f824">2.7. Algebraic equations. Approximations techniques. Series expansions: Taylor series.</a></li>
-<li><a href="#org3849f3e">2.8. Solving equations with complex numbers. Trigonometry.</a></li>
-<li><a href="#orgbf0879c">2.9. Infinitesimals. Differentiation. Differentiate basic functions.</a></li>
-<li><a href="#orgdd1f7e6">2.10. Integration. Integrate basic functions. Differential equations. Linear equations.</a></li>
-<li><a href="#org5f9de11">2.11. Fourier transformation. The use of complex numbers. Convergence of series.</a></li>
-<li><a href="#orge2a2e1b">2.12. The complex plane. Cauchy theorems and contour integration.</a></li>
-<li><a href="#org347e5f5">2.13. The gamma function.</a></li>
-<li><a href="#org374cefb">2.14. Gaussian integrals. Probability theory.</a></li>
-<li><a href="#org18de28d">2.15. Partial differential equations. Dirichlet and Neumann boundary conditions.</a></li>
+<li><a href="#orge29844d">2.1. Natural numbers.</a></li>
+<li><a href="#org7571e46">2.2. Integers.</a></li>
+<li><a href="#orgea46004">2.3. Rational numbers.</a></li>
+<li><a href="#org3d413bc">2.4. Real numbers.</a></li>
+<li><a href="#orgdc5b479">2.5. Complex numbers.</a></li>
+<li><a href="#org91d521d">2.6. Set theory: open sets, compacts spaces. Topology.</a></li>
+<li><a href="#org1b0dc84">2.7. Algebraic equations. Approximations techniques. Series expansions: Taylor series.</a></li>
+<li><a href="#orgfd41cef">2.8. Solving equations with complex numbers. Trigonometry.</a></li>
+<li><a href="#org3cf4a9b">2.9. Infinitesimals. Differentiation. Differentiate basic functions.</a></li>
+<li><a href="#orgbe310f7">2.10. Integration. Integrate basic functions. Differential equations. Linear equations.</a></li>
+<li><a href="#org093296f">2.11. Fourier transformation. The use of complex numbers. Convergence of series.</a></li>
+<li><a href="#org218c03b">2.12. The complex plane. Cauchy theorems and contour integration.</a></li>
+<li><a href="#org9a1c791">2.13. The gamma function.</a></li>
+<li><a href="#orgb0afc3a">2.14. Gaussian integrals. Probability theory.</a></li>
+<li><a href="#orgfb3dbf4">2.15. Partial differential equations. Dirichlet and Neumann boundary conditions.</a></li>
 </ul>
 </li>
-<li><a href="#org75fbe93">3. Classical Mechanics</a>
+<li><a href="#org3cac690">3. Classical Mechanics</a>
 <ul>
-<li><a href="#orgb7c22ab">3.1. Static mechanics (force, tension). Hydrostatics. Newton's Laws.</a></li>
-<li><a href="#org57da8b9">3.2. The elliptical orbits of planets. The many body system.</a></li>
-<li><a href="#org9a95fb0">3.3. The action principle. Hamilton’s equations. The Lagrangean.</a></li>
-<li><a href="#org574b8d5">3.4. The harmonic oscillator. The pendulum.</a></li>
-<li><a href="#org12d02fa">3.5. Poisson’s brackets.</a></li>
-<li><a href="#orgb505412">3.6. Wave equations. Liquids and gases. The Navier-Stokes equations. Viscosity and friction.</a></li>
+<li><a href="#orge56ba67">3.1. Static mechanics (force, tension). Hydrostatics. Newton's Laws.</a></li>
+<li><a href="#org94d0e4c">3.2. The elliptical orbits of planets. The many body system.</a></li>
+<li><a href="#org9e36516">3.3. The action principle. Hamilton’s equations. The Lagrangean.</a></li>
+<li><a href="#org251671a">3.4. The harmonic oscillator. The pendulum.</a></li>
+<li><a href="#org6aa6e75">3.5. Poisson’s brackets.</a></li>
+<li><a href="#org65f437c">3.6. Wave equations. Liquids and gases. The Navier-Stokes equations. Viscosity and friction.</a></li>
 </ul>
 </li>
-<li><a href="#orgefea22c">4. Optics</a>
+<li><a href="#org2aee1e1">4. Optics</a>
 <ul>
-<li><a href="#orgb7870f2">4.1. Fraction and reflection.</a></li>
-<li><a href="#orgfd613fe">4.2. Lenses and mirrors.</a></li>
-<li><a href="#orgee36b2e">4.3. The telescope and the microscope.</a></li>
-<li><a href="#org9873146">4.4. Introduction to wave propagation.</a></li>
-<li><a href="#org6411e21">4.5. Doppler effect.</a></li>
-<li><a href="#org9ba04e2">4.6. Huijgens’ principle of wave superposition.</a></li>
-<li><a href="#orgc1b79ba">4.7. Wave fronts.</a></li>
-<li><a href="#orgecfb766">4.8. Caustics</a></li>
+<li><a href="#org1fa294d">4.1. Fraction and reflection.</a></li>
+<li><a href="#org70ce89c">4.2. Lenses and mirrors.</a></li>
+<li><a href="#org98f3289">4.3. The telescope and the microscope.</a></li>
+<li><a href="#org478eccb">4.4. Introduction to wave propagation.</a></li>
+<li><a href="#orgcb2ee8c">4.5. Doppler effect.</a></li>
+<li><a href="#org07c7177">4.6. Huijgens’ principle of wave superposition.</a></li>
+<li><a href="#org485ada1">4.7. Wave fronts.</a></li>
+<li><a href="#org8c9bfa9">4.8. Caustics</a></li>
 </ul>
 </li>
-<li><a href="#orgb2aecc7">5. Statistical Mechanics &amp; Thermodynamics</a>
+<li><a href="#org859ed15">5. Statistical Mechanics &amp; Thermodynamics</a>
 <ul>
-<li><a href="#orgd43a8e1">5.1. The first, second and third laws of thermodynamics.</a></li>
-<li><a href="#org9c16870">5.2. The Boltzmann distribution.</a></li>
-<li><a href="#org0c3e199">5.3. The Carnot cycle. Entropy. Heat engines.</a></li>
-<li><a href="#org6d3375a">5.4. Phase transitions. Thermodynamical models.</a></li>
-<li><a href="#orgc7ce641">5.5. The Ising Model (postpone techniques to solve the 2-dimensional Ising Model to later).</a></li>
-<li><a href="#org2113046">5.6. Planck’s radiation law (as a prelude to Quantum Mechanics).</a></li>
-<li><a href="#org7f29b7b">5.7. Homogeneous and inhomogeneous systems</a>
+<li><a href="#org67c1bbd">5.1. The first, second and third laws of thermodynamics.</a></li>
+<li><a href="#org47cfe8a">5.2. The Boltzmann distribution.</a></li>
+<li><a href="#org4e4320f">5.3. The Carnot cycle. Entropy. Heat engines.</a></li>
+<li><a href="#orgf36f954">5.4. Phase transitions. Thermodynamical models.</a></li>
+<li><a href="#org774f862">5.5. The Ising Model (postpone techniques to solve the 2-dimensional Ising Model to later).</a></li>
+<li><a href="#org9cd7203">5.6. Planck’s radiation law (as a prelude to Quantum Mechanics).</a></li>
+<li><a href="#orgf0c7dd0">5.7. Homogeneous and inhomogeneous systems</a>
 <ul>
-<li><a href="#org5a76038">5.7.1. Pair correlation function or the radial correlation function</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#org860309e">6. Electronics</a>
-<ul>
-<li><a href="#org8a8a5ca">6.1. Ohm’s law, capacitors, inductors, using complex numbers to calculate their effects.</a></li>
-<li><a href="#org51f7463">6.2. Transistors, diodes.</a></li>
-</ul>
-</li>
-<li><a href="#org1c680fb">7. Electromagnetism</a>
-<ul>
-<li><a href="#org00df103">7.1. Maxwell’s Theory for electromagnetism: Homogeneous and inhomogeneous  .</a></li>
-<li><a href="#org2a5afec">7.2. Maxwell’s laws in a medium. Boundaries. Solving the equations in: Vacumm and homogeneous medium (electromagnetic waves). In a box (wave guides). At boundaries (fraction and reflection).</a></li>
-<li><a href="#org73f1b1f">7.3. The vector potential and gauge invariance (extremely important).</a></li>
-<li><a href="#org6815834">7.4. Emission and absorption on EM waves (antenna).</a></li>
-<li><a href="#org21be689">7.5. Light scattering against objects</a></li>
-</ul>
-</li>
-<li><a href="#org3487961">8. Computational Physic</a>
-<ul>
-<li><a href="#org8ddbb0b">8.1. Numerical Integration and Differentiation</a>
-<ul>
-<li><a href="#org2d62ced">8.1.1. Derivative by:</a></li>
-<li><a href="#org5072ad6">8.1.2. Boundary conditions:</a></li>
-</ul>
-</li>
-<li><a href="#orgdc359d3">8.2. Programming languages</a>
-<ul>
-<li><a href="#org875e37e">8.2.1. Julia</a></li>
-<li><a href="#orgd56ea2f">8.2.2. R</a></li>
-</ul>
-</li>
-<li><a href="#orgded8a52">8.3. Solvers</a>
-<ul>
-<li><a href="#org1d3039e">8.3.1. Fortran solvers</a></li>
-<li><a href="#org244a15a">8.3.2. C - organized in a single suite, SUNDIALS (Suite of Nonlinear and Differential/Algebraic Equation Solvers</a></li>
-<li><a href="#org7fbf876">8.3.3. Julia Solvers</a></li>
+<li><a href="#org816114f">5.7.1. Pair correlation function or the radial correlation function</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgc19095f">9. Quantum Mechanics (Non-relativistic).</a>
+<li><a href="#org6928ada">6. Electronics</a>
 <ul>
-<li><a href="#orgda1fd02">9.1. Bohr’s atom</a></li>
-<li><a href="#org6e52453">9.2. De Broglie’s relations (Energy-frequency, momentum-wave number).</a></li>
-<li><a href="#org7a986e1">9.3. Schrödinger’s equation (with electric potential and magnetic field).</a>
-<ul>
-<li><a href="#org68b5cf0">9.3.1. Numerical solution of the Schrödinger equation</a></li>
+<li><a href="#orgecbde40">6.1. Ohm’s law, capacitors, inductors, using complex numbers to calculate their effects.</a></li>
+<li><a href="#org02ca8a6">6.2. Transistors, diodes.</a></li>
 </ul>
 </li>
-<li><a href="#org9473306">9.4. Ehrenfest’s theorem.</a></li>
-<li><a href="#orgd6ff01c">9.5. A particle in a box.</a></li>
-<li><a href="#org4bde35e">9.6. The hydrogen atom, solved systematically. The Zeeman effect. Stark effect.</a></li>
-<li><a href="#orgf9d09b8">9.7. The quantum harmonic oscillator.</a></li>
-<li><a href="#orgf31b8db">9.8. Operators: energy, momentum, angular momentum, creation and annihilation operators.</a></li>
-<li><a href="#org09e2b0e">9.9. Their commutation rules.</a></li>
-<li><a href="#orgbc45350">9.10. Introduction to quantum mechanical scattering. The S-matrix. Radio-active decay.</a></li>
-</ul>
-</li>
-<li><a href="#org1ab183b">10. Atoms &amp; Molecules</a>
+<li><a href="#org0cee29a">7. Electromagnetism</a>
 <ul>
-<li><a href="#orgdf7077a">10.1. Chemical binding.</a></li>
-<li><a href="#org4937902">10.2. Orbitals.</a></li>
-<li><a href="#orged4d164">10.3. Atomic and molecular spectra.</a></li>
-<li><a href="#orgbb928f3">10.4. Emission and absorption of light.</a></li>
-<li><a href="#org1c90747">10.5. Quantum selection rules.</a></li>
-<li><a href="#org5ebf44b">10.6. Magnetic moments.</a></li>
+<li><a href="#orgc1aaed2">7.1. Maxwell’s Theory for electromagnetism: Homogeneous and inhomogeneous  .</a></li>
+<li><a href="#orgb59ba2c">7.2. Maxwell’s laws in a medium. Boundaries. Solving the equations in: Vacumm and homogeneous medium (electromagnetic waves). In a box (wave guides). At boundaries (fraction and reflection).</a></li>
+<li><a href="#orgc39ac79">7.3. The vector potential and gauge invariance (extremely important).</a></li>
+<li><a href="#org443c304">7.4. Emission and absorption on EM waves (antenna).</a></li>
+<li><a href="#org2aae852">7.5. Light scattering against objects</a></li>
 </ul>
 </li>
-<li><a href="#orgd721c53">11. Solid State Physics</a>
+<li><a href="#org381ca57">8. Computational Physic</a>
 <ul>
-<li><a href="#orgf772d72">11.1. Crystal groups.</a></li>
-<li><a href="#org6c1ca81">11.2. Bragg reflection.</a></li>
-<li><a href="#orgfc20c48">11.3. Dielectric and diamagnetic constants.</a></li>
-<li><a href="#org73e0d9e">11.4. Bloch spectra.</a></li>
-<li><a href="#orga3042c3">11.5. Fermi level.</a></li>
-<li><a href="#org52428fe">11.6. Conductors, semiconductors and insulators.</a></li>
-<li><a href="#org31c7dc3">11.7. Specific heat.</a></li>
-<li><a href="#org43870e9">11.8. Electrons and holes.</a></li>
-<li><a href="#org551435f">11.9. The transistor.</a></li>
-<li><a href="#org3e3ce00">11.10. Superconductivity.</a></li>
-<li><a href="#org347c038">11.11. Hall effect.</a></li>
-</ul>
-</li>
-<li><a href="#org2eb1a11">12. Nuclear Physics</a>
+<li><a href="#org4673e7b">8.1. Numerical Integration and Differentiation</a>
 <ul>
-<li><a href="#orgaff2d4f">12.1. Isotopes. Radio-activity. Fission and Fusion.</a>
+<li><a href="#org96fa1f8">8.1.1. Derivative by:</a></li>
+<li><a href="#orga89dbd5">8.1.2. Boundary conditions:</a></li>
+</ul>
+</li>
+<li><a href="#org9aebe50">8.2. Programming languages</a>
 <ul>
-<li><a href="#org3ff6bcb">12.1.1. Geiger-Nuttall law</a></li>
+<li><a href="#org15d67f8">8.2.1. Julia</a></li>
+<li><a href="#org15de038">8.2.2. R</a></li>
 </ul>
 </li>
-<li><a href="#org0c9ce22">12.2. Droplet model.</a></li>
-<li><a href="#org82d9deb">12.3. Nuclear quantum numbers.</a></li>
-<li><a href="#org2ec3839">12.4. Magic nuclei.</a></li>
-<li><a href="#org6943bdb">12.5. Isospin.</a></li>
-<li><a href="#orgf0bedaf">12.6. Yukawa theory.</a></li>
-</ul>
-</li>
-<li><a href="#org2ff1ded">13. Plasma Physics</a>
+<li><a href="#orgbd4b82a">8.3. Solvers</a>
 <ul>
-<li><a href="#org4936a3d">13.1. Magnetohydrodynamics.</a></li>
-<li><a href="#org7a64028">13.2. Alfvén waves.</a></li>
+<li><a href="#org9b51483">8.3.1. Fortran solvers</a></li>
+<li><a href="#org33b160b">8.3.2. C - organized in a single suite, SUNDIALS (Suite of Nonlinear and Differential/Algebraic Equation Solvers</a></li>
+<li><a href="#orgbb04e90">8.3.3. Julia Solvers</a></li>
 </ul>
 </li>
-<li><a href="#org8655d16">14. Advanced Mathematics</a>
+<li><a href="#org1a070e2">8.4. Simulações hidrodinâmicas</a></li>
+</ul>
+</li>
+<li><a href="#org1b598fa">9. Quantum Mechanics (Non-relativistic).</a>
 <ul>
-<li><a href="#orga8f47d2">14.1. Group theory, and the linear representations of groups.</a></li>
-<li><a href="#org221bdb0">14.2. Lie group theory.</a></li>
-<li><a href="#org89ecf00">14.3. Vectors and tensors.</a></li>
-<li><a href="#org1100aad">14.4. More techniques to solve (partial) differential and integral equations.</a></li>
-<li><a href="#org00c1533">14.5. Extremum principle and approximation techniques based on that.</a></li>
-<li><a href="#org04eb021">14.6. Difference equations.</a></li>
-<li><a href="#orgf7c873f">14.7. Generating functions.</a></li>
-<li><a href="#orgf17e797">14.8. Hilbert space.</a></li>
-<li><a href="#org8e430f5">14.9. Introduction to the functional integral.</a></li>
-</ul>
-</li>
-<li><a href="#org4356e67">15. Special Relativity</a>
+<li><a href="#orgda94aad">9.1. Bohr’s atom</a></li>
+<li><a href="#org31d7c5b">9.2. De Broglie’s relations (Energy-frequency, momentum-wave number).</a></li>
+<li><a href="#orgc1882b7">9.3. Schrödinger’s equation (with electric potential and magnetic field).</a>
 <ul>
-<li><a href="#orgac26261">15.1. 4-vectors.</a>
+<li><a href="#org682d5e7">9.3.1. Numerical solution of the Schrödinger equation</a></li>
+</ul>
+</li>
+<li><a href="#org0e72d47">9.4. Ehrenfest’s theorem.</a></li>
+<li><a href="#org73db2e5">9.5. A particle in a box.</a></li>
+<li><a href="#org7197b0f">9.6. The hydrogen atom, solved systematically. The Zeeman effect. Stark effect.</a></li>
+<li><a href="#org927acfd">9.7. The quantum harmonic oscillator.</a></li>
+<li><a href="#orga2949ce">9.8. Operators: energy, momentum, angular momentum, creation and annihilation operators.</a></li>
+<li><a href="#orgaa5fe0d">9.9. Their commutation rules.</a></li>
+<li><a href="#orgdd9a54b">9.10. Introduction to quantum mechanical scattering. The S-matrix. Radio-active decay.</a></li>
+</ul>
+</li>
+<li><a href="#orgc1052b7">10. Atoms &amp; Molecules</a>
 <ul>
-<li><a href="#org6936018">15.1.1. Spacetime coordinates:</a></li>
-<li><a href="#orge9186db">15.1.2. Four-momentum:</a></li>
-<li><a href="#org042f286">15.1.3. Derivatives:</a></li>
-<li><a href="#org81bfcb9">15.1.4. Four-momentum operator</a></li>
-<li><a href="#orgea81e8e">15.1.5. Lorentz-invariant <i>d'Alembert operator</i></a></li>
-<li><a href="#orgf13e7ba">15.1.6. Four-current</a></li>
-<li><a href="#org8be27f2">15.1.7. Electromagnetic potential</a></li>
+<li><a href="#orga2fe892">10.1. Chemical binding.</a></li>
+<li><a href="#orga5e8231">10.2. Orbitals.</a></li>
+<li><a href="#orgf8e0a53">10.3. Atomic and molecular spectra.</a></li>
+<li><a href="#org898127c">10.4. Emission and absorption of light.</a></li>
+<li><a href="#org56feca6">10.5. Quantum selection rules.</a></li>
+<li><a href="#org47afcbc">10.6. Magnetic moments.</a></li>
 </ul>
 </li>
-<li><a href="#org4b63441">15.2. The Lorentz transformation.</a></li>
-<li><a href="#org78347a0">15.3. Lorentz contraction, time dilatation.</a></li>
-<li><a href="#org209daf0">15.4. \(E=mc^2\).</a></li>
-<li><a href="#orge6f129c">15.5. Transformation rules for the Maxwell field.</a></li>
-<li><a href="#orgb43e081">15.6. Relativistic Doppler effect.</a></li>
-</ul>
-</li>
-<li><a href="#orgaa3d34d">16. Advanced Quantum Mechanics</a>
+<li><a href="#org99825c2">11. Solid State Physics</a>
 <ul>
-<li><a href="#org3a973a3">16.1. Hilbert space.</a></li>
-<li><a href="#orga8cb836">16.2. Atomic transitions.</a></li>
-<li><a href="#org4a1450c">16.3. Emission and absorption of light.</a></li>
-<li><a href="#org461bdc6">16.4. Stimulated emission.</a></li>
-<li><a href="#org510bfd3">16.5. Density matrix.</a></li>
-<li><a href="#org09e60e9">16.6. Interpretation of QM.</a></li>
-<li><a href="#orgb2ae174">16.7. The Bell inequalities.</a></li>
-<li><a href="#org7efa51f">16.8. Towards relativistic QM: The Dirac equation, finestructure.</a></li>
-<li><a href="#org485d82c">16.9. Electrons and positrons.</a></li>
-<li><a href="#org4086072">16.10. BCS theory for superconductivity.</a></li>
-<li><a href="#orgf5073d1">16.11. Quantum Hall effect.</a></li>
-<li><a href="#org47f5e62">16.12. Advanced scattering theory.</a></li>
-<li><a href="#org5d0b55e">16.13. Dispersion relations.</a></li>
-<li><a href="#org2cb2d59">16.14. Perturbation expansion.</a></li>
-<li><a href="#orgc881ccc">16.15. WKB approximation, Extremum principle.</a></li>
-<li><a href="#org3fb25c7">16.16. Bose-Einstein condensation</a></li>
-<li><a href="#org204ad88">16.17. Superliquid helium</a></li>
-<li><a href="#orgbf83385">16.18. Klein-Gordon equation</a></li>
+<li><a href="#org7bf53e4">11.1. Crystal groups.</a></li>
+<li><a href="#org2d5f795">11.2. Bragg reflection.</a></li>
+<li><a href="#org90a60a0">11.3. Dielectric and diamagnetic constants.</a></li>
+<li><a href="#org7c7b008">11.4. Bloch spectra.</a></li>
+<li><a href="#orgc98052a">11.5. Fermi level.</a></li>
+<li><a href="#org4742330">11.6. Conductors, semiconductors and insulators.</a></li>
+<li><a href="#org255fe38">11.7. Specific heat.</a></li>
+<li><a href="#org47757e9">11.8. Electrons and holes.</a></li>
+<li><a href="#org175a737">11.9. The transistor.</a></li>
+<li><a href="#orgd696e66">11.10. Superconductivity.</a></li>
+<li><a href="#org28d952a">11.11. Hall effect.</a></li>
 </ul>
 </li>
-<li><a href="#org7a7f80d">17. Phenomenology/Astroparticles</a>
+<li><a href="#org3bed46d">12. Nuclear Physics</a>
 <ul>
-<li><a href="#orgb79ca65">17.1. Subatomic particles (mesons, baryons, photons, leptons, quarks) and cosmic rays</a>
+<li><a href="#orgfa06b48">12.1. Isotopes. Radio-activity. Fission and Fusion.</a>
 <ul>
-<li><a href="#org81cb0d8">17.1.1. QHD Quantum Hydrodynamics</a></li>
+<li><a href="#org06479fb">12.1.1. Geiger-Nuttall law</a></li>
 </ul>
 </li>
+<li><a href="#org07fc059">12.2. Droplet model.</a></li>
+<li><a href="#org4f10209">12.3. Nuclear quantum numbers.</a></li>
+<li><a href="#org7ab3acd">12.4. Magic nuclei.</a></li>
+<li><a href="#org6425f10">12.5. Isospin.</a></li>
+<li><a href="#org36c4c2d">12.6. Yukawa theory.</a></li>
 </ul>
 </li>
-<li><a href="#org9329062">18. General Relativity</a>
+<li><a href="#org00f2e1e">13. Plasma Physics</a>
 <ul>
-<li><a href="#org5bcd0b2">18.1. 4-tensors</a>
+<li><a href="#orgcd2ad9a">13.1. Magnetohydrodynamics.</a></li>
+<li><a href="#orgd2190ce">13.2. Alfvén waves.</a></li>
+</ul>
+</li>
+<li><a href="#org8246698">14. Advanced Mathematics</a>
 <ul>
-<li><a href="#org5aee230">18.1.1. The metric tensor.</a></li>
-<li><a href="#org34b7cb4">18.1.2. Space-time curvature.</a></li>
+<li><a href="#org3fb69e4">14.1. Group theory, and the linear representations of groups.</a></li>
+<li><a href="#org59e8324">14.2. Lie group theory.</a></li>
+<li><a href="#orgcbd6e80">14.3. Vectors and tensors.</a></li>
+<li><a href="#org6c197a1">14.4. More techniques to solve (partial) differential and integral equations.</a></li>
+<li><a href="#org812bd04">14.5. Extremum principle and approximation techniques based on that.</a></li>
+<li><a href="#orge42caa3">14.6. Difference equations.</a></li>
+<li><a href="#org3f5151b">14.7. Generating functions.</a></li>
+<li><a href="#org6e7ec28">14.8. Hilbert space.</a></li>
+<li><a href="#org04d163f">14.9. Introduction to the functional integral.</a></li>
 </ul>
 </li>
-<li><a href="#org70df4e5">18.2. Einstein’s gravity equation.</a></li>
-<li><a href="#org39c51dd">18.3. The Schwarzschild spacetime - black hole.</a></li>
-<li><a href="#org587d688">18.4. Reissner-Nordström black hole.</a></li>
-<li><a href="#org182289f">18.5. Periastron shift</a></li>
-<li><a href="#org2054bee">18.6. Gravitational lensing.</a></li>
-<li><a href="#orgb9d7532">18.7. Cosmological models.</a></li>
-<li><a href="#org879ed62">18.8. Gravitational radiation.</a></li>
-</ul>
-</li>
-<li><a href="#org7927b9f">19. Cosmology</a>
+<li><a href="#org6373d9b">15. Special Relativity</a>
 <ul>
-<li><a href="#orgd835b3c">19.1. Big bang</a>
+<li><a href="#org62dc3dc">15.1. 4-vectors.</a>
 <ul>
-<li><a href="#org8a6a148">19.1.1. Big Bang Nucleosynthesis</a></li>
+<li><a href="#org8b117d6">15.1.1. Spacetime coordinates:</a></li>
+<li><a href="#orgd8ce003">15.1.2. Four-momentum:</a></li>
+<li><a href="#orga6563dc">15.1.3. Derivatives:</a></li>
+<li><a href="#orgaae5c38">15.1.4. Four-momentum operator</a></li>
+<li><a href="#orge2c5153">15.1.5. Lorentz-invariant <i>d'Alembert operator</i></a></li>
+<li><a href="#org89179d1">15.1.6. Four-current</a></li>
+<li><a href="#org91a4ac8">15.1.7. Electromagnetic potential</a></li>
 </ul>
 </li>
-<li><a href="#org4b1de2b">19.2. Books</a></li>
+<li><a href="#orgd50ecb4">15.2. The Lorentz transformation.</a></li>
+<li><a href="#org67dbe06">15.3. Lorentz contraction, time dilatation.</a></li>
+<li><a href="#org4441aa3">15.4. \(E=mc^2\).</a></li>
+<li><a href="#org81511c4">15.5. Transformation rules for the Maxwell field.</a></li>
+<li><a href="#org2874714">15.6. Relativistic Doppler effect.</a></li>
 </ul>
 </li>
-<li><a href="#orgd691fc9">20. Astrophysics</a>
+<li><a href="#org08b7869">16. Advanced Quantum Mechanics</a>
 <ul>
-<li><a href="#orgf320dfc">20.1. Compact stars</a>
+<li><a href="#orgbb1f640">16.1. Hilbert space.</a></li>
+<li><a href="#org175b8da">16.2. Atomic transitions.</a></li>
+<li><a href="#org787bfd0">16.3. Emission and absorption of light.</a></li>
+<li><a href="#org47ecb72">16.4. Stimulated emission.</a></li>
+<li><a href="#org9285f6e">16.5. Density matrix.</a></li>
+<li><a href="#orgf2e1227">16.6. Interpretation of QM.</a></li>
+<li><a href="#org3b37504">16.7. The Bell inequalities.</a></li>
+<li><a href="#org1cba823">16.8. Towards relativistic QM: The Dirac equation, finestructure.</a></li>
+<li><a href="#org2fd04a3">16.9. Electrons and positrons.</a></li>
+<li><a href="#orgeac4e3c">16.10. BCS theory for superconductivity.</a></li>
+<li><a href="#orgb6db809">16.11. Quantum Hall effect.</a></li>
+<li><a href="#orgf14498a">16.12. Advanced scattering theory.</a></li>
+<li><a href="#org594148a">16.13. Dispersion relations.</a></li>
+<li><a href="#org3f0685f">16.14. Perturbation expansion.</a></li>
+<li><a href="#orge740768">16.15. WKB approximation, Extremum principle.</a></li>
+<li><a href="#orga6cf8cd">16.16. Bose-Einstein condensation</a></li>
+<li><a href="#org2ba5baf">16.17. Superliquid helium</a></li>
+<li><a href="#org988cf0e">16.18. Klein-Gordon equation</a></li>
+</ul>
+</li>
+<li><a href="#org38bdffc">17. Phenomenology/Astroparticles</a>
 <ul>
-<li><a href="#orgcc52372">20.1.1. White dwarfs</a></li>
-<li><a href="#orgcd85b55">20.1.2. Neutron stars</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#orga03b7c3">21. Quantum Field Theory</a>
+<li><a href="#orgcf14ec7">17.1. Subatomic particles (mesons, baryons, photons, leptons, quarks) and cosmic rays</a>
 <ul>
-<li><a href="#orgd524cb7">21.1. Classical fields: Scalar, Dirac-spinor, Yang-Mills vector fields.</a></li>
-<li><a href="#orgd72d765">21.2. Interactions, perturbation expansion. Spontaneous symmetry breaking, Goldstone mode, Higgs mechanism</a></li>
-<li><a href="#org1084d06">21.3. Particles and fields: Fock space. Antiparticles. Feynman rules. The Gell-Mann-Lévy sigma model for pions and nuclei. Loop diagrams. Unitarity, Causality and dispersion relations. Renormalization (Pauli-Villars; dimensional ren.) Quantum gauge theory: Gauge fixing, Faddeev-Popov determinant, Slavnov identities, BRST symmetry. The renormalization group. Asymptotic freedom.</a></li>
-<li><a href="#org09f2d41">21.4. Solitons, Skyrmions. Magnetic monopoles and instantons. Permanent quark confinement mechanism. The 1/N expansion. Operator product expansion. Bethe-Salpeter equation. Construction of the Standard Model. P and CP violation. The CPT theorem. Spin and statistics connection. Supersymmetry.</a></li>
+<li><a href="#orgf7b1182">17.1.1. QHD Quantum Hydrodynamics</a></li>
 </ul>
 </li>
-<li><a href="#org23a9d58">22. Supersymmetry/Super gravity</a></li>
+</ul>
+</li>
+<li><a href="#org27c868d">18. General Relativity</a>
+<ul>
+<li><a href="#orga639a23">18.1. 4-tensors</a>
+<ul>
+<li><a href="#orgdbbf54b">18.1.1. The metric tensor.</a></li>
+<li><a href="#orgb1d9894">18.1.2. Space-time curvature.</a></li>
+</ul>
+</li>
+<li><a href="#orgce5cabd">18.2. Einstein’s gravity equation.</a></li>
+<li><a href="#orgf391925">18.3. The Schwarzschild spacetime - black hole.</a></li>
+<li><a href="#orge5f725b">18.4. Reissner-Nordström black hole.</a></li>
+<li><a href="#orgdffc458">18.5. Periastron shift</a></li>
+<li><a href="#org9103735">18.6. Gravitational lensing.</a></li>
+<li><a href="#org2fb3e1a">18.7. Cosmological models.</a></li>
+<li><a href="#orgccf1366">18.8. Gravitational radiation.</a></li>
+</ul>
+</li>
+<li><a href="#orge72a442">19. Cosmology</a>
+<ul>
+<li><a href="#orgdac01b8">19.1. Big bang</a>
+<ul>
+<li><a href="#orgab88ff6">19.1.1. Big Bang Nucleosynthesis</a></li>
+</ul>
+</li>
+<li><a href="#org40c148c">19.2. Books</a></li>
+</ul>
+</li>
+<li><a href="#org6cb5e7b">20. Astrophysics</a>
+<ul>
+<li><a href="#org37adddd">20.1. Compact stars</a>
+<ul>
+<li><a href="#org11e64e3">20.1.1. White dwarfs</a></li>
+<li><a href="#org5d37cd0">20.1.2. Neutron stars</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org5693771">21. Quantum Field Theory</a>
+<ul>
+<li><a href="#org4f32913">21.1. Classical fields: Scalar, Dirac-spinor, Yang-Mills vector fields.</a></li>
+<li><a href="#orgc5f8bbf">21.2. Interactions, perturbation expansion. Spontaneous symmetry breaking, Goldstone mode, Higgs mechanism</a></li>
+<li><a href="#org7548208">21.3. Particles and fields: Fock space. Antiparticles. Feynman rules. The Gell-Mann-Lévy sigma model for pions and nuclei. Loop diagrams. Unitarity, Causality and dispersion relations. Renormalization (Pauli-Villars; dimensional ren.) Quantum gauge theory: Gauge fixing, Faddeev-Popov determinant, Slavnov identities, BRST symmetry. The renormalization group. Asymptotic freedom.</a></li>
+<li><a href="#orgeb3ed16">21.4. Solitons, Skyrmions. Magnetic monopoles and instantons. Permanent quark confinement mechanism. The 1/N expansion. Operator product expansion. Bethe-Salpeter equation. Construction of the Standard Model. P and CP violation. The CPT theorem. Spin and statistics connection. Supersymmetry.</a></li>
+</ul>
+</li>
+<li><a href="#org2a71d88">22. Supersymmetry/Super gravity</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgaf206c0" class="outline-2">
-<h2 id="orgaf206c0"><span class="section-number-2">1.</span> Languages</h2>
+<div id="outline-container-org668b94b" class="outline-2">
+<h2 id="org668b94b"><span class="section-number-2">1.</span> Languages</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li>Spell checkers: `<a href="http://aspell.net/">http://aspell.net/</a>`</li>
@@ -528,7 +358,7 @@ Java. `<a href="https://www.languagetool.org/">https://www.languagetool.org/</a>
 </div>
 
 <ol class="org-ol">
-<li><a id="orgbaaed64"></a>The <b>acquisition-learning hypothesis</b> is a <b>hypothesis</b> that forms part of <i>Stephen Krashen</i>'s<br />
+<li><a id="orgb98a73a"></a>The <b>acquisition-learning hypothesis</b> is a <b>hypothesis</b> that forms part of <i>Stephen Krashen</i>'s<br />
 <div class="outline-text-6" id="text-1-0-0-0-1">
 <p>
 theory of second language <b>acquisition</b>. It states that there are two independent ways in which we
@@ -538,7 +368,7 @@ more important than learning. `<a href="https://en.wikipedia.org/wiki/Input_hypo
 </div>
 
 <ol class="org-ol">
-<li><a id="org577cc23"></a>Learn through audiobook:<br />
+<li><a id="orge275c13"></a>Learn through audiobook:<br />
 <div class="outline-text-7" id="text-1-0-0-0-1-1">
 <ul class="org-ul">
 <li>Librivox: free public domain audiobooks `<a href="https://librivox.org/">https://librivox.org/</a>`</li>
@@ -546,7 +376,7 @@ more important than learning. `<a href="https://en.wikipedia.org/wiki/Input_hypo
 </div>
 </li>
 
-<li><a id="org01d92b0"></a>Learn reading:<br />
+<li><a id="orge4d9725"></a>Learn reading:<br />
 <div class="outline-text-7" id="text-1-0-0-0-1-2">
 <ul class="org-ul">
 <li>Open library: `<a href="https://openlibrary.org/">https://openlibrary.org/</a>`</li>
@@ -556,7 +386,7 @@ more important than learning. `<a href="https://en.wikipedia.org/wiki/Input_hypo
 </ol>
 </li>
 
-<li><a id="org0a5c285"></a>Learning:<br />
+<li><a id="orga506a65"></a>Learning:<br />
 <div class="outline-text-6" id="text-1-0-0-0-2">
 <ul class="org-ul">
 <li>Duoling: `<a href="https://www.duolingo.com">https://www.duolingo.com</a>`</li>
@@ -567,8 +397,8 @@ more important than learning. `<a href="https://en.wikipedia.org/wiki/Input_hypo
 </li>
 </ol>
 
-<div id="outline-container-org6abe77a" class="outline-3">
-<h3 id="org6abe77a"><span class="section-number-3">1.1.</span> <b>English</b>.</h3>
+<div id="outline-container-org5486146" class="outline-3">
+<h3 id="org5486146"><span class="section-number-3">1.1.</span> <b>English</b>.</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 English is a prerequisite. All sciences nowadays are in English.
@@ -580,7 +410,7 @@ English is a prerequisite. All sciences nowadays are in English.
 </div>
 
 <ol class="org-ol">
-<li><a id="org35039bc"></a>Learning:<br />
+<li><a id="org93a92c5"></a>Learning:<br />
 <div class="outline-text-6" id="text-1-1-0-0-1">
 <ul class="org-ul">
 <li>BBC learning English: `<a href="https://www.bbc.co.uk/learningenglish/">https://www.bbc.co.uk/learningenglish/</a>`</li>
@@ -591,12 +421,12 @@ English is a prerequisite. All sciences nowadays are in English.
 </ol>
 </div>
 
-<div id="outline-container-org79c2bab" class="outline-3">
-<h3 id="org79c2bab"><span class="section-number-3">1.2.</span> Some French, German, Spanish and Italian may be useful.</h3>
+<div id="outline-container-orga9dacb7" class="outline-3">
+<h3 id="orga9dacb7"><span class="section-number-3">1.2.</span> Some French, German, Spanish and Italian may be useful.</h3>
 <div class="outline-text-3" id="text-1-2">
 </div>
 <ol class="org-ol">
-<li><a id="org8e7e88d"></a>Learning:<br />
+<li><a id="orgd695e6b"></a>Learning:<br />
 <div class="outline-text-6" id="text-1-2-0-0-1">
 <ul class="org-ul">
 <li>DW Learning German: `<a href="https://learngerman.dw.com/en/overview">https://learngerman.dw.com/en/overview</a>`,
@@ -614,75 +444,75 @@ English is a prerequisite. All sciences nowadays are in English.
 </div>
 </div>
 
-<div id="outline-container-org1e710bb" class="outline-2">
-<h2 id="org1e710bb"><span class="section-number-2">2.</span> Primary mathematics</h2>
+<div id="outline-container-orgab3ede9" class="outline-2">
+<h2 id="orgab3ede9"><span class="section-number-2">2.</span> Primary mathematics</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org13d3c5a" class="outline-3">
-<h3 id="org13d3c5a"><span class="section-number-3">2.1.</span> Natural numbers.</h3>
+<div id="outline-container-orge29844d" class="outline-3">
+<h3 id="orge29844d"><span class="section-number-3">2.1.</span> Natural numbers.</h3>
 </div>
-<div id="outline-container-orgad64268" class="outline-3">
-<h3 id="orgad64268"><span class="section-number-3">2.2.</span> Integers.</h3>
+<div id="outline-container-org7571e46" class="outline-3">
+<h3 id="org7571e46"><span class="section-number-3">2.2.</span> Integers.</h3>
 </div>
-<div id="outline-container-org296bdea" class="outline-3">
-<h3 id="org296bdea"><span class="section-number-3">2.3.</span> Rational numbers.</h3>
+<div id="outline-container-orgea46004" class="outline-3">
+<h3 id="orgea46004"><span class="section-number-3">2.3.</span> Rational numbers.</h3>
 </div>
-<div id="outline-container-orgbf35443" class="outline-3">
-<h3 id="orgbf35443"><span class="section-number-3">2.4.</span> Real numbers.</h3>
+<div id="outline-container-org3d413bc" class="outline-3">
+<h3 id="org3d413bc"><span class="section-number-3">2.4.</span> Real numbers.</h3>
 </div>
-<div id="outline-container-orgd6d7c4b" class="outline-3">
-<h3 id="orgd6d7c4b"><span class="section-number-3">2.5.</span> Complex numbers.</h3>
+<div id="outline-container-orgdc5b479" class="outline-3">
+<h3 id="orgdc5b479"><span class="section-number-3">2.5.</span> Complex numbers.</h3>
 </div>
-<div id="outline-container-org9a77430" class="outline-3">
-<h3 id="org9a77430"><span class="section-number-3">2.6.</span> Set theory: open sets, compacts spaces. Topology.</h3>
+<div id="outline-container-org91d521d" class="outline-3">
+<h3 id="org91d521d"><span class="section-number-3">2.6.</span> Set theory: open sets, compacts spaces. Topology.</h3>
 </div>
-<div id="outline-container-org3a0f824" class="outline-3">
-<h3 id="org3a0f824"><span class="section-number-3">2.7.</span> Algebraic equations. Approximations techniques. Series expansions: Taylor series.</h3>
+<div id="outline-container-org1b0dc84" class="outline-3">
+<h3 id="org1b0dc84"><span class="section-number-3">2.7.</span> Algebraic equations. Approximations techniques. Series expansions: Taylor series.</h3>
 </div>
-<div id="outline-container-org3849f3e" class="outline-3">
-<h3 id="org3849f3e"><span class="section-number-3">2.8.</span> Solving equations with complex numbers. Trigonometry.</h3>
+<div id="outline-container-orgfd41cef" class="outline-3">
+<h3 id="orgfd41cef"><span class="section-number-3">2.8.</span> Solving equations with complex numbers. Trigonometry.</h3>
 </div>
-<div id="outline-container-orgbf0879c" class="outline-3">
-<h3 id="orgbf0879c"><span class="section-number-3">2.9.</span> Infinitesimals. Differentiation. Differentiate basic functions.</h3>
+<div id="outline-container-org3cf4a9b" class="outline-3">
+<h3 id="org3cf4a9b"><span class="section-number-3">2.9.</span> Infinitesimals. Differentiation. Differentiate basic functions.</h3>
 </div>
-<div id="outline-container-orgdd1f7e6" class="outline-3">
-<h3 id="orgdd1f7e6"><span class="section-number-3">2.10.</span> Integration. Integrate basic functions. Differential equations. Linear equations.</h3>
+<div id="outline-container-orgbe310f7" class="outline-3">
+<h3 id="orgbe310f7"><span class="section-number-3">2.10.</span> Integration. Integrate basic functions. Differential equations. Linear equations.</h3>
 </div>
-<div id="outline-container-org5f9de11" class="outline-3">
-<h3 id="org5f9de11"><span class="section-number-3">2.11.</span> Fourier transformation. The use of complex numbers. Convergence of series.</h3>
+<div id="outline-container-org093296f" class="outline-3">
+<h3 id="org093296f"><span class="section-number-3">2.11.</span> Fourier transformation. The use of complex numbers. Convergence of series.</h3>
 </div>
-<div id="outline-container-orge2a2e1b" class="outline-3">
-<h3 id="orge2a2e1b"><span class="section-number-3">2.12.</span> The complex plane. Cauchy theorems and contour integration.</h3>
+<div id="outline-container-org218c03b" class="outline-3">
+<h3 id="org218c03b"><span class="section-number-3">2.12.</span> The complex plane. Cauchy theorems and contour integration.</h3>
 </div>
-<div id="outline-container-org347e5f5" class="outline-3">
-<h3 id="org347e5f5"><span class="section-number-3">2.13.</span> The gamma function.</h3>
+<div id="outline-container-org9a1c791" class="outline-3">
+<h3 id="org9a1c791"><span class="section-number-3">2.13.</span> The gamma function.</h3>
 </div>
-<div id="outline-container-org374cefb" class="outline-3">
-<h3 id="org374cefb"><span class="section-number-3">2.14.</span> Gaussian integrals. Probability theory.</h3>
+<div id="outline-container-orgb0afc3a" class="outline-3">
+<h3 id="orgb0afc3a"><span class="section-number-3">2.14.</span> Gaussian integrals. Probability theory.</h3>
 </div>
-<div id="outline-container-org18de28d" class="outline-3">
-<h3 id="org18de28d"><span class="section-number-3">2.15.</span> Partial differential equations. Dirichlet and Neumann boundary conditions.</h3>
+<div id="outline-container-orgfb3dbf4" class="outline-3">
+<h3 id="orgfb3dbf4"><span class="section-number-3">2.15.</span> Partial differential equations. Dirichlet and Neumann boundary conditions.</h3>
 </div>
 </div>
 
-<div id="outline-container-org75fbe93" class="outline-2">
-<h2 id="org75fbe93"><span class="section-number-2">3.</span> Classical Mechanics</h2>
+<div id="outline-container-org3cac690" class="outline-2">
+<h2 id="org3cac690"><span class="section-number-2">3.</span> Classical Mechanics</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-orgb7c22ab" class="outline-3">
-<h3 id="orgb7c22ab"><span class="section-number-3">3.1.</span> Static mechanics (force, tension). Hydrostatics. Newton's Laws.</h3>
+<div id="outline-container-orge56ba67" class="outline-3">
+<h3 id="orge56ba67"><span class="section-number-3">3.1.</span> Static mechanics (force, tension). Hydrostatics. Newton's Laws.</h3>
 </div>
-<div id="outline-container-org57da8b9" class="outline-3">
-<h3 id="org57da8b9"><span class="section-number-3">3.2.</span> The elliptical orbits of planets. The many body system.</h3>
+<div id="outline-container-org94d0e4c" class="outline-3">
+<h3 id="org94d0e4c"><span class="section-number-3">3.2.</span> The elliptical orbits of planets. The many body system.</h3>
 </div>
-<div id="outline-container-org9a95fb0" class="outline-3">
-<h3 id="org9a95fb0"><span class="section-number-3">3.3.</span> The action principle. Hamilton’s equations. The Lagrangean.</h3>
+<div id="outline-container-org9e36516" class="outline-3">
+<h3 id="org9e36516"><span class="section-number-3">3.3.</span> The action principle. Hamilton’s equations. The Lagrangean.</h3>
 </div>
-<div id="outline-container-org574b8d5" class="outline-3">
-<h3 id="org574b8d5"><span class="section-number-3">3.4.</span> The harmonic oscillator. The pendulum.</h3>
+<div id="outline-container-org251671a" class="outline-3">
+<h3 id="org251671a"><span class="section-number-3">3.4.</span> The harmonic oscillator. The pendulum.</h3>
 </div>
-<div id="outline-container-org12d02fa" class="outline-3">
-<h3 id="org12d02fa"><span class="section-number-3">3.5.</span> Poisson’s brackets.</h3>
+<div id="outline-container-org6aa6e75" class="outline-3">
+<h3 id="org6aa6e75"><span class="section-number-3">3.5.</span> Poisson’s brackets.</h3>
 <div class="outline-text-3" id="text-3-5">
 <p>
 A function \(f(p, q, t)\) of the phase space coordinates of the system and time as total time
@@ -756,7 +586,7 @@ An important identity satisfied by the Poisson brackets is the <b>Jacob identity
 </div>
 
 <ol class="org-ol">
-<li><a id="org003cb39"></a>Hamilton's equations are<br />
+<li><a id="org81388ba"></a>Hamilton's equations are<br />
 <div class="outline-text-5" id="text-3-5-0-1">
 <p>
 \[
@@ -780,69 +610,69 @@ with the Poisson bracket we have
 </ol>
 </div>
 
-<div id="outline-container-orgb505412" class="outline-3">
-<h3 id="orgb505412"><span class="section-number-3">3.6.</span> Wave equations. Liquids and gases. The Navier-Stokes equations. Viscosity and friction.</h3>
+<div id="outline-container-org65f437c" class="outline-3">
+<h3 id="org65f437c"><span class="section-number-3">3.6.</span> Wave equations. Liquids and gases. The Navier-Stokes equations. Viscosity and friction.</h3>
 </div>
 </div>
 
-<div id="outline-container-orgefea22c" class="outline-2">
-<h2 id="orgefea22c"><span class="section-number-2">4.</span> Optics</h2>
+<div id="outline-container-org2aee1e1" class="outline-2">
+<h2 id="org2aee1e1"><span class="section-number-2">4.</span> Optics</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-orgb7870f2" class="outline-3">
-<h3 id="orgb7870f2"><span class="section-number-3">4.1.</span> Fraction and reflection.</h3>
+<div id="outline-container-org1fa294d" class="outline-3">
+<h3 id="org1fa294d"><span class="section-number-3">4.1.</span> Fraction and reflection.</h3>
 </div>
-<div id="outline-container-orgfd613fe" class="outline-3">
-<h3 id="orgfd613fe"><span class="section-number-3">4.2.</span> Lenses and mirrors.</h3>
+<div id="outline-container-org70ce89c" class="outline-3">
+<h3 id="org70ce89c"><span class="section-number-3">4.2.</span> Lenses and mirrors.</h3>
 </div>
-<div id="outline-container-orgee36b2e" class="outline-3">
-<h3 id="orgee36b2e"><span class="section-number-3">4.3.</span> The telescope and the microscope.</h3>
+<div id="outline-container-org98f3289" class="outline-3">
+<h3 id="org98f3289"><span class="section-number-3">4.3.</span> The telescope and the microscope.</h3>
 </div>
-<div id="outline-container-org9873146" class="outline-3">
-<h3 id="org9873146"><span class="section-number-3">4.4.</span> Introduction to wave propagation.</h3>
+<div id="outline-container-org478eccb" class="outline-3">
+<h3 id="org478eccb"><span class="section-number-3">4.4.</span> Introduction to wave propagation.</h3>
 </div>
-<div id="outline-container-org6411e21" class="outline-3">
-<h3 id="org6411e21"><span class="section-number-3">4.5.</span> Doppler effect.</h3>
+<div id="outline-container-orgcb2ee8c" class="outline-3">
+<h3 id="orgcb2ee8c"><span class="section-number-3">4.5.</span> Doppler effect.</h3>
 </div>
-<div id="outline-container-org9ba04e2" class="outline-3">
-<h3 id="org9ba04e2"><span class="section-number-3">4.6.</span> Huijgens’ principle of wave superposition.</h3>
+<div id="outline-container-org07c7177" class="outline-3">
+<h3 id="org07c7177"><span class="section-number-3">4.6.</span> Huijgens’ principle of wave superposition.</h3>
 </div>
-<div id="outline-container-orgc1b79ba" class="outline-3">
-<h3 id="orgc1b79ba"><span class="section-number-3">4.7.</span> Wave fronts.</h3>
+<div id="outline-container-org485ada1" class="outline-3">
+<h3 id="org485ada1"><span class="section-number-3">4.7.</span> Wave fronts.</h3>
 </div>
-<div id="outline-container-orgecfb766" class="outline-3">
-<h3 id="orgecfb766"><span class="section-number-3">4.8.</span> Caustics</h3>
+<div id="outline-container-org8c9bfa9" class="outline-3">
+<h3 id="org8c9bfa9"><span class="section-number-3">4.8.</span> Caustics</h3>
 </div>
 </div>
 
-<div id="outline-container-orgb2aecc7" class="outline-2">
-<h2 id="orgb2aecc7"><span class="section-number-2">5.</span> Statistical Mechanics &amp; Thermodynamics</h2>
+<div id="outline-container-org859ed15" class="outline-2">
+<h2 id="org859ed15"><span class="section-number-2">5.</span> Statistical Mechanics &amp; Thermodynamics</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-orgd43a8e1" class="outline-3">
-<h3 id="orgd43a8e1"><span class="section-number-3">5.1.</span> The first, second and third laws of thermodynamics.</h3>
+<div id="outline-container-org67c1bbd" class="outline-3">
+<h3 id="org67c1bbd"><span class="section-number-3">5.1.</span> The first, second and third laws of thermodynamics.</h3>
 </div>
-<div id="outline-container-org9c16870" class="outline-3">
-<h3 id="org9c16870"><span class="section-number-3">5.2.</span> The Boltzmann distribution.</h3>
+<div id="outline-container-org47cfe8a" class="outline-3">
+<h3 id="org47cfe8a"><span class="section-number-3">5.2.</span> The Boltzmann distribution.</h3>
 </div>
-<div id="outline-container-org0c3e199" class="outline-3">
-<h3 id="org0c3e199"><span class="section-number-3">5.3.</span> The Carnot cycle. Entropy. Heat engines.</h3>
+<div id="outline-container-org4e4320f" class="outline-3">
+<h3 id="org4e4320f"><span class="section-number-3">5.3.</span> The Carnot cycle. Entropy. Heat engines.</h3>
 </div>
-<div id="outline-container-org6d3375a" class="outline-3">
-<h3 id="org6d3375a"><span class="section-number-3">5.4.</span> Phase transitions. Thermodynamical models.</h3>
+<div id="outline-container-orgf36f954" class="outline-3">
+<h3 id="orgf36f954"><span class="section-number-3">5.4.</span> Phase transitions. Thermodynamical models.</h3>
 </div>
-<div id="outline-container-orgc7ce641" class="outline-3">
-<h3 id="orgc7ce641"><span class="section-number-3">5.5.</span> The Ising Model (postpone techniques to solve the 2-dimensional Ising Model to later).</h3>
+<div id="outline-container-org774f862" class="outline-3">
+<h3 id="org774f862"><span class="section-number-3">5.5.</span> The Ising Model (postpone techniques to solve the 2-dimensional Ising Model to later).</h3>
 </div>
-<div id="outline-container-org2113046" class="outline-3">
-<h3 id="org2113046"><span class="section-number-3">5.6.</span> Planck’s radiation law (as a prelude to Quantum Mechanics).</h3>
+<div id="outline-container-org9cd7203" class="outline-3">
+<h3 id="org9cd7203"><span class="section-number-3">5.6.</span> Planck’s radiation law (as a prelude to Quantum Mechanics).</h3>
 </div>
-<div id="outline-container-org7f29b7b" class="outline-3">
-<h3 id="org7f29b7b"><span class="section-number-3">5.7.</span> Homogeneous and inhomogeneous systems</h3>
+<div id="outline-container-orgf0c7dd0" class="outline-3">
+<h3 id="orgf0c7dd0"><span class="section-number-3">5.7.</span> Homogeneous and inhomogeneous systems</h3>
 <div class="outline-text-3" id="text-5-7">
 </div>
-<div id="outline-container-org5a76038" class="outline-4">
-<h4 id="org5a76038"><span class="section-number-4">5.7.1.</span> Pair correlation function or the radial correlation function</h4>
+<div id="outline-container-org816114f" class="outline-4">
+<h4 id="org816114f"><span class="section-number-4">5.7.1.</span> Pair correlation function or the radial correlation function</h4>
 <div class="outline-text-4" id="text-5-7-1">
 <p>
 In computational mechanics and statistics mechanics, a <b>radial distribution function</b> (RDF),
@@ -853,7 +683,7 @@ macroscopic thermodynamics quantities can be calculated using \(g(r)\).
 </div>
 
 <ol class="org-ol">
-<li><a id="orgb23134d"></a>The virial equation for the pressure:<br />
+<li><a id="org02aa2f3"></a>The virial equation for the pressure:<br />
 <div class="outline-text-5" id="text-5-7-1-1">
 <p>
 \[
@@ -863,7 +693,7 @@ macroscopic thermodynamics quantities can be calculated using \(g(r)\).
 </div>
 </li>
 
-<li><a id="org17178cc"></a>The energy equation:<br />
+<li><a id="org38254d0"></a>The energy equation:<br />
 <div class="outline-text-5" id="text-5-7-1-2">
 <p>
 \[
@@ -873,7 +703,7 @@ macroscopic thermodynamics quantities can be calculated using \(g(r)\).
 </div>
 </li>
 
-<li><a id="orgb0b8372"></a>The compressibility equation:<br />
+<li><a id="org8f2c8bd"></a>The compressibility equation:<br />
 <div class="outline-text-5" id="text-5-7-1-3">
 <p>
 \[
@@ -887,53 +717,53 @@ macroscopic thermodynamics quantities can be calculated using \(g(r)\).
 </div>
 </div>
 
-<div id="outline-container-org860309e" class="outline-2">
-<h2 id="org860309e"><span class="section-number-2">6.</span> Electronics</h2>
+<div id="outline-container-org6928ada" class="outline-2">
+<h2 id="org6928ada"><span class="section-number-2">6.</span> Electronics</h2>
 <div class="outline-text-2" id="text-6">
 </div>
-<div id="outline-container-org8a8a5ca" class="outline-3">
-<h3 id="org8a8a5ca"><span class="section-number-3">6.1.</span> Ohm’s law, capacitors, inductors, using complex numbers to calculate their effects.</h3>
+<div id="outline-container-orgecbde40" class="outline-3">
+<h3 id="orgecbde40"><span class="section-number-3">6.1.</span> Ohm’s law, capacitors, inductors, using complex numbers to calculate their effects.</h3>
 </div>
-<div id="outline-container-org51f7463" class="outline-3">
-<h3 id="org51f7463"><span class="section-number-3">6.2.</span> Transistors, diodes.</h3>
+<div id="outline-container-org02ca8a6" class="outline-3">
+<h3 id="org02ca8a6"><span class="section-number-3">6.2.</span> Transistors, diodes.</h3>
 </div>
 </div>
 
-<div id="outline-container-org1c680fb" class="outline-2">
-<h2 id="org1c680fb"><span class="section-number-2">7.</span> Electromagnetism</h2>
+<div id="outline-container-org0cee29a" class="outline-2">
+<h2 id="org0cee29a"><span class="section-number-2">7.</span> Electromagnetism</h2>
 <div class="outline-text-2" id="text-7">
 </div>
-<div id="outline-container-org00df103" class="outline-3">
-<h3 id="org00df103"><span class="section-number-3">7.1.</span> Maxwell’s Theory for electromagnetism: Homogeneous and inhomogeneous  .</h3>
+<div id="outline-container-orgc1aaed2" class="outline-3">
+<h3 id="orgc1aaed2"><span class="section-number-3">7.1.</span> Maxwell’s Theory for electromagnetism: Homogeneous and inhomogeneous  .</h3>
 </div>
-<div id="outline-container-org2a5afec" class="outline-3">
-<h3 id="org2a5afec"><span class="section-number-3">7.2.</span> Maxwell’s laws in a medium. Boundaries. Solving the equations in: Vacumm and homogeneous medium (electromagnetic waves). In a box (wave guides). At boundaries (fraction and reflection).</h3>
+<div id="outline-container-orgb59ba2c" class="outline-3">
+<h3 id="orgb59ba2c"><span class="section-number-3">7.2.</span> Maxwell’s laws in a medium. Boundaries. Solving the equations in: Vacumm and homogeneous medium (electromagnetic waves). In a box (wave guides). At boundaries (fraction and reflection).</h3>
 </div>
-<div id="outline-container-org73f1b1f" class="outline-3">
-<h3 id="org73f1b1f"><span class="section-number-3">7.3.</span> The vector potential and gauge invariance (extremely important).</h3>
+<div id="outline-container-orgc39ac79" class="outline-3">
+<h3 id="orgc39ac79"><span class="section-number-3">7.3.</span> The vector potential and gauge invariance (extremely important).</h3>
 </div>
-<div id="outline-container-org6815834" class="outline-3">
-<h3 id="org6815834"><span class="section-number-3">7.4.</span> Emission and absorption on EM waves (antenna).</h3>
+<div id="outline-container-org443c304" class="outline-3">
+<h3 id="org443c304"><span class="section-number-3">7.4.</span> Emission and absorption on EM waves (antenna).</h3>
 </div>
-<div id="outline-container-org21be689" class="outline-3">
-<h3 id="org21be689"><span class="section-number-3">7.5.</span> Light scattering against objects</h3>
+<div id="outline-container-org2aae852" class="outline-3">
+<h3 id="org2aae852"><span class="section-number-3">7.5.</span> Light scattering against objects</h3>
 </div>
 </div>
 
-<div id="outline-container-org3487961" class="outline-2">
-<h2 id="org3487961"><span class="section-number-2">8.</span> Computational Physic</h2>
+<div id="outline-container-org381ca57" class="outline-2">
+<h2 id="org381ca57"><span class="section-number-2">8.</span> Computational Physic</h2>
 <div class="outline-text-2" id="text-8">
 </div>
-<div id="outline-container-org8ddbb0b" class="outline-3">
-<h3 id="org8ddbb0b"><span class="section-number-3">8.1.</span> Numerical Integration and Differentiation</h3>
+<div id="outline-container-org4673e7b" class="outline-3">
+<h3 id="org4673e7b"><span class="section-number-3">8.1.</span> Numerical Integration and Differentiation</h3>
 <div class="outline-text-3" id="text-8-1">
 </div>
-<div id="outline-container-org2d62ced" class="outline-4">
-<h4 id="org2d62ced"><span class="section-number-4">8.1.1.</span> Derivative by:</h4>
+<div id="outline-container-org96fa1f8" class="outline-4">
+<h4 id="org96fa1f8"><span class="section-number-4">8.1.1.</span> Derivative by:</h4>
 <div class="outline-text-4" id="text-8-1-1">
 </div>
 <ol class="org-ol">
-<li><a id="org097165d"></a>Finite difference `<a href="https://en.wikipedia.org/wiki/Finite_difference_method">https://en.wikipedia.org/wiki/Finite_difference_method</a>`<br />
+<li><a id="org2d10cd3"></a>Finite difference `<a href="https://en.wikipedia.org/wiki/Finite_difference_method">https://en.wikipedia.org/wiki/Finite_difference_method</a>`<br />
 <div class="outline-text-5" id="text-8-1-1-1">
 <p>
 The derivative of a function \(f(x)\) can be approximated by the <i>forward difference</i>  based on
@@ -994,7 +824,7 @@ derivative
 </div>
 </li>
 
-<li><a id="org9baada9"></a>Interpolation<br />
+<li><a id="org6875be8"></a>Interpolation<br />
 <div class="outline-text-5" id="text-8-1-1-2">
 <p>
 `<a href="https://en.wikipedia.org/wiki/Interpolation">https://en.wikipedia.org/wiki/Interpolation</a>`
@@ -1055,7 +885,7 @@ E_{n}(x)=R_{n}^{\prime}(x)=l^{\prime}(x) \frac{f^{(n+1)}(\xi(x))}{(n+1) !}.
 </div>
 
 <ol class="org-ol">
-<li><a id="org4f0bafb"></a>Special cases:<br />
+<li><a id="org3aa2f0c"></a>Special cases:<br />
 <div class="outline-text-6" id="text-8-1-1-2-1">
 <ul class="org-ul">
 <li>\(n=1\), linear interpolation based on \(n+1 = 2\) points:</li>
@@ -1176,12 +1006,12 @@ x-x_{0}-x_{2}}{h^{2}} y_{1}+\frac{2 x-x_{0}-x_{1}}{2 h^{2}} y_{2}\right]
 </ol>
 </div>
 
-<div id="outline-container-org5072ad6" class="outline-4">
-<h4 id="org5072ad6"><span class="section-number-4">8.1.2.</span> Boundary conditions:</h4>
+<div id="outline-container-orga89dbd5" class="outline-4">
+<h4 id="orga89dbd5"><span class="section-number-4">8.1.2.</span> Boundary conditions:</h4>
 <div class="outline-text-4" id="text-8-1-2">
 </div>
 <ol class="org-ol">
-<li><a id="orge0edb35"></a>Dirichlet Boundary Conditions:<br />
+<li><a id="org036cb5f"></a>Dirichlet Boundary Conditions:<br />
 <div class="outline-text-5" id="text-8-1-2-1">
 <p>
 The values at the edges are fixed at some constant values that we impose.
@@ -1192,7 +1022,7 @@ Introduction to the Finite Element Method, 3rd Edition, pp. 110</i>
 </div>
 </li>
 
-<li><a id="orgbe0c54d"></a>Neumann Boundary Conditions:<br />
+<li><a id="org24c8026"></a>Neumann Boundary Conditions:<br />
 <div class="outline-text-5" id="text-8-1-2-2">
 <p>
 The derivative (or discrete difference) at the edges are fixed at some constant values that we choose.
@@ -1202,18 +1032,18 @@ The derivative (or discrete difference) at the edges are fixed at some constant 
 </ol>
 </div>
 </div>
-<div id="outline-container-orgdc359d3" class="outline-3">
-<h3 id="orgdc359d3"><span class="section-number-3">8.2.</span> Programming languages</h3>
+<div id="outline-container-org9aebe50" class="outline-3">
+<h3 id="org9aebe50"><span class="section-number-3">8.2.</span> Programming languages</h3>
 <div class="outline-text-3" id="text-8-2">
 </div>
-<div id="outline-container-org875e37e" class="outline-4">
-<h4 id="org875e37e"><span class="section-number-4">8.2.1.</span> Julia</h4>
+<div id="outline-container-org15d67f8" class="outline-4">
+<h4 id="org15d67f8"><span class="section-number-4">8.2.1.</span> Julia</h4>
 <div class="outline-text-4" id="text-8-2-1">
 </div>
 <ol class="org-ol">
-<li><a id="org3a1f265"></a>Packages<br />
+<li><a id="orga821c8b"></a>Packages<br />
 <ol class="org-ol">
-<li><a id="orgd9ddf4a"></a>Latexify - `<a href="https://github.com/korsbo/Latexify.jl">https://github.com/korsbo/Latexify.jl</a>`<br />
+<li><a id="orgc127f14"></a>Latexify - `<a href="https://github.com/korsbo/Latexify.jl">https://github.com/korsbo/Latexify.jl</a>`<br />
 <div class="outline-text-6" id="text-8-2-1-1-1">
 <p>
 This is a package for generating LaTeX maths from julia objects.
@@ -1221,7 +1051,7 @@ This is a package for generating LaTeX maths from julia objects.
 </div>
 </li>
 
-<li><a id="orgea5f41d"></a>SugarBLAS - `<a href="https://github.com/lopezm94/SugarBLAS.jl">https://github.com/lopezm94/SugarBLAS.jl</a>`<br />
+<li><a id="org81e3e51"></a>SugarBLAS - `<a href="https://github.com/lopezm94/SugarBLAS.jl">https://github.com/lopezm94/SugarBLAS.jl</a>`<br />
 <div class="outline-text-6" id="text-8-2-1-1-2">
 <p>
 This package provides macros for BLAS functions representing polynomials
@@ -1229,7 +1059,7 @@ This package provides macros for BLAS functions representing polynomials
 </div>
 </li>
 
-<li><a id="org6cde397"></a>Flux - `<a href="https://fluxml.ai/Flux.jl">https://fluxml.ai/Flux.jl</a>`<br />
+<li><a id="org1d262fb"></a>Flux - `<a href="https://fluxml.ai/Flux.jl">https://fluxml.ai/Flux.jl</a>`<br />
 <div class="outline-text-6" id="text-8-2-1-1-3">
 <p>
 Flux is an elegant approach to machine learning.
@@ -1237,7 +1067,7 @@ Flux is an elegant approach to machine learning.
 </div>
 </li>
 
-<li><a id="org2ef897f"></a>DifferentialEquations - `<a href="https://diffeq.sciml.ai">https://diffeq.sciml.ai</a>`<br />
+<li><a id="org01a9932"></a>DifferentialEquations - `<a href="https://diffeq.sciml.ai">https://diffeq.sciml.ai</a>`<br />
 <div class="outline-text-6" id="text-8-2-1-1-4">
 <p>
 This is a suite for numerically solving differential equations written in Julia and available
@@ -1246,7 +1076,7 @@ for use in Julia, Python, and R.
 </div>
 </li>
 
-<li><a id="orga667527"></a>Knet - `<a href="https://denizyuret.github.io/Knet.jl">https://denizyuret.github.io/Knet.jl</a>`<br />
+<li><a id="org6291404"></a>Knet - `<a href="https://denizyuret.github.io/Knet.jl">https://denizyuret.github.io/Knet.jl</a>`<br />
 <div class="outline-text-6" id="text-8-2-1-1-5">
 <p>
 Knet (pronounced "kay-net") is the Koç University deep learning framework implemented in Julia
@@ -1256,7 +1086,7 @@ using dynamic computational graphs for models defined in plain Julia.
 </div>
 </li>
 
-<li><a id="orge1b88cb"></a>Symbolics - `<a href="https://symbolics.juliasymbolics.org/dev">https://symbolics.juliasymbolics.org/dev</a><br />
+<li><a id="org05df2a7"></a>Symbolics - `<a href="https://symbolics.juliasymbolics.org/dev">https://symbolics.juliasymbolics.org/dev</a><br />
 <div class="outline-text-6" id="text-8-2-1-1-6">
 <p>
       Symbolics.jl is a fast and modern Computer Algebra System (CAS) for a fast and modern
@@ -1265,7 +1095,7 @@ programming language (Julia)
 </div>
 </li>
 
-<li><a id="org08aa62f"></a>Pluto - `<a href="https://github.com/fonsp/Pluto.jl">https://github.com/fonsp/Pluto.jl</a>`<br />
+<li><a id="org5624ff6"></a>Pluto - `<a href="https://github.com/fonsp/Pluto.jl">https://github.com/fonsp/Pluto.jl</a>`<br />
 <div class="outline-text-6" id="text-8-2-1-1-7">
 <p>
 Simple reactive notebooks for Julia
@@ -1273,7 +1103,7 @@ Simple reactive notebooks for Julia
 </div>
 </li>
 
-<li><a id="orgc4af2f3"></a>Gadfly - `<a href="https://gadflyjl.org/stable/">https://gadflyjl.org/stable/</a>`<br />
+<li><a id="org2fefe67"></a>Gadfly - `<a href="https://gadflyjl.org/stable/">https://gadflyjl.org/stable/</a>`<br />
 <div class="outline-text-6" id="text-8-2-1-1-8">
 <p>
 Gadfly is a system for plotting and visualization written in Julia. It is based largely on Hadley Wickhams's ggplot2 for R and Leland Wilkinson's book The Grammar of Graphics. It was Daniel C. Jones' brainchild and is now maintained by the community.
@@ -1281,7 +1111,7 @@ Gadfly is a system for plotting and visualization written in Julia. It is based 
 </div>
 </li>
 
-<li><a id="org7b08dae"></a>RCall - `<a href="https://juliainterop.github.io/RCall.jl/stable/">https://juliainterop.github.io/RCall.jl/stable/</a>`<br />
+<li><a id="org78e7065"></a>RCall - `<a href="https://juliainterop.github.io/RCall.jl/stable/">https://juliainterop.github.io/RCall.jl/stable/</a>`<br />
 <div class="outline-text-6" id="text-8-2-1-1-9">
 <p>
 RCall, allows the user to call R packages from within Julia.
@@ -1293,12 +1123,12 @@ RCall, allows the user to call R packages from within Julia.
 </ol>
 </div>
 
-<div id="outline-container-orgd56ea2f" class="outline-4">
-<h4 id="orgd56ea2f"><span class="section-number-4">8.2.2.</span> R</h4>
+<div id="outline-container-org15de038" class="outline-4">
+<h4 id="org15de038"><span class="section-number-4">8.2.2.</span> R</h4>
 <div class="outline-text-4" id="text-8-2-2">
 </div>
 <ol class="org-ol">
-<li><a id="org9869ba2"></a>ggplot2<br />
+<li><a id="orgcb356d0"></a>ggplot2<br />
 <div class="outline-text-5" id="text-8-2-2-1">
 <p>
 ggplot2 is a system for declaratively creating graphics, based on The Grammar of Graphics. You
@@ -1315,27 +1145,27 @@ use, and it takes care of the details.
 </div>
 </div>
 
-<div id="outline-container-orgded8a52" class="outline-3">
-<h3 id="orgded8a52"><span class="section-number-3">8.3.</span> Solvers</h3>
+<div id="outline-container-orgbd4b82a" class="outline-3">
+<h3 id="orgbd4b82a"><span class="section-number-3">8.3.</span> Solvers</h3>
 <div class="outline-text-3" id="text-8-3">
 </div>
-<div id="outline-container-org1d3039e" class="outline-4">
-<h4 id="org1d3039e"><span class="section-number-4">8.3.1.</span> Fortran solvers</h4>
+<div id="outline-container-org9b51483" class="outline-4">
+<h4 id="org9b51483"><span class="section-number-4">8.3.1.</span> Fortran solvers</h4>
 <div class="outline-text-4" id="text-8-3-1">
 </div>
 <ol class="org-ol">
-<li><a id="orgd6f9f06"></a>VODE: stiff/nonstiff ODE systems, with direct linear solvers<br /></li>
+<li><a id="org757887b"></a>VODE: stiff/nonstiff ODE systems, with direct linear solvers<br /></li>
 
-<li><a id="org256cbe7"></a>VODPK: with Krylov linear solvers (GMRES)<br /></li>
+<li><a id="org41a5a55"></a>VODPK: with Krylov linear solvers (GMRES)<br /></li>
 
-<li><a id="orgcb4b86e"></a>NKSOL: Newton-Krylov solver - nonlinear algebraic systems<br /></li>
+<li><a id="org972b574"></a>NKSOL: Newton-Krylov solver - nonlinear algebraic systems<br /></li>
 
-<li><a id="org38593f1"></a>DASPK: DAE system solver (from DASSL)<br /></li>
+<li><a id="org1a7947c"></a>DASPK: DAE system solver (from DASSL)<br /></li>
 </ol>
 </div>
 
-<div id="outline-container-org244a15a" class="outline-4">
-<h4 id="org244a15a"><span class="section-number-4">8.3.2.</span> C - organized in a single suite, SUNDIALS (Suite of Nonlinear and Differential/Algebraic Equation Solvers</h4>
+<div id="outline-container-org33b160b" class="outline-4">
+<h4 id="org33b160b"><span class="section-number-4">8.3.2.</span> C - organized in a single suite, SUNDIALS (Suite of Nonlinear and Differential/Algebraic Equation Solvers</h4>
 <div class="outline-text-4" id="text-8-3-2">
 <p>
 `<a href="https://computing.llnl.gov/projects/sundials">https://computing.llnl.gov/projects/sundials</a>`
@@ -1343,22 +1173,22 @@ use, and it takes care of the details.
 </div>
 
 <ol class="org-ol">
-<li><a id="org4eba6de"></a>CVODE<br /></li>
+<li><a id="orge8602e7"></a>CVODE<br /></li>
 
-<li><a id="org3c58f57"></a>PVODE<br /></li>
+<li><a id="orgb55d885"></a>PVODE<br /></li>
 
-<li><a id="orgc0bfe57"></a>KINSOL<br /></li>
+<li><a id="orgf4b05d8"></a>KINSOL<br /></li>
 
-<li><a id="org9f451cb"></a>IDA: rewrite of DASPK<br /></li>
+<li><a id="orgd990598"></a>IDA: rewrite of DASPK<br /></li>
 </ol>
 </div>
 
-<div id="outline-container-org7fbf876" class="outline-4">
-<h4 id="org7fbf876"><span class="section-number-4">8.3.3.</span> Julia Solvers</h4>
+<div id="outline-container-orgbb04e90" class="outline-4">
+<h4 id="orgbb04e90"><span class="section-number-4">8.3.3.</span> Julia Solvers</h4>
 <div class="outline-text-4" id="text-8-3-3">
 </div>
 <ol class="org-ol">
-<li><a id="org30ce0a5"></a>DASSL<br />
+<li><a id="orgce08b67"></a>DASSL<br />
 <div class="outline-text-5" id="text-8-3-3-1">
 <p>
 Solves stiff differential algebraic equations (DAE) using variable stepsize backwards finite
@@ -1371,7 +1201,7 @@ difference formula (BDF).
 </div>
 </li>
 
-<li><a id="orgba59faa"></a>DASKR<br />
+<li><a id="org4035ce7"></a>DASKR<br />
 <div class="outline-text-5" id="text-8-3-3-2">
 <p>
 DASKR (FORTRAN solver) is a derivative of the DASSL solver with root finding.
@@ -1385,24 +1215,180 @@ DASKR (FORTRAN solver) is a derivative of the DASSL solver with root finding.
 </ol>
 </div>
 </div>
+
+<div id="outline-container-org1a070e2" class="outline-3">
+<h3 id="org1a070e2"><span class="section-number-3">8.4.</span> Simulações hidrodinâmicas</h3>
+<div class="outline-text-3" id="text-8-4">
+<p>
+Tem desempenhado um papel central em astrofísica e astronomia desde os
+anos 50 com as simulações de interações de nuvens. Essas simulações são
+muito populares com ciências climáticas, modelagem de previsão do
+tempo, contudo a astrofísica representa um desafio para a dinâmica
+computacional de fluidos, já que possui alguns problemas específicos não
+comuns na dinâmica de fluidos, como efeitos de curvatura na atmosfera de
+uma estrela de nêutrons por exemplo. Técnicas numéricas foram
+desenvolvidas na década de 80 usando métodos de elementos finitos e suas
+extensões como o <a href="https://en.wikipedia.org/wiki/MUSCL_scheme">MUSCL</a>
+(Monotonic Upstream-centered Scheme for Conservation Laws (van Leer,
+1979)) e métodos parabólicos.
+</p>
+
+<p>
+O ponto central das simulações hidrodinâmicas é descrito por meio das
+equações de
+<a href="https://en.wikipedia.org/wiki/Navier-Stokes_equations">Navier-Stokes</a>,
+que expressa a conservação da massa, momento-energia em fluído. No
+contexto de astrofísica, a compressibilidade e efeitos
+relativísticos. Essas equações são equações diferenciais parciais. As
+equações de Navier-Stokes podem ser combinadas com as equações de
+Maxwell para simulações de magneto-hidrodinâmica.
+</p>
+
+<p>
+Essas equações não procuram estabelecer uma relação entre as variáveis,
+mas sim entre as taxas de variação ou fluxos destas quantidades. A
+equação da continuidade, conservação da massa pode ser escrita como:
+</p>
+
+<p>
+\[ \frac{\partial\rho}{\partial t} = \nabla\cdot(\rho \vec{v}) = 0;\]
+</p>
+
+<p>
+onde \(\rho\) é a densidade do fluido e \(v\) sua velocidade. A equação de
+conservação de momento pode ser escrita como:
+</p>
+
+<p>
+\[ \frac{\partial}{\partial t} (\rho v_i) + \nabla \cdot (\rho v_i
+\vec{v}) = \rho f_i \]
+</p>
+
+<p>
+aqui \(\rho f_i\) é a i-ésima componente da força autuando sobre o
+fluído. Esta equação dá conta de mudanças no momento devido a forças
+externas que podem ser estendidas para levar em conta campos magnéticos
+(pela força de Lorentz), gravidade, gradientes de pressão. Esta equação
+também pode ser escrita como:
+</p>
+
+<p>
+\[ \frac{\partial }{\partial t} (\rho \vec{v}) + \nabla \cdot
+(\rho\vec{v}\otimes v) = -\nabla p + \nabla\cdot \zeta + \rho f \]
+</p>
+
+<p>
+com \(\zeta\) sendo viscosidade/tensor de stress
+</p>
+
+<p>
+Há ainda a equação para troca de energia, em cenários astrofísicos isso
+pode ser bem complexo, requerendo termos adicionais ao considerar a
+primeira lei da termodinâmica \(Q = w + \delta U\); termos de convecção,
+difusão, dissipação, pressões realizado trabalho devem ser
+consideradas. Podemos escrever a equação para energia como:
+</p>
+
+<p>
+\[ \frac{\partial E}{\partial t} + \nabla ((E + D) V) = \rho vg + Q +
+\nabla (k\nabla T)\]
+</p>
+
+<p>
+onde \(E\) é a densidade de energia \(k\) a condutividade térmica, \(T\)
+temperatura, \(Q\) calor "viscoso".
+</p>
+
+<p>
+Contudo estas equações estão de formas gerais, dependendo do sistema a
+ser modelado, equações adicionais são necessárias, como equações para
+processo radiativos, reações químicas, sistemas auto-gravitantes, etc.
+</p>
+
+<p>
+As formulações das equações de hidrodinâmica podem ser Lagrangeanas
+(como as anteriores) se acompanham o movimento das partículas e se vê
+mudanças de grandezas nelas. Já o sistema euleriano, verifica-se um
+ponto no espaço e verifica mudanças neste ponto.
+</p>
+
+<p>
+Métodos numéricos levam em conta essas formulações e podem fazer uso das
+duas por meio do teorema de Reynolds.
+</p>
+
+<p>
+Para resolver as equações hidrodinâmicas diferentes métodos são
+empregados, os mais comuns são métodos de diferenças finitas, as
+derivadas são diferenças em um grid; métodos de volumes finitos, que
+considera a integração das equações em uma célula, as conservações são
+satisfeitas integrando fluxos. Método
+<a href="https://en.wikipedia.org/wiki/Smoothed-particle_hydrodynamics">SPH</a>
+(Smoothed-particle hydrodynamics) que é uma técnica para aproximar o
+continuum de fluídos por meio de partículas, cada partícula tem
+informação de massa, posição, velocidade e outras propriedades, as
+propriedades em qualquer ponto no espaço são dadas por interpolações dos
+pontos vizinhos; este método foi originalmente desenvolvido para
+astrofísica (Lucy, Gingold e Monaghan, 1977) e desde então tem sido
+aplicado em outras áreas das ciências.
+</p>
+
+<p>
+A principal ideia do SPH é tratar a hidrodinâmica de uma maneira sem
+grides como no caso de elementos finitos. As equações são desenvolvidas
+levando em conta partículas, que deixa o sistema simples, com uma
+formulação de dinâmica de gás. Na representação SPH as quantidades
+conservadas são bem definidas. É uma formulação Lagrangeana, onde uma
+regiãolocal do SPH segue o fluxo de massa automaticamente, uma
+propriedade importante em sistemas astrofísicos com mudanças altas de
+densidade. Devido às suas particularidades e a facilidade de usar
+rotinas prontas para simulações cosmológicas em conjunto, este método se
+tornou popular em uma grande range de problemas em astrofísica, desde
+estruturas cosmológicas até estudos de colisões de protoplanetas. No
+coração do método SPH está a ideia de kernel interpolador, uma técnica
+para estimar o valor de uma função real como a média ponderada dos dados
+vizinhos à região. A extensões do SPH incluem modelaggem de campos
+magnéticos, fenômenos de transporte, processos radiastivos. O método
+também precisa ser extendido para considerar velocidades
+relativísticas. As aplicações do SPH incluem: formação de estruturas
+cosmológicas, estas simulações são usadas para o estudo de formação de
+galáxias em contexto cosmológico complexo, advindo de flutuações do
+cenário inflacionário; fusão de galáxias, a teoria hierárquica prediz a
+fusão constante de galáxias e a criação de grandes sistemas; em escalas
+mais baixas, muitas simulações SPH são feitas para estudar fragmentação
+de nuvens, formação de estrelas; formação de planetas e discos de
+acreção. O método tem sido aplicado com sucesso em formação gigantes e
+fragmentação de discos proto-planetários.
+</p>
+
+<p>
+Agora o outro método popular é o refinamento por método adaptativo
+(AMR), é um método que usa a representação euleriana, este método é
+usado quando a dinâmica acontece em grandes ranges espaciais. Este
+método é um dos principais ingredientes em relatividade geral
+numérica. Em simulações numéricas de fusão de dois corpos, em geral
+</p>
+</div>
+</div>
 </div>
 
-<div id="outline-container-orgc19095f" class="outline-2">
-<h2 id="orgc19095f"><span class="section-number-2">9.</span> Quantum Mechanics (Non-relativistic).</h2>
+
+<div id="outline-container-org1b598fa" class="outline-2">
+<h2 id="org1b598fa"><span class="section-number-2">9.</span> Quantum Mechanics (Non-relativistic).</h2>
 <div class="outline-text-2" id="text-9">
 </div>
-<div id="outline-container-orgda1fd02" class="outline-3">
-<h3 id="orgda1fd02"><span class="section-number-3">9.1.</span> Bohr’s atom</h3>
+<div id="outline-container-orgda94aad" class="outline-3">
+<h3 id="orgda94aad"><span class="section-number-3">9.1.</span> Bohr’s atom</h3>
 </div>
-<div id="outline-container-org6e52453" class="outline-3">
-<h3 id="org6e52453"><span class="section-number-3">9.2.</span> De Broglie’s relations (Energy-frequency, momentum-wave number).</h3>
+<div id="outline-container-org31d7c5b" class="outline-3">
+<h3 id="org31d7c5b"><span class="section-number-3">9.2.</span> De Broglie’s relations (Energy-frequency, momentum-wave number).</h3>
 </div>
-<div id="outline-container-org7a986e1" class="outline-3">
-<h3 id="org7a986e1"><span class="section-number-3">9.3.</span> Schrödinger’s equation (with electric potential and magnetic field).</h3>
+<div id="outline-container-orgc1882b7" class="outline-3">
+<h3 id="orgc1882b7"><span class="section-number-3">9.3.</span> Schrödinger’s equation (with electric potential and magnetic field).</h3>
 <div class="outline-text-3" id="text-9-3">
 </div>
-<div id="outline-container-org68b5cf0" class="outline-4">
-<h4 id="org68b5cf0"><span class="section-number-4">9.3.1.</span> Numerical solution of the Schrödinger equation</h4>
+<div id="outline-container-org682d5e7" class="outline-4">
+<h4 id="org682d5e7"><span class="section-number-4">9.3.1.</span> Numerical solution of the Schrödinger equation</h4>
 <div class="outline-text-4" id="text-9-3-1">
 <p>
 `<a href="https://www.rvlobato.com/teaching/notes/pdfs/n_sch_eq.pdf">https://www.rvlobato.com/teaching/notes/pdfs/n_sch_eq.pdf</a>`
@@ -1411,102 +1397,102 @@ DASKR (FORTRAN solver) is a derivative of the DASSL solver with root finding.
 </div>
 </div>
 
-<div id="outline-container-org9473306" class="outline-3">
-<h3 id="org9473306"><span class="section-number-3">9.4.</span> Ehrenfest’s theorem.</h3>
+<div id="outline-container-org0e72d47" class="outline-3">
+<h3 id="org0e72d47"><span class="section-number-3">9.4.</span> Ehrenfest’s theorem.</h3>
 </div>
-<div id="outline-container-orgd6ff01c" class="outline-3">
-<h3 id="orgd6ff01c"><span class="section-number-3">9.5.</span> A particle in a box.</h3>
+<div id="outline-container-org73db2e5" class="outline-3">
+<h3 id="org73db2e5"><span class="section-number-3">9.5.</span> A particle in a box.</h3>
 </div>
-<div id="outline-container-org4bde35e" class="outline-3">
-<h3 id="org4bde35e"><span class="section-number-3">9.6.</span> The hydrogen atom, solved systematically. The Zeeman effect. Stark effect.</h3>
+<div id="outline-container-org7197b0f" class="outline-3">
+<h3 id="org7197b0f"><span class="section-number-3">9.6.</span> The hydrogen atom, solved systematically. The Zeeman effect. Stark effect.</h3>
 </div>
-<div id="outline-container-orgf9d09b8" class="outline-3">
-<h3 id="orgf9d09b8"><span class="section-number-3">9.7.</span> The quantum harmonic oscillator.</h3>
+<div id="outline-container-org927acfd" class="outline-3">
+<h3 id="org927acfd"><span class="section-number-3">9.7.</span> The quantum harmonic oscillator.</h3>
 </div>
-<div id="outline-container-orgf31b8db" class="outline-3">
-<h3 id="orgf31b8db"><span class="section-number-3">9.8.</span> Operators: energy, momentum, angular momentum, creation and annihilation operators.</h3>
+<div id="outline-container-orga2949ce" class="outline-3">
+<h3 id="orga2949ce"><span class="section-number-3">9.8.</span> Operators: energy, momentum, angular momentum, creation and annihilation operators.</h3>
 </div>
-<div id="outline-container-org09e2b0e" class="outline-3">
-<h3 id="org09e2b0e"><span class="section-number-3">9.9.</span> Their commutation rules.</h3>
+<div id="outline-container-orgaa5fe0d" class="outline-3">
+<h3 id="orgaa5fe0d"><span class="section-number-3">9.9.</span> Their commutation rules.</h3>
 </div>
-<div id="outline-container-orgbc45350" class="outline-3">
-<h3 id="orgbc45350"><span class="section-number-3">9.10.</span> Introduction to quantum mechanical scattering. The S-matrix. Radio-active decay.</h3>
+<div id="outline-container-orgdd9a54b" class="outline-3">
+<h3 id="orgdd9a54b"><span class="section-number-3">9.10.</span> Introduction to quantum mechanical scattering. The S-matrix. Radio-active decay.</h3>
 </div>
 </div>
 
-<div id="outline-container-org1ab183b" class="outline-2">
-<h2 id="org1ab183b"><span class="section-number-2">10.</span> Atoms &amp; Molecules</h2>
+<div id="outline-container-orgc1052b7" class="outline-2">
+<h2 id="orgc1052b7"><span class="section-number-2">10.</span> Atoms &amp; Molecules</h2>
 <div class="outline-text-2" id="text-10">
 </div>
-<div id="outline-container-orgdf7077a" class="outline-3">
-<h3 id="orgdf7077a"><span class="section-number-3">10.1.</span> Chemical binding.</h3>
+<div id="outline-container-orga2fe892" class="outline-3">
+<h3 id="orga2fe892"><span class="section-number-3">10.1.</span> Chemical binding.</h3>
 </div>
-<div id="outline-container-org4937902" class="outline-3">
-<h3 id="org4937902"><span class="section-number-3">10.2.</span> Orbitals.</h3>
+<div id="outline-container-orga5e8231" class="outline-3">
+<h3 id="orga5e8231"><span class="section-number-3">10.2.</span> Orbitals.</h3>
 </div>
-<div id="outline-container-orged4d164" class="outline-3">
-<h3 id="orged4d164"><span class="section-number-3">10.3.</span> Atomic and molecular spectra.</h3>
+<div id="outline-container-orgf8e0a53" class="outline-3">
+<h3 id="orgf8e0a53"><span class="section-number-3">10.3.</span> Atomic and molecular spectra.</h3>
 </div>
-<div id="outline-container-orgbb928f3" class="outline-3">
-<h3 id="orgbb928f3"><span class="section-number-3">10.4.</span> Emission and absorption of light.</h3>
+<div id="outline-container-org898127c" class="outline-3">
+<h3 id="org898127c"><span class="section-number-3">10.4.</span> Emission and absorption of light.</h3>
 </div>
-<div id="outline-container-org1c90747" class="outline-3">
-<h3 id="org1c90747"><span class="section-number-3">10.5.</span> Quantum selection rules.</h3>
+<div id="outline-container-org56feca6" class="outline-3">
+<h3 id="org56feca6"><span class="section-number-3">10.5.</span> Quantum selection rules.</h3>
 </div>
-<div id="outline-container-org5ebf44b" class="outline-3">
-<h3 id="org5ebf44b"><span class="section-number-3">10.6.</span> Magnetic moments.</h3>
+<div id="outline-container-org47afcbc" class="outline-3">
+<h3 id="org47afcbc"><span class="section-number-3">10.6.</span> Magnetic moments.</h3>
 </div>
 </div>
 
-<div id="outline-container-orgd721c53" class="outline-2">
-<h2 id="orgd721c53"><span class="section-number-2">11.</span> Solid State Physics</h2>
+<div id="outline-container-org99825c2" class="outline-2">
+<h2 id="org99825c2"><span class="section-number-2">11.</span> Solid State Physics</h2>
 <div class="outline-text-2" id="text-11">
 </div>
-<div id="outline-container-orgf772d72" class="outline-3">
-<h3 id="orgf772d72"><span class="section-number-3">11.1.</span> Crystal groups.</h3>
+<div id="outline-container-org7bf53e4" class="outline-3">
+<h3 id="org7bf53e4"><span class="section-number-3">11.1.</span> Crystal groups.</h3>
 </div>
-<div id="outline-container-org6c1ca81" class="outline-3">
-<h3 id="org6c1ca81"><span class="section-number-3">11.2.</span> Bragg reflection.</h3>
+<div id="outline-container-org2d5f795" class="outline-3">
+<h3 id="org2d5f795"><span class="section-number-3">11.2.</span> Bragg reflection.</h3>
 </div>
-<div id="outline-container-orgfc20c48" class="outline-3">
-<h3 id="orgfc20c48"><span class="section-number-3">11.3.</span> Dielectric and diamagnetic constants.</h3>
+<div id="outline-container-org90a60a0" class="outline-3">
+<h3 id="org90a60a0"><span class="section-number-3">11.3.</span> Dielectric and diamagnetic constants.</h3>
 </div>
-<div id="outline-container-org73e0d9e" class="outline-3">
-<h3 id="org73e0d9e"><span class="section-number-3">11.4.</span> Bloch spectra.</h3>
+<div id="outline-container-org7c7b008" class="outline-3">
+<h3 id="org7c7b008"><span class="section-number-3">11.4.</span> Bloch spectra.</h3>
 </div>
-<div id="outline-container-orga3042c3" class="outline-3">
-<h3 id="orga3042c3"><span class="section-number-3">11.5.</span> Fermi level.</h3>
+<div id="outline-container-orgc98052a" class="outline-3">
+<h3 id="orgc98052a"><span class="section-number-3">11.5.</span> Fermi level.</h3>
 </div>
-<div id="outline-container-org52428fe" class="outline-3">
-<h3 id="org52428fe"><span class="section-number-3">11.6.</span> Conductors, semiconductors and insulators.</h3>
+<div id="outline-container-org4742330" class="outline-3">
+<h3 id="org4742330"><span class="section-number-3">11.6.</span> Conductors, semiconductors and insulators.</h3>
 </div>
-<div id="outline-container-org31c7dc3" class="outline-3">
-<h3 id="org31c7dc3"><span class="section-number-3">11.7.</span> Specific heat.</h3>
+<div id="outline-container-org255fe38" class="outline-3">
+<h3 id="org255fe38"><span class="section-number-3">11.7.</span> Specific heat.</h3>
 </div>
-<div id="outline-container-org43870e9" class="outline-3">
-<h3 id="org43870e9"><span class="section-number-3">11.8.</span> Electrons and holes.</h3>
+<div id="outline-container-org47757e9" class="outline-3">
+<h3 id="org47757e9"><span class="section-number-3">11.8.</span> Electrons and holes.</h3>
 </div>
-<div id="outline-container-org551435f" class="outline-3">
-<h3 id="org551435f"><span class="section-number-3">11.9.</span> The transistor.</h3>
+<div id="outline-container-org175a737" class="outline-3">
+<h3 id="org175a737"><span class="section-number-3">11.9.</span> The transistor.</h3>
 </div>
-<div id="outline-container-org3e3ce00" class="outline-3">
-<h3 id="org3e3ce00"><span class="section-number-3">11.10.</span> Superconductivity.</h3>
+<div id="outline-container-orgd696e66" class="outline-3">
+<h3 id="orgd696e66"><span class="section-number-3">11.10.</span> Superconductivity.</h3>
 </div>
-<div id="outline-container-org347c038" class="outline-3">
-<h3 id="org347c038"><span class="section-number-3">11.11.</span> Hall effect.</h3>
+<div id="outline-container-org28d952a" class="outline-3">
+<h3 id="org28d952a"><span class="section-number-3">11.11.</span> Hall effect.</h3>
 </div>
 </div>
 
-<div id="outline-container-org2eb1a11" class="outline-2">
-<h2 id="org2eb1a11"><span class="section-number-2">12.</span> Nuclear Physics</h2>
+<div id="outline-container-org3bed46d" class="outline-2">
+<h2 id="org3bed46d"><span class="section-number-2">12.</span> Nuclear Physics</h2>
 <div class="outline-text-2" id="text-12">
 </div>
-<div id="outline-container-orgaff2d4f" class="outline-3">
-<h3 id="orgaff2d4f"><span class="section-number-3">12.1.</span> Isotopes. Radio-activity. Fission and Fusion.</h3>
+<div id="outline-container-orgfa06b48" class="outline-3">
+<h3 id="orgfa06b48"><span class="section-number-3">12.1.</span> Isotopes. Radio-activity. Fission and Fusion.</h3>
 <div class="outline-text-3" id="text-12-1">
 </div>
-<div id="outline-container-org3ff6bcb" class="outline-4">
-<h4 id="org3ff6bcb"><span class="section-number-4">12.1.1.</span> Geiger-Nuttall law</h4>
+<div id="outline-container-org06479fb" class="outline-4">
+<h4 id="org06479fb"><span class="section-number-4">12.1.1.</span> Geiger-Nuttall law</h4>
 <div class="outline-text-4" id="text-12-1-1">
 <p>
 The Geinger-Nuttall relates the decay constant of a radioactive isotope with the energy of the
@@ -1535,70 +1521,70 @@ and \(a_2\) are constants.
 </div>
 </div>
 
-<div id="outline-container-org0c9ce22" class="outline-3">
-<h3 id="org0c9ce22"><span class="section-number-3">12.2.</span> Droplet model.</h3>
+<div id="outline-container-org07fc059" class="outline-3">
+<h3 id="org07fc059"><span class="section-number-3">12.2.</span> Droplet model.</h3>
 </div>
-<div id="outline-container-org82d9deb" class="outline-3">
-<h3 id="org82d9deb"><span class="section-number-3">12.3.</span> Nuclear quantum numbers.</h3>
+<div id="outline-container-org4f10209" class="outline-3">
+<h3 id="org4f10209"><span class="section-number-3">12.3.</span> Nuclear quantum numbers.</h3>
 </div>
-<div id="outline-container-org2ec3839" class="outline-3">
-<h3 id="org2ec3839"><span class="section-number-3">12.4.</span> Magic nuclei.</h3>
+<div id="outline-container-org7ab3acd" class="outline-3">
+<h3 id="org7ab3acd"><span class="section-number-3">12.4.</span> Magic nuclei.</h3>
 </div>
-<div id="outline-container-org6943bdb" class="outline-3">
-<h3 id="org6943bdb"><span class="section-number-3">12.5.</span> Isospin.</h3>
+<div id="outline-container-org6425f10" class="outline-3">
+<h3 id="org6425f10"><span class="section-number-3">12.5.</span> Isospin.</h3>
 </div>
-<div id="outline-container-orgf0bedaf" class="outline-3">
-<h3 id="orgf0bedaf"><span class="section-number-3">12.6.</span> Yukawa theory.</h3>
+<div id="outline-container-org36c4c2d" class="outline-3">
+<h3 id="org36c4c2d"><span class="section-number-3">12.6.</span> Yukawa theory.</h3>
 </div>
 </div>
 
-<div id="outline-container-org2ff1ded" class="outline-2">
-<h2 id="org2ff1ded"><span class="section-number-2">13.</span> Plasma Physics</h2>
+<div id="outline-container-org00f2e1e" class="outline-2">
+<h2 id="org00f2e1e"><span class="section-number-2">13.</span> Plasma Physics</h2>
 <div class="outline-text-2" id="text-13">
 </div>
-<div id="outline-container-org4936a3d" class="outline-3">
-<h3 id="org4936a3d"><span class="section-number-3">13.1.</span> Magnetohydrodynamics.</h3>
+<div id="outline-container-orgcd2ad9a" class="outline-3">
+<h3 id="orgcd2ad9a"><span class="section-number-3">13.1.</span> Magnetohydrodynamics.</h3>
 </div>
-<div id="outline-container-org7a64028" class="outline-3">
-<h3 id="org7a64028"><span class="section-number-3">13.2.</span> Alfvén waves.</h3>
+<div id="outline-container-orgd2190ce" class="outline-3">
+<h3 id="orgd2190ce"><span class="section-number-3">13.2.</span> Alfvén waves.</h3>
 </div>
 </div>
 
-<div id="outline-container-org8655d16" class="outline-2">
-<h2 id="org8655d16"><span class="section-number-2">14.</span> Advanced Mathematics</h2>
+<div id="outline-container-org8246698" class="outline-2">
+<h2 id="org8246698"><span class="section-number-2">14.</span> Advanced Mathematics</h2>
 <div class="outline-text-2" id="text-14">
 </div>
-<div id="outline-container-orga8f47d2" class="outline-3">
-<h3 id="orga8f47d2"><span class="section-number-3">14.1.</span> Group theory, and the linear representations of groups.</h3>
+<div id="outline-container-org3fb69e4" class="outline-3">
+<h3 id="org3fb69e4"><span class="section-number-3">14.1.</span> Group theory, and the linear representations of groups.</h3>
 </div>
-<div id="outline-container-org221bdb0" class="outline-3">
-<h3 id="org221bdb0"><span class="section-number-3">14.2.</span> Lie group theory.</h3>
+<div id="outline-container-org59e8324" class="outline-3">
+<h3 id="org59e8324"><span class="section-number-3">14.2.</span> Lie group theory.</h3>
 </div>
-<div id="outline-container-org89ecf00" class="outline-3">
-<h3 id="org89ecf00"><span class="section-number-3">14.3.</span> Vectors and tensors.</h3>
+<div id="outline-container-orgcbd6e80" class="outline-3">
+<h3 id="orgcbd6e80"><span class="section-number-3">14.3.</span> Vectors and tensors.</h3>
 </div>
-<div id="outline-container-org1100aad" class="outline-3">
-<h3 id="org1100aad"><span class="section-number-3">14.4.</span> More techniques to solve (partial) differential and integral equations.</h3>
+<div id="outline-container-org6c197a1" class="outline-3">
+<h3 id="org6c197a1"><span class="section-number-3">14.4.</span> More techniques to solve (partial) differential and integral equations.</h3>
 </div>
-<div id="outline-container-org00c1533" class="outline-3">
-<h3 id="org00c1533"><span class="section-number-3">14.5.</span> Extremum principle and approximation techniques based on that.</h3>
+<div id="outline-container-org812bd04" class="outline-3">
+<h3 id="org812bd04"><span class="section-number-3">14.5.</span> Extremum principle and approximation techniques based on that.</h3>
 </div>
-<div id="outline-container-org04eb021" class="outline-3">
-<h3 id="org04eb021"><span class="section-number-3">14.6.</span> Difference equations.</h3>
+<div id="outline-container-orge42caa3" class="outline-3">
+<h3 id="orge42caa3"><span class="section-number-3">14.6.</span> Difference equations.</h3>
 </div>
-<div id="outline-container-orgf7c873f" class="outline-3">
-<h3 id="orgf7c873f"><span class="section-number-3">14.7.</span> Generating functions.</h3>
+<div id="outline-container-org3f5151b" class="outline-3">
+<h3 id="org3f5151b"><span class="section-number-3">14.7.</span> Generating functions.</h3>
 </div>
-<div id="outline-container-orgf17e797" class="outline-3">
-<h3 id="orgf17e797"><span class="section-number-3">14.8.</span> Hilbert space.</h3>
+<div id="outline-container-org6e7ec28" class="outline-3">
+<h3 id="org6e7ec28"><span class="section-number-3">14.8.</span> Hilbert space.</h3>
 </div>
-<div id="outline-container-org8e430f5" class="outline-3">
-<h3 id="org8e430f5"><span class="section-number-3">14.9.</span> Introduction to the functional integral.</h3>
+<div id="outline-container-org04d163f" class="outline-3">
+<h3 id="org04d163f"><span class="section-number-3">14.9.</span> Introduction to the functional integral.</h3>
 </div>
 </div>
 
-<div id="outline-container-org4356e67" class="outline-2">
-<h2 id="org4356e67"><span class="section-number-2">15.</span> Special Relativity</h2>
+<div id="outline-container-org6373d9b" class="outline-2">
+<h2 id="org6373d9b"><span class="section-number-2">15.</span> Special Relativity</h2>
 <div class="outline-text-2" id="text-15">
 <p>
 These annotations are based on `<a href="http://jacobi.luc.edu/index.html">http://jacobi.luc.edu/index.html</a>` and
@@ -1616,8 +1602,8 @@ Minkowski geometry.
 </p>
 </div>
 
-<div id="outline-container-orgac26261" class="outline-3">
-<h3 id="orgac26261"><span class="section-number-3">15.1.</span> 4-vectors.</h3>
+<div id="outline-container-org62dc3dc" class="outline-3">
+<h3 id="org62dc3dc"><span class="section-number-3">15.1.</span> 4-vectors.</h3>
 <div class="outline-text-3" id="text-15-1">
 <p>
 In relativistic expressions four-vectors are written as
@@ -1688,8 +1674,8 @@ The invariant square of the four-vector is thus
 </p>
 </div>
 
-<div id="outline-container-org6936018" class="outline-4">
-<h4 id="org6936018"><span class="section-number-4">15.1.1.</span> Spacetime coordinates:</h4>
+<div id="outline-container-org8b117d6" class="outline-4">
+<h4 id="org8b117d6"><span class="section-number-4">15.1.1.</span> Spacetime coordinates:</h4>
 <div class="outline-text-4" id="text-15-1-1">
 <p>
 \[x^{\mu} = (x^0, \vec{x}) = (ct, \vec{x}); \qquad x_{\mu} = (ct, -\vec{x}); \qquad \vec{x} =
@@ -1698,8 +1684,8 @@ The invariant square of the four-vector is thus
 </div>
 </div>
 
-<div id="outline-container-orge9186db" class="outline-4">
-<h4 id="orge9186db"><span class="section-number-4">15.1.2.</span> Four-momentum:</h4>
+<div id="outline-container-orgd8ce003" class="outline-4">
+<h4 id="orgd8ce003"><span class="section-number-4">15.1.2.</span> Four-momentum:</h4>
 <div class="outline-text-4" id="text-15-1-2">
 <p>
 \[ p^{\mu} = (E/c, \vec{p}); \qquad  p_{\mu} = (E/c, -\vec{p}); \qquad p^{\mu} =
@@ -1708,8 +1694,8 @@ The invariant square of the four-vector is thus
 </div>
 </div>
 
-<div id="outline-container-org042f286" class="outline-4">
-<h4 id="org042f286"><span class="section-number-4">15.1.3.</span> Derivatives:</h4>
+<div id="outline-container-orga6563dc" class="outline-4">
+<h4 id="orga6563dc"><span class="section-number-4">15.1.3.</span> Derivatives:</h4>
 <div class="outline-text-4" id="text-15-1-3">
 <p>
 \[ \partial_{\mu} \equiv \frac{\partial}{\partial x^{\mu}} = \left(\frac{1}{c} \frac{\partial}{\partial
@@ -1719,8 +1705,8 @@ The invariant square of the four-vector is thus
 </div>
 </div>
 
-<div id="outline-container-org81bfcb9" class="outline-4">
-<h4 id="org81bfcb9"><span class="section-number-4">15.1.4.</span> Four-momentum operator</h4>
+<div id="outline-container-orgaae5c38" class="outline-4">
+<h4 id="orgaae5c38"><span class="section-number-4">15.1.4.</span> Four-momentum operator</h4>
 <div class="outline-text-4" id="text-15-1-4">
 <p>
 \[ \hat{P}^{\mu} = i\partial^{\mu}. \]
@@ -1728,8 +1714,8 @@ The invariant square of the four-vector is thus
 </div>
 </div>
 
-<div id="outline-container-orgea81e8e" class="outline-4">
-<h4 id="orgea81e8e"><span class="section-number-4">15.1.5.</span> Lorentz-invariant <i>d'Alembert operator</i></h4>
+<div id="outline-container-orge2c5153" class="outline-4">
+<h4 id="orge2c5153"><span class="section-number-4">15.1.5.</span> Lorentz-invariant <i>d'Alembert operator</i></h4>
 <div class="outline-text-4" id="text-15-1-5">
 <p>
 \[ \partial^{\mu}\partial_{\mu} = \frac{\partial^2}{\partial t^2} - \vec\nabla^2 = \Box. \]
@@ -1737,8 +1723,8 @@ The invariant square of the four-vector is thus
 </div>
 </div>
 
-<div id="outline-container-orgf13e7ba" class="outline-4">
-<h4 id="orgf13e7ba"><span class="section-number-4">15.1.6.</span> Four-current</h4>
+<div id="outline-container-org89179d1" class="outline-4">
+<h4 id="org89179d1"><span class="section-number-4">15.1.6.</span> Four-current</h4>
 <div class="outline-text-4" id="text-15-1-6">
 <p>
 \[ j^{\mu} = (\rho, \vec{j}). \]
@@ -1746,8 +1732,8 @@ The invariant square of the four-vector is thus
 </div>
 </div>
 
-<div id="outline-container-org8be27f2" class="outline-4">
-<h4 id="org8be27f2"><span class="section-number-4">15.1.7.</span> Electromagnetic potential</h4>
+<div id="outline-container-org91a4ac8" class="outline-4">
+<h4 id="org91a4ac8"><span class="section-number-4">15.1.7.</span> Electromagnetic potential</h4>
 <div class="outline-text-4" id="text-15-1-7">
 <p>
 \[ A^{\mu} = (\phi, \vec{A}). \]
@@ -1756,8 +1742,8 @@ The invariant square of the four-vector is thus
 </div>
 </div>
 
-<div id="outline-container-org4b63441" class="outline-3">
-<h3 id="org4b63441"><span class="section-number-3">15.2.</span> The Lorentz transformation.</h3>
+<div id="outline-container-orgd50ecb4" class="outline-3">
+<h3 id="orgd50ecb4"><span class="section-number-3">15.2.</span> The Lorentz transformation.</h3>
 <div class="outline-text-3" id="text-15-2">
 <p>
 \[ A'_{\mu} = \Lambda_{\mu}{}^{\nu}A_{\nu}; \qquad A'^{\mu} = \Lambda^{\mu}{}_{\nu}A^{\nu}; \\
@@ -1782,68 +1768,68 @@ The invariant square of the four-vector is thus
 </div>
 </div>
 
-<div id="outline-container-org78347a0" class="outline-3">
-<h3 id="org78347a0"><span class="section-number-3">15.3.</span> Lorentz contraction, time dilatation.</h3>
+<div id="outline-container-org67dbe06" class="outline-3">
+<h3 id="org67dbe06"><span class="section-number-3">15.3.</span> Lorentz contraction, time dilatation.</h3>
 </div>
-<div id="outline-container-org209daf0" class="outline-3">
-<h3 id="org209daf0"><span class="section-number-3">15.4.</span> \(E=mc^2\).</h3>
+<div id="outline-container-org4441aa3" class="outline-3">
+<h3 id="org4441aa3"><span class="section-number-3">15.4.</span> \(E=mc^2\).</h3>
 </div>
-<div id="outline-container-orge6f129c" class="outline-3">
-<h3 id="orge6f129c"><span class="section-number-3">15.5.</span> Transformation rules for the Maxwell field.</h3>
+<div id="outline-container-org81511c4" class="outline-3">
+<h3 id="org81511c4"><span class="section-number-3">15.5.</span> Transformation rules for the Maxwell field.</h3>
 </div>
-<div id="outline-container-orgb43e081" class="outline-3">
-<h3 id="orgb43e081"><span class="section-number-3">15.6.</span> Relativistic Doppler effect.</h3>
+<div id="outline-container-org2874714" class="outline-3">
+<h3 id="org2874714"><span class="section-number-3">15.6.</span> Relativistic Doppler effect.</h3>
 </div>
 </div>
 
-<div id="outline-container-orgaa3d34d" class="outline-2">
-<h2 id="orgaa3d34d"><span class="section-number-2">16.</span> Advanced Quantum Mechanics</h2>
+<div id="outline-container-org08b7869" class="outline-2">
+<h2 id="org08b7869"><span class="section-number-2">16.</span> Advanced Quantum Mechanics</h2>
 <div class="outline-text-2" id="text-16">
 </div>
-<div id="outline-container-org3a973a3" class="outline-3">
-<h3 id="org3a973a3"><span class="section-number-3">16.1.</span> Hilbert space.</h3>
+<div id="outline-container-orgbb1f640" class="outline-3">
+<h3 id="orgbb1f640"><span class="section-number-3">16.1.</span> Hilbert space.</h3>
 </div>
-<div id="outline-container-orga8cb836" class="outline-3">
-<h3 id="orga8cb836"><span class="section-number-3">16.2.</span> Atomic transitions.</h3>
+<div id="outline-container-org175b8da" class="outline-3">
+<h3 id="org175b8da"><span class="section-number-3">16.2.</span> Atomic transitions.</h3>
 </div>
-<div id="outline-container-org4a1450c" class="outline-3">
-<h3 id="org4a1450c"><span class="section-number-3">16.3.</span> Emission and absorption of light.</h3>
+<div id="outline-container-org787bfd0" class="outline-3">
+<h3 id="org787bfd0"><span class="section-number-3">16.3.</span> Emission and absorption of light.</h3>
 </div>
-<div id="outline-container-org461bdc6" class="outline-3">
-<h3 id="org461bdc6"><span class="section-number-3">16.4.</span> Stimulated emission.</h3>
+<div id="outline-container-org47ecb72" class="outline-3">
+<h3 id="org47ecb72"><span class="section-number-3">16.4.</span> Stimulated emission.</h3>
 </div>
-<div id="outline-container-org510bfd3" class="outline-3">
-<h3 id="org510bfd3"><span class="section-number-3">16.5.</span> Density matrix.</h3>
+<div id="outline-container-org9285f6e" class="outline-3">
+<h3 id="org9285f6e"><span class="section-number-3">16.5.</span> Density matrix.</h3>
 </div>
-<div id="outline-container-org09e60e9" class="outline-3">
-<h3 id="org09e60e9"><span class="section-number-3">16.6.</span> Interpretation of QM.</h3>
+<div id="outline-container-orgf2e1227" class="outline-3">
+<h3 id="orgf2e1227"><span class="section-number-3">16.6.</span> Interpretation of QM.</h3>
 </div>
-<div id="outline-container-orgb2ae174" class="outline-3">
-<h3 id="orgb2ae174"><span class="section-number-3">16.7.</span> The Bell inequalities.</h3>
+<div id="outline-container-org3b37504" class="outline-3">
+<h3 id="org3b37504"><span class="section-number-3">16.7.</span> The Bell inequalities.</h3>
 </div>
-<div id="outline-container-org7efa51f" class="outline-3">
-<h3 id="org7efa51f"><span class="section-number-3">16.8.</span> Towards relativistic QM: The Dirac equation, finestructure.</h3>
+<div id="outline-container-org1cba823" class="outline-3">
+<h3 id="org1cba823"><span class="section-number-3">16.8.</span> Towards relativistic QM: The Dirac equation, finestructure.</h3>
 </div>
-<div id="outline-container-org485d82c" class="outline-3">
-<h3 id="org485d82c"><span class="section-number-3">16.9.</span> Electrons and positrons.</h3>
+<div id="outline-container-org2fd04a3" class="outline-3">
+<h3 id="org2fd04a3"><span class="section-number-3">16.9.</span> Electrons and positrons.</h3>
 </div>
-<div id="outline-container-org4086072" class="outline-3">
-<h3 id="org4086072"><span class="section-number-3">16.10.</span> BCS theory for superconductivity.</h3>
+<div id="outline-container-orgeac4e3c" class="outline-3">
+<h3 id="orgeac4e3c"><span class="section-number-3">16.10.</span> BCS theory for superconductivity.</h3>
 </div>
-<div id="outline-container-orgf5073d1" class="outline-3">
-<h3 id="orgf5073d1"><span class="section-number-3">16.11.</span> Quantum Hall effect.</h3>
+<div id="outline-container-orgb6db809" class="outline-3">
+<h3 id="orgb6db809"><span class="section-number-3">16.11.</span> Quantum Hall effect.</h3>
 </div>
-<div id="outline-container-org47f5e62" class="outline-3">
-<h3 id="org47f5e62"><span class="section-number-3">16.12.</span> Advanced scattering theory.</h3>
+<div id="outline-container-orgf14498a" class="outline-3">
+<h3 id="orgf14498a"><span class="section-number-3">16.12.</span> Advanced scattering theory.</h3>
 </div>
-<div id="outline-container-org5d0b55e" class="outline-3">
-<h3 id="org5d0b55e"><span class="section-number-3">16.13.</span> Dispersion relations.</h3>
+<div id="outline-container-org594148a" class="outline-3">
+<h3 id="org594148a"><span class="section-number-3">16.13.</span> Dispersion relations.</h3>
 </div>
-<div id="outline-container-org2cb2d59" class="outline-3">
-<h3 id="org2cb2d59"><span class="section-number-3">16.14.</span> Perturbation expansion.</h3>
+<div id="outline-container-org3f0685f" class="outline-3">
+<h3 id="org3f0685f"><span class="section-number-3">16.14.</span> Perturbation expansion.</h3>
 </div>
-<div id="outline-container-orgc881ccc" class="outline-3">
-<h3 id="orgc881ccc"><span class="section-number-3">16.15.</span> WKB approximation, Extremum principle.</h3>
+<div id="outline-container-orge740768" class="outline-3">
+<h3 id="orge740768"><span class="section-number-3">16.15.</span> WKB approximation, Extremum principle.</h3>
 <div class="outline-text-3" id="text-16-15">
 <p>
 The WKB approximation (named after Wentzel, Kramers and Brillouin) is a method for obtaining an
@@ -1861,14 +1847,14 @@ applied to tunneling `<a href="https://www.rvlobato.com/teaching/notes/pdfs/wkb_
 </div>
 </div>
 
-<div id="outline-container-org3fb25c7" class="outline-3">
-<h3 id="org3fb25c7"><span class="section-number-3">16.16.</span> Bose-Einstein condensation</h3>
+<div id="outline-container-orga6cf8cd" class="outline-3">
+<h3 id="orga6cf8cd"><span class="section-number-3">16.16.</span> Bose-Einstein condensation</h3>
 </div>
-<div id="outline-container-org204ad88" class="outline-3">
-<h3 id="org204ad88"><span class="section-number-3">16.17.</span> Superliquid helium</h3>
+<div id="outline-container-org2ba5baf" class="outline-3">
+<h3 id="org2ba5baf"><span class="section-number-3">16.17.</span> Superliquid helium</h3>
 </div>
-<div id="outline-container-orgbf83385" class="outline-3">
-<h3 id="orgbf83385"><span class="section-number-3">16.18.</span> Klein-Gordon equation</h3>
+<div id="outline-container-org988cf0e" class="outline-3">
+<h3 id="org988cf0e"><span class="section-number-3">16.18.</span> Klein-Gordon equation</h3>
 <div class="outline-text-3" id="text-16-18">
 <p>
 \[
@@ -1889,12 +1875,12 @@ Lagrangian Walecka model
 </div>
 </div>
 
-<div id="outline-container-org7a7f80d" class="outline-2">
-<h2 id="org7a7f80d"><span class="section-number-2">17.</span> Phenomenology/Astroparticles</h2>
+<div id="outline-container-org38bdffc" class="outline-2">
+<h2 id="org38bdffc"><span class="section-number-2">17.</span> Phenomenology/Astroparticles</h2>
 <div class="outline-text-2" id="text-17">
 </div>
-<div id="outline-container-orgb79ca65" class="outline-3">
-<h3 id="orgb79ca65"><span class="section-number-3">17.1.</span> Subatomic particles (mesons, baryons, photons, leptons, quarks) and cosmic rays</h3>
+<div id="outline-container-orgcf14ec7" class="outline-3">
+<h3 id="orgcf14ec7"><span class="section-number-3">17.1.</span> Subatomic particles (mesons, baryons, photons, leptons, quarks) and cosmic rays</h3>
 <div class="outline-text-3" id="text-17-1">
 <p>
 Particles classification
@@ -1959,12 +1945,12 @@ baryons are the proton and the neutron.</li>
 </ul>
 </div>
 
-<div id="outline-container-org81cb0d8" class="outline-4">
-<h4 id="org81cb0d8"><span class="section-number-4">17.1.1.</span> QHD Quantum Hydrodynamics</h4>
+<div id="outline-container-orgf7b1182" class="outline-4">
+<h4 id="orgf7b1182"><span class="section-number-4">17.1.1.</span> QHD Quantum Hydrodynamics</h4>
 <div class="outline-text-4" id="text-17-1-1">
 </div>
 <ol class="org-ol">
-<li><a id="org988df27"></a>Modelo walecka<br />
+<li><a id="org726807d"></a>Modelo walecka<br />
 <div class="outline-text-5" id="text-17-1-1-1">
 <p>
 \(\psi\) -&gt; fermions -&gt; p, n, hyperons (\(\Lambda, \Sigma, \Xi\)) (Dirac equations)
@@ -1980,16 +1966,16 @@ baryons are the proton and the neutron.</li>
 </div>
 </div>
 
-<div id="outline-container-org9329062" class="outline-2">
-<h2 id="org9329062"><span class="section-number-2">18.</span> General Relativity</h2>
+<div id="outline-container-org27c868d" class="outline-2">
+<h2 id="org27c868d"><span class="section-number-2">18.</span> General Relativity</h2>
 <div class="outline-text-2" id="text-18">
 </div>
-<div id="outline-container-org5bcd0b2" class="outline-3">
-<h3 id="org5bcd0b2"><span class="section-number-3">18.1.</span> 4-tensors</h3>
+<div id="outline-container-orga639a23" class="outline-3">
+<h3 id="orga639a23"><span class="section-number-3">18.1.</span> 4-tensors</h3>
 <div class="outline-text-3" id="text-18-1">
 </div>
-<div id="outline-container-org5aee230" class="outline-4">
-<h4 id="org5aee230"><span class="section-number-4">18.1.1.</span> The metric tensor.</h4>
+<div id="outline-container-orgdbbf54b" class="outline-4">
+<h4 id="orgdbbf54b"><span class="section-number-4">18.1.1.</span> The metric tensor.</h4>
 <div class="outline-text-4" id="text-18-1-1">
 <p>
 In local coordinates \(x^{\mu}\) the metric can be written in the form
@@ -2043,7 +2029,7 @@ g_{\bar{\mu} \bar\nu}=\frac{\partial x^{\rho}}{\partial x^{\bar{\mu}}} \frac{\pa
 </div>
 
 <ol class="org-ol">
-<li><a id="orga35b3d7"></a>Flat spacetime<br />
+<li><a id="org13d8445"></a>Flat spacetime<br />
 <div class="outline-text-5" id="text-18-1-1-1">
 <p>
 The simplest of Lorentz manifold is flat spacetime which can be given as \(R^4\) with
@@ -2060,8 +2046,8 @@ d s^{2}=-c^{2} d t^{2}+d x^{2}+d y^{2}+d z^{2}=\eta_{\mu \nu} d x^{\mu} d x^{\nu
 </ol>
 </div>
 
-<div id="outline-container-org34b7cb4" class="outline-4">
-<h4 id="org34b7cb4"><span class="section-number-4">18.1.2.</span> Space-time curvature.</h4>
+<div id="outline-container-orgb1d9894" class="outline-4">
+<h4 id="orgb1d9894"><span class="section-number-4">18.1.2.</span> Space-time curvature.</h4>
 <div class="outline-text-4" id="text-18-1-2">
 <p>
 The metric \(g\) completely determines the curvature of spacetime. On any semi-Riemannian manifold
@@ -2181,8 +2167,8 @@ which always obey \(\nabla^{\mu}G_{\mu\nu}=0\)
 </div>
 </div>
 
-<div id="outline-container-org70df4e5" class="outline-3">
-<h3 id="org70df4e5"><span class="section-number-3">18.2.</span> Einstein’s gravity equation.</h3>
+<div id="outline-container-orgce5cabd" class="outline-3">
+<h3 id="orgce5cabd"><span class="section-number-3">18.2.</span> Einstein’s gravity equation.</h3>
 <div class="outline-text-3" id="text-18-2">
 <p>
 From Einstein tensor, one can have
@@ -2199,8 +2185,8 @@ energy-momentum density (symmetric (0, 2) tensor). The left-had side is a symmet
 </div>
 </div>
 
-<div id="outline-container-org39c51dd" class="outline-3">
-<h3 id="org39c51dd"><span class="section-number-3">18.3.</span> The Schwarzschild spacetime - black hole.</h3>
+<div id="outline-container-orgf391925" class="outline-3">
+<h3 id="orgf391925"><span class="section-number-3">18.3.</span> The Schwarzschild spacetime - black hole.</h3>
 <div class="outline-text-3" id="text-18-3">
 <p>
 The standard Schwarzschild coordinates are introduced by a chart applied to the manifold \(\cal{M}\).
@@ -2231,37 +2217,37 @@ and nonredundant ones) are
 
 
 
-<div id="outline-container-org587d688" class="outline-3">
-<h3 id="org587d688"><span class="section-number-3">18.4.</span> Reissner-Nordström black hole.</h3>
+<div id="outline-container-orge5f725b" class="outline-3">
+<h3 id="orge5f725b"><span class="section-number-3">18.4.</span> Reissner-Nordström black hole.</h3>
 </div>
 
-<div id="outline-container-org182289f" class="outline-3">
-<h3 id="org182289f"><span class="section-number-3">18.5.</span> Periastron shift</h3>
+<div id="outline-container-orgdffc458" class="outline-3">
+<h3 id="orgdffc458"><span class="section-number-3">18.5.</span> Periastron shift</h3>
 </div>
 
-<div id="outline-container-org2054bee" class="outline-3">
-<h3 id="org2054bee"><span class="section-number-3">18.6.</span> Gravitational lensing.</h3>
+<div id="outline-container-org9103735" class="outline-3">
+<h3 id="org9103735"><span class="section-number-3">18.6.</span> Gravitational lensing.</h3>
 </div>
 
-<div id="outline-container-orgb9d7532" class="outline-3">
-<h3 id="orgb9d7532"><span class="section-number-3">18.7.</span> Cosmological models.</h3>
+<div id="outline-container-org2fb3e1a" class="outline-3">
+<h3 id="org2fb3e1a"><span class="section-number-3">18.7.</span> Cosmological models.</h3>
 </div>
 
-<div id="outline-container-org879ed62" class="outline-3">
-<h3 id="org879ed62"><span class="section-number-3">18.8.</span> Gravitational radiation.</h3>
+<div id="outline-container-orgccf1366" class="outline-3">
+<h3 id="orgccf1366"><span class="section-number-3">18.8.</span> Gravitational radiation.</h3>
 </div>
 </div>
 
-<div id="outline-container-org7927b9f" class="outline-2">
-<h2 id="org7927b9f"><span class="section-number-2">19.</span> Cosmology</h2>
+<div id="outline-container-orge72a442" class="outline-2">
+<h2 id="orge72a442"><span class="section-number-2">19.</span> Cosmology</h2>
 <div class="outline-text-2" id="text-19">
 </div>
-<div id="outline-container-orgd835b3c" class="outline-3">
-<h3 id="orgd835b3c"><span class="section-number-3">19.1.</span> Big bang</h3>
+<div id="outline-container-orgdac01b8" class="outline-3">
+<h3 id="orgdac01b8"><span class="section-number-3">19.1.</span> Big bang</h3>
 <div class="outline-text-3" id="text-19-1">
 </div>
-<div id="outline-container-org8a6a148" class="outline-4">
-<h4 id="org8a6a148"><span class="section-number-4">19.1.1.</span> Big Bang Nucleosynthesis</h4>
+<div id="outline-container-orgab88ff6" class="outline-4">
+<h4 id="orgab88ff6"><span class="section-number-4">19.1.1.</span> Big Bang Nucleosynthesis</h4>
 <div class="outline-text-4" id="text-19-1-1">
 <p>
 Primordial plasma reached \(\sim 1\ {\rm MeV}\) value and light nuclides such
@@ -2279,8 +2265,8 @@ than astrophysical measurements.</li>
 </div>
 </div>
 
-<div id="outline-container-org4b1de2b" class="outline-3">
-<h3 id="org4b1de2b"><span class="section-number-3">19.2.</span> Books</h3>
+<div id="outline-container-org40c148c" class="outline-3">
+<h3 id="org40c148c"><span class="section-number-3">19.2.</span> Books</h3>
 <div class="outline-text-3" id="text-19-2">
 <ul class="org-ul">
 <li><b>Relativistic cosmology</b>. George F.R. Ellis, Roy Maartens, Malcolm A.H. MacCallum</li>
@@ -2292,20 +2278,20 @@ than astrophysical measurements.</li>
 </div>
 </div>
 
-<div id="outline-container-orgd691fc9" class="outline-2">
-<h2 id="orgd691fc9"><span class="section-number-2">20.</span> Astrophysics</h2>
+<div id="outline-container-org6cb5e7b" class="outline-2">
+<h2 id="org6cb5e7b"><span class="section-number-2">20.</span> Astrophysics</h2>
 <div class="outline-text-2" id="text-20">
 </div>
-<div id="outline-container-orgf320dfc" class="outline-3">
-<h3 id="orgf320dfc"><span class="section-number-3">20.1.</span> Compact stars</h3>
+<div id="outline-container-org37adddd" class="outline-3">
+<h3 id="org37adddd"><span class="section-number-3">20.1.</span> Compact stars</h3>
 <div class="outline-text-3" id="text-20-1">
 </div>
-<div id="outline-container-orgcc52372" class="outline-4">
-<h4 id="orgcc52372"><span class="section-number-4">20.1.1.</span> White dwarfs</h4>
+<div id="outline-container-org11e64e3" class="outline-4">
+<h4 id="org11e64e3"><span class="section-number-4">20.1.1.</span> White dwarfs</h4>
 </div>
 
-<div id="outline-container-orgcd85b55" class="outline-4">
-<h4 id="orgcd85b55"><span class="section-number-4">20.1.2.</span> Neutron stars</h4>
+<div id="outline-container-org5d37cd0" class="outline-4">
+<h4 id="org5d37cd0"><span class="section-number-4">20.1.2.</span> Neutron stars</h4>
 <div class="outline-text-4" id="text-20-1-2">
 <ul class="org-ul">
 <li>Reminiscent of stars with mass \(10\lesssim M/M_{\odot} \lesssim 25\).</li>
@@ -2326,13 +2312,13 @@ speed.</li>
 </div>
 
 <ol class="org-ol">
-<li><a id="orgbad5660"></a>Equation of state<br />
+<li><a id="orgac4d73b"></a>Equation of state<br />
 <ol class="org-ol">
-<li><a id="orgb38ea6d"></a>Nucleonic<br />
+<li><a id="org258b367"></a>Nucleonic<br />
 <ol class="org-ol">
-<li><a id="orgaba40b5"></a>Non-relativistic<br />
+<li><a id="orgd8c26ed"></a>Non-relativistic<br />
 <ol class="org-ol">
-<li><a id="org44ed6fb"></a>APR<br />
+<li><a id="orgcdd2521"></a>APR<br />
 <div class="outline-text-8" id="text-20-1-2-1-1-1-1">
 <p>
 Obtained from variational-method with modern nuclear potentials such as Argone (2-nucleon interaction) and
@@ -2342,7 +2328,7 @@ temperature and $&beta;$-equilibrium \(npe\mu\) matter. (Akmal et al. (1998)).
 </div>
 </li>
 
-<li><a id="org2692b69"></a>BBB<br />
+<li><a id="org284825c"></a>BBB<br />
 <div class="outline-text-8" id="text-20-1-2-1-1-1-2">
 <p>
 Obtained from the Brueckner-Hartree-Fock (BHF) framework as approximation of the
@@ -2351,7 +2337,7 @@ Brueckner-Bethe-Goldstone (BBG) theory. Uses two-three particle potentials. (Bal
 </div>
 </li>
 
-<li><a id="org7a858be"></a>FPS<br />
+<li><a id="org23bec42"></a>FPS<br />
 <div class="outline-text-8" id="text-20-1-2-1-1-1-3">
 <p>
 Modern version of the EoS by Friedman and Pandharipande. It is a Skyrme type model with a
@@ -2363,15 +2349,15 @@ potential and phenomenological three-nucleons interaction. (Lorenz et al (1993))
 </ol>
 </li>
 
-<li><a id="orga026938"></a>Relativistic<br /></li>
+<li><a id="org4b57f7b"></a>Relativistic<br /></li>
 </ol>
 </li>
 </ol>
 </li>
 
-<li><a id="org36e3121"></a>Massive pulsars<br />
+<li><a id="orgae8fd5a"></a>Massive pulsars<br />
 <ol class="org-ol">
-<li><a id="orgf0134c5"></a>J1614-2230 (\(\approx2M_{\odot}\))<br />
+<li><a id="org04c03c3"></a>J1614-2230 (\(\approx2M_{\odot}\))<br />
 <div class="outline-text-6" id="text-20-1-2-2-1">
 <p>
 `<a href="https://arxiv.org/abs/1010.5788">https://arxiv.org/abs/1010.5788</a>`
@@ -2379,7 +2365,7 @@ potential and phenomenological three-nucleons interaction. (Lorenz et al (1993))
 </div>
 </li>
 
-<li><a id="org22e49b5"></a>J0348+0432 (\(\approx2M_{\odot}\))<br />
+<li><a id="orgba3d5bb"></a>J0348+0432 (\(\approx2M_{\odot}\))<br />
 <div class="outline-text-6" id="text-20-1-2-2-2">
 <p>
 `<a href="https://arxiv.org/abs/1304.6875">https://arxiv.org/abs/1304.6875</a>`
@@ -2387,7 +2373,7 @@ potential and phenomenological three-nucleons interaction. (Lorenz et al (1993))
 </div>
 </li>
 
-<li><a id="orgf3b4748"></a>J0740+6620 (\(\approx2.14M_{\odot}\))<br />
+<li><a id="orge532fc7"></a>J0740+6620 (\(\approx2.14M_{\odot}\))<br />
 <div class="outline-text-6" id="text-20-1-2-2-3">
 <p>
 `<a href="https://arxiv.org/abs/1904.06759">https://arxiv.org/abs/1904.06759</a>`, `<a href="https://arxiv.org/abs/2104.00880">https://arxiv.org/abs/2104.00880</a>`
@@ -2397,7 +2383,7 @@ potential and phenomenological three-nucleons interaction. (Lorenz et al (1993))
 </ol>
 </li>
 
-<li><a id="org9ebe832"></a>Mass-radius measurements<br />
+<li><a id="orgd2ee116"></a>Mass-radius measurements<br />
 <div class="outline-text-5" id="text-20-1-2-3">
 <ul class="org-ul">
 <li><p>
@@ -2415,33 +2401,33 @@ PSR J0030+0451
 </div>
 </div>
 
-<div id="outline-container-orga03b7c3" class="outline-2">
-<h2 id="orga03b7c3"><span class="section-number-2">21.</span> Quantum Field Theory</h2>
+<div id="outline-container-org5693771" class="outline-2">
+<h2 id="org5693771"><span class="section-number-2">21.</span> Quantum Field Theory</h2>
 <div class="outline-text-2" id="text-21">
 </div>
-<div id="outline-container-orgd524cb7" class="outline-3">
-<h3 id="orgd524cb7"><span class="section-number-3">21.1.</span> Classical fields: Scalar, Dirac-spinor, Yang-Mills vector fields.</h3>
+<div id="outline-container-org4f32913" class="outline-3">
+<h3 id="org4f32913"><span class="section-number-3">21.1.</span> Classical fields: Scalar, Dirac-spinor, Yang-Mills vector fields.</h3>
 </div>
 
-<div id="outline-container-orgd72d765" class="outline-3">
-<h3 id="orgd72d765"><span class="section-number-3">21.2.</span> Interactions, perturbation expansion. Spontaneous symmetry breaking, Goldstone mode, Higgs mechanism</h3>
+<div id="outline-container-orgc5f8bbf" class="outline-3">
+<h3 id="orgc5f8bbf"><span class="section-number-3">21.2.</span> Interactions, perturbation expansion. Spontaneous symmetry breaking, Goldstone mode, Higgs mechanism</h3>
 </div>
 
-<div id="outline-container-org1084d06" class="outline-3">
-<h3 id="org1084d06"><span class="section-number-3">21.3.</span> Particles and fields: Fock space. Antiparticles. Feynman rules. The Gell-Mann-Lévy sigma model for pions and nuclei. Loop diagrams. Unitarity, Causality and dispersion relations. Renormalization (Pauli-Villars; dimensional ren.) Quantum gauge theory: Gauge fixing, Faddeev-Popov determinant, Slavnov identities, BRST symmetry. The renormalization group. Asymptotic freedom.</h3>
+<div id="outline-container-org7548208" class="outline-3">
+<h3 id="org7548208"><span class="section-number-3">21.3.</span> Particles and fields: Fock space. Antiparticles. Feynman rules. The Gell-Mann-Lévy sigma model for pions and nuclei. Loop diagrams. Unitarity, Causality and dispersion relations. Renormalization (Pauli-Villars; dimensional ren.) Quantum gauge theory: Gauge fixing, Faddeev-Popov determinant, Slavnov identities, BRST symmetry. The renormalization group. Asymptotic freedom.</h3>
 </div>
 
-<div id="outline-container-org09f2d41" class="outline-3">
-<h3 id="org09f2d41"><span class="section-number-3">21.4.</span> Solitons, Skyrmions. Magnetic monopoles and instantons. Permanent quark confinement mechanism. The 1/N expansion. Operator product expansion. Bethe-Salpeter equation. Construction of the Standard Model. P and CP violation. The CPT theorem. Spin and statistics connection. Supersymmetry.</h3>
+<div id="outline-container-orgeb3ed16" class="outline-3">
+<h3 id="orgeb3ed16"><span class="section-number-3">21.4.</span> Solitons, Skyrmions. Magnetic monopoles and instantons. Permanent quark confinement mechanism. The 1/N expansion. Operator product expansion. Bethe-Salpeter equation. Construction of the Standard Model. P and CP violation. The CPT theorem. Spin and statistics connection. Supersymmetry.</h3>
 </div>
 </div>
 
-<div id="outline-container-org23a9d58" class="outline-2">
-<h2 id="org23a9d58"><span class="section-number-2">22.</span> Supersymmetry/Super gravity</h2>
+<div id="outline-container-org2a71d88" class="outline-2">
+<h2 id="org2a71d88"><span class="section-number-2">22.</span> Supersymmetry/Super gravity</h2>
 </div>
 </div>
 <div id="postamble" class="status">
-Created by: Ronaldo V. Lobato on 2020-11-11. Last Updated: 2022-05-02 Mon 20:23
+Created by: Ronaldo V. Lobato on 2020-11-11. Last Updated: 2024-12-14 Sat 21:31
 </div>
 </body>
 </html>
