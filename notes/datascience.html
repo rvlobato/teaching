@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-02-14 Sat 23:35 -->
+<!-- 2026-02-19 gio 02:28 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Data science reference guide:</title>
@@ -66,140 +66,147 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org8c7c9e9">1. Data science</a>
+<li><a href="#org289c038">1. Data science</a>
 <ul>
-<li><a href="#orgf11f9bd">1.1. Big data</a>
+<li><a href="#orgfa9e868">1.1. Big data</a>
 <ul>
-<li><a href="#orgfe7b233">1.1.1. Data Preprocessing</a></li>
+<li><a href="#org9e2470b">1.1.1. Data Preprocessing</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org688d729">2. AI</a>
+<li><a href="#org3e4fb51">2. AI</a>
 <ul>
-<li><a href="#orgad1dafb">2.1. Machine learning</a>
+<li><a href="#org9dd0796">2.1. Machine learning</a>
 <ul>
-<li><a href="#org49f31b4">2.1.1. Basic concepts of machine learning and data analysis and statistical concepts like expectation values, variance, covariance, correlation functions and errors;</a></li>
-<li><a href="#org981a150">2.1.2. Estimation of errors using cross-validation, blocking, bootstrapping and jackknife methods;</a></li>
-<li><a href="#org981f4c0">2.1.3. Optimization of functions</a></li>
-<li><a href="#org3899ba0">2.1.4. Supervised Machine Learning</a></li>
-<li><a href="#orgfad7383">2.1.5. Experimental design</a></li>
-<li><a href="#org7f3adab">2.1.6. Predictive modelling</a></li>
-<li><a href="#org6f1047a">2.1.7. Optimization</a></li>
-<li><a href="#org37d2fd3">2.1.8. Cluster, feature selection</a></li>
-<li><a href="#org2a167b0">2.1.9. Neural networks and deep learning, SVMc</a></li>
-<li><a href="#org0dd8069">2.1.10. Boltzmann machines;</a></li>
-<li><a href="#orgdcc7c41">2.1.11. Causal inference</a></li>
-<li><a href="#org4a6a29f">2.1.12. Decisions trees and random forests</a></li>
-<li><a href="#org7752d30">2.1.13. Regression \(y(t, f)\) and classification (metric) (te, ve, algorithm m1)</a></li>
-<li><a href="#org0d06b15">2.1.14. Distance measures</a></li>
-<li><a href="#orgbcdf9b9">2.1.15. Fourier Neural Operators</a></li>
-<li><a href="#orgafe8535">2.1.16. Tools</a></li>
+<li><a href="#orgc3a328e">2.1.1. Basic concepts of machine learning and data analysis and statistical concepts like expectation values, variance, covariance, correlation functions and errors;</a></li>
+<li><a href="#org1dd0adc">2.1.2. Estimation of errors using cross-validation, blocking, bootstrapping and jackknife methods;</a></li>
+<li><a href="#org71f10a6">2.1.3. Optimization of functions</a></li>
+<li><a href="#org9c49617">2.1.4. Supervised Machine Learning</a></li>
+<li><a href="#org1d8d444">2.1.5. Experimental design</a></li>
+<li><a href="#org389b0d6">2.1.6. Predictive modelling</a></li>
+<li><a href="#orge1af9de">2.1.7. Optimization</a></li>
+<li><a href="#org1c99eb5">2.1.8. Cluster, feature selection</a></li>
+<li><a href="#org25be519">2.1.9. Neural networks and deep learning, SVMc</a></li>
+<li><a href="#orgf674a24">2.1.10. Boltzmann machines;</a></li>
+<li><a href="#orgec63664">2.1.11. Causal inference</a></li>
+<li><a href="#orgcf75460">2.1.12. Decisions trees and random forests</a></li>
+<li><a href="#orgee80e7a">2.1.13. Regression \(y(t, f)\) and classification (metric) (te, ve, algorithm m1)</a></li>
+<li><a href="#orgd7c6073">2.1.14. Distance measures</a></li>
+<li><a href="#org1c7f06a">2.1.15. Fourier Neural Operators</a></li>
+<li><a href="#org468abc2">2.1.16. Tools</a></li>
 </ul>
 </li>
-<li><a href="#orgf75a918">2.2. Techniques - Algorithms</a>
+<li><a href="#orgf8bebfa">2.2. Techniques - Algorithms</a>
 <ul>
-<li><a href="#org0c6c6e6">2.2.1. Linear regression</a></li>
-<li><a href="#orgaa8e4b7">2.2.2. Logistic regression</a></li>
-<li><a href="#org8e2447c">2.2.3. Linear SVM and Kernel SVM</a></li>
-<li><a href="#orga8ff8b5">2.2.4. Trees and ensemble trees</a></li>
-<li><a href="#orgd026186">2.2.5. Neural networks</a></li>
-<li><a href="#org1b95101">2.2.6. K-means/k-modes, GMM (Gaussian Mixture Model) Clustering</a></li>
-<li><a href="#orgd3592dd">2.2.7. DBSCAN</a></li>
-<li><a href="#org24e1c90">2.2.8. Hierarchical clustering</a></li>
-<li><a href="#org316042e">2.2.9. PCA, SVD and LDA</a></li>
-<li><a href="#orge84e207">2.2.10. Feedforward neural networks, Multilayered logistic regression classifiers many layers separated by non-linearity</a></li>
-<li><a href="#org483410d">2.2.11. Convolution neural networks, vision based machine learn, image classification</a></li>
+<li><a href="#org4411c3b">2.2.1. Linear regression</a></li>
+<li><a href="#org98318a0">2.2.2. Logistic regression</a></li>
+<li><a href="#orgffd1558">2.2.3. Linear SVM and Kernel SVM</a></li>
+<li><a href="#org10ceb2f">2.2.4. Trees and ensemble trees</a></li>
+<li><a href="#orgbe7cd1d">2.2.5. Neural networks</a></li>
+<li><a href="#org623326d">2.2.6. K-means/k-modes, GMM (Gaussian Mixture Model) Clustering</a></li>
+<li><a href="#org3cf817d">2.2.7. DBSCAN</a></li>
+<li><a href="#orge6ea4b9">2.2.8. Hierarchical clustering</a></li>
+<li><a href="#org8d0ca9d">2.2.9. PCA, SVD and LDA</a></li>
+<li><a href="#org12fff31">2.2.10. Feedforward neural networks, Multilayered logistic regression classifiers many layers separated by non-linearity</a></li>
+<li><a href="#orgee976d3">2.2.11. Convolution neural networks, vision based machine learn, image classification</a></li>
 </ul>
 </li>
-<li><a href="#org6762c65">2.3. Computational complexity theory</a>
+<li><a href="#org5f6e370">2.3. Computational complexity theory</a>
 <ul>
-<li><a href="#orgd962238">2.3.1. NP - Completeness</a></li>
+<li><a href="#org2a3517a">2.3.1. NP - Completeness</a></li>
 </ul>
 </li>
-<li><a href="#orgdd4e2e7">2.4. Elements of AI</a>
+<li><a href="#orgccfe080">2.4. Elements of AI</a>
 <ul>
-<li><a href="#orga8b4f5c">2.4.1. Data science -&gt; Recent umbrella</a></li>
-<li><a href="#org93e8715">2.4.2. Euler diagram -&gt; Relates to Venn Diagrams</a></li>
-<li><a href="#org14148b8">2.4.3. Natural Language Processing</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#org04cfa50">3. Tools</a>
-<ul>
-<li><a href="#orgdca77aa">3.1. Jupyter</a>
-<ul>
-<li><a href="#org46b2c3c">3.1.1. Extensions:</a></li>
-<li><a href="#org19d45c4">3.1.2. Tricks</a></li>
-</ul>
-</li>
-<li><a href="#org74a0cb3">3.2. LIBSVM</a></li>
-<li><a href="#orgc276587">3.3. Python</a>
-<ul>
-<li><a href="#orge378587">3.3.1. Numpy</a></li>
-<li><a href="#orge757734">3.3.2. Scipy</a></li>
-<li><a href="#org1c4f20c">3.3.3. Scikit-learn</a></li>
-<li><a href="#orgfbc314e">3.3.4. Keras</a></li>
-<li><a href="#orgb0c9997">3.3.5. Tensorflow</a></li>
-<li><a href="#org623f64a">3.3.6. PyMC</a></li>
-</ul>
-</li>
-<li><a href="#org4ce3d87">3.4. Julia</a>
-<ul>
-<li><a href="#orga125101">3.4.1. JuliaML</a></li>
-<li><a href="#orge4db13d">3.4.2. MLJ</a></li>
-<li><a href="#orgd1dffe0">3.4.3. DataFrames.jl</a></li>
-<li><a href="#org1deb897">3.4.4. Turing.jl</a></li>
-<li><a href="#orge4db793">3.4.5. ScikitLearn.jl</a></li>
-<li><a href="#org0e262e8">3.4.6. FastAI</a></li>
-<li><a href="#org553b86b">3.4.7. SmartTensors</a></li>
-</ul>
-</li>
-<li><a href="#orgfe4c37b">3.5. R</a>
-<ul>
-<li><a href="#orgf335a1f">3.5.1. proxy</a></li>
-<li><a href="#org3b3d181">3.5.2. ggplot2</a></li>
-<li><a href="#orgdb82a66">3.5.3. tidyr</a></li>
-<li><a href="#orge9aca8c">3.5.4. tm</a></li>
-<li><a href="#org16227be">3.5.5. dplyr</a></li>
-<li><a href="#org2edebd8">3.5.6. tidytext</a></li>
-<li><a href="#org2ded3b8">3.5.7. tidyverse</a></li>
-<li><a href="#orgc624502">3.5.8. udpipe</a></li>
-<li><a href="#org945a305">3.5.9. corpus</a></li>
-<li><a href="#org8cecbaa">3.5.10. DIY ML</a></li>
+<li><a href="#orgaf5fd65">2.4.1. Data science -&gt; Recent umbrella</a></li>
+<li><a href="#org4daa799">2.4.2. Euler diagram -&gt; Relates to Venn Diagrams</a></li>
+<li><a href="#org8e551af">2.4.3. Natural Language Processing</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org3b070d6">4. To organize</a>
+<li><a href="#org655a2d6">3. Tools</a>
 <ul>
-<li><a href="#orgf174573">4.1. Mineracao e big data</a>
+<li><a href="#org6e3ad74">3.1. Jupyter</a>
 <ul>
-<li><a href="#orgd95935b">4.1.1. Bit data:</a></li>
-<li><a href="#org5f27e69">4.1.2. Redes neurais artificiais</a></li>
+<li><a href="#org09035c2">3.1.1. Extensions:</a></li>
+<li><a href="#orgfc836d8">3.1.2. Tricks</a></li>
 </ul>
 </li>
-<li><a href="#org1d96eb6">4.2. SQL</a></li>
+<li><a href="#org3d98b1b">3.2. LIBSVM</a></li>
+<li><a href="#org5943fd9">3.3. Python</a>
+<ul>
+<li><a href="#orgf868460">3.3.1. Numpy</a></li>
+<li><a href="#org31de5a1">3.3.2. Scipy</a></li>
+<li><a href="#org38f0dec">3.3.3. Scikit-learn</a></li>
+<li><a href="#orgb73fe9e">3.3.4. Keras</a></li>
+<li><a href="#org7c86747">3.3.5. Tensorflow</a></li>
+<li><a href="#org0d60561">3.3.6. PyMC</a></li>
+<li><a href="#org0909d64">3.3.7. NumPyro</a></li>
+<li><a href="#org408b3ee">3.3.8. Pyro</a></li>
+<li><a href="#org6102ed4">3.3.9. Pixi</a></li>
+<li><a href="#orgdc8e5b8">3.3.10. Polars</a></li>
+<li><a href="#org9fc1930">3.3.11. BigFrames</a></li>
+<li><a href="#org7d18cb9">3.3.12. Marimo</a></li>
+<li><a href="#org118f6ce">3.3.13. DuckDB</a></li>
+</ul>
+</li>
+<li><a href="#orge6899fb">3.4. Julia</a>
+<ul>
+<li><a href="#org7245604">3.4.1. JuliaML</a></li>
+<li><a href="#orga52d912">3.4.2. MLJ</a></li>
+<li><a href="#org1a71731">3.4.3. DataFrames.jl</a></li>
+<li><a href="#org2c7e771">3.4.4. Turing.jl</a></li>
+<li><a href="#org38e1017">3.4.5. ScikitLearn.jl</a></li>
+<li><a href="#orgf00ff66">3.4.6. FastAI</a></li>
+<li><a href="#org8e8f773">3.4.7. SmartTensors</a></li>
+</ul>
+</li>
+<li><a href="#org5ae1dc1">3.5. R</a>
+<ul>
+<li><a href="#orgb4344d1">3.5.1. proxy</a></li>
+<li><a href="#org6cae409">3.5.2. ggplot2</a></li>
+<li><a href="#orge8296b8">3.5.3. tidyr</a></li>
+<li><a href="#org7cb3533">3.5.4. tm</a></li>
+<li><a href="#org897223f">3.5.5. dplyr</a></li>
+<li><a href="#org2303c03">3.5.6. tidytext</a></li>
+<li><a href="#org936b831">3.5.7. tidyverse</a></li>
+<li><a href="#org5ce3363">3.5.8. udpipe</a></li>
+<li><a href="#org423ca42">3.5.9. corpus</a></li>
+<li><a href="#org39516aa">3.5.10. DIY ML</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org38073c9">4. To organize</a>
+<ul>
+<li><a href="#org6c0fdb8">4.1. Mineracao e big data</a>
+<ul>
+<li><a href="#orgdb1eb1f">4.1.1. Bit data:</a></li>
+<li><a href="#orgefad66c">4.1.2. Redes neurais artificiais</a></li>
+</ul>
+</li>
+<li><a href="#org3dde2c9">4.2. SQL</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org8c7c9e9" class="outline-2">
-<h2 id="org8c7c9e9"><span class="section-number-2">1.</span> Data science</h2>
+<div id="outline-container-org289c038" class="outline-2">
+<h2 id="org289c038"><span class="section-number-2">1.</span> Data science</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Data science is an interdisciplinary field that uses scientific methods, process, algorithms and
 systems to extract knowledge and insights from structured and unstructured data `<a href="https://en.wikipedia.org/wiki/Data_science">https://en.wikipedia.org/wiki/Data_science</a>`
 </p>
 </div>
-<div id="outline-container-orgf11f9bd" class="outline-3">
-<h3 id="orgf11f9bd"><span class="section-number-3">1.1.</span> Big data</h3>
+<div id="outline-container-orgfa9e868" class="outline-3">
+<h3 id="orgfa9e868"><span class="section-number-3">1.1.</span> Big data</h3>
 <div class="outline-text-3" id="text-1-1">
 </div>
-<div id="outline-container-orgfe7b233" class="outline-4">
-<h4 id="orgfe7b233"><span class="section-number-4">1.1.1.</span> Data Preprocessing</h4>
+<div id="outline-container-org9e2470b" class="outline-4">
+<h4 id="org9e2470b"><span class="section-number-4">1.1.1.</span> Data Preprocessing</h4>
 <div class="outline-text-4" id="text-1-1-1">
 <p>
 Normalization:
@@ -235,7 +242,7 @@ by the mean and standard deviation of \(A\)</li>
 </p>
 </div>
 <ol class="org-ol">
-<li><a id="orgb066af3"></a>One hot enconding<br />
+<li><a id="org1e9a210"></a>One hot enconding<br />
 <div class="outline-text-5" id="text-1-1-1-1">
 <p>
 Process of converting categorical data variables (label values) to they can be provided to machine learning
@@ -243,34 +250,34 @@ algorithms.
 </p>
 </div>
 </li>
-<li><a id="org91810b8"></a>label enconding<br /></li>
+<li><a id="orgd34a76d"></a>label enconding<br /></li>
 </ol>
 </div>
 </div>
 </div>
-<div id="outline-container-org688d729" class="outline-2">
-<h2 id="org688d729"><span class="section-number-2">2.</span> AI</h2>
+<div id="outline-container-org3e4fb51" class="outline-2">
+<h2 id="org3e4fb51"><span class="section-number-2">2.</span> AI</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-orgad1dafb" class="outline-3">
-<h3 id="orgad1dafb"><span class="section-number-3">2.1.</span> Machine learning</h3>
+<div id="outline-container-org9dd0796" class="outline-3">
+<h3 id="org9dd0796"><span class="section-number-3">2.1.</span> Machine learning</h3>
 <div class="outline-text-3" id="text-2-1">
 </div>
-<div id="outline-container-org49f31b4" class="outline-4">
-<h4 id="org49f31b4"><span class="section-number-4">2.1.1.</span> Basic concepts of machine learning and data analysis and statistical concepts like expectation values, variance, covariance, correlation functions and errors;</h4>
+<div id="outline-container-orgc3a328e" class="outline-4">
+<h4 id="orgc3a328e"><span class="section-number-4">2.1.1.</span> Basic concepts of machine learning and data analysis and statistical concepts like expectation values, variance, covariance, correlation functions and errors;</h4>
 </div>
-<div id="outline-container-org981a150" class="outline-4">
-<h4 id="org981a150"><span class="section-number-4">2.1.2.</span> Estimation of errors using cross-validation, blocking, bootstrapping and jackknife methods;</h4>
+<div id="outline-container-org1dd0adc" class="outline-4">
+<h4 id="org1dd0adc"><span class="section-number-4">2.1.2.</span> Estimation of errors using cross-validation, blocking, bootstrapping and jackknife methods;</h4>
 </div>
-<div id="outline-container-org981f4c0" class="outline-4">
-<h4 id="org981f4c0"><span class="section-number-4">2.1.3.</span> Optimization of functions</h4>
+<div id="outline-container-org71f10a6" class="outline-4">
+<h4 id="org71f10a6"><span class="section-number-4">2.1.3.</span> Optimization of functions</h4>
 </div>
-<div id="outline-container-org3899ba0" class="outline-4">
-<h4 id="org3899ba0"><span class="section-number-4">2.1.4.</span> Supervised Machine Learning</h4>
+<div id="outline-container-org9c49617" class="outline-4">
+<h4 id="org9c49617"><span class="section-number-4">2.1.4.</span> Supervised Machine Learning</h4>
 <div class="outline-text-4" id="text-2-1-4">
 </div>
 <ol class="org-ol">
-<li><a id="org0cde790"></a>Learning Vector Quantization (LVQ)<br />
+<li><a id="org4492b99"></a>Learning Vector Quantization (LVQ)<br />
 <div class="outline-text-5" id="text-2-1-4-1">
 <p>
 Is a supervised classification algorithm that uses a "winner-takes-all"
@@ -284,7 +291,7 @@ related to the unsupervised Self-Organizing Map (SOM).
 </p>
 </div>
 </li>
-<li><a id="org274b37d"></a>Linear Discriminant Analysis (LDA)<br />
+<li><a id="orgf1c26dc"></a>Linear Discriminant Analysis (LDA)<br />
 <div class="outline-text-5" id="text-2-1-4-2">
 <p>
 Linear Discriminant Analysis (LDA) is a supervised method for both
@@ -295,27 +302,27 @@ recognition &amp; medical diagnosis.
 </p>
 </div>
 </li>
-<li><a id="orgb69257a"></a>Linear Regression and Logistic Regression;<br /></li>
+<li><a id="orge581beb"></a>Linear Regression and Logistic Regression;<br /></li>
 </ol>
 </div>
-<div id="outline-container-orgfad7383" class="outline-4">
-<h4 id="orgfad7383"><span class="section-number-4">2.1.5.</span> Experimental design</h4>
+<div id="outline-container-org1d8d444" class="outline-4">
+<h4 id="org1d8d444"><span class="section-number-4">2.1.5.</span> Experimental design</h4>
 </div>
-<div id="outline-container-org7f3adab" class="outline-4">
-<h4 id="org7f3adab"><span class="section-number-4">2.1.6.</span> Predictive modelling</h4>
+<div id="outline-container-org389b0d6" class="outline-4">
+<h4 id="org389b0d6"><span class="section-number-4">2.1.6.</span> Predictive modelling</h4>
 </div>
-<div id="outline-container-org6f1047a" class="outline-4">
-<h4 id="org6f1047a"><span class="section-number-4">2.1.7.</span> Optimization</h4>
+<div id="outline-container-orge1af9de" class="outline-4">
+<h4 id="orge1af9de"><span class="section-number-4">2.1.7.</span> Optimization</h4>
 </div>
-<div id="outline-container-org37d2fd3" class="outline-4">
-<h4 id="org37d2fd3"><span class="section-number-4">2.1.8.</span> Cluster, feature selection</h4>
+<div id="outline-container-org1c99eb5" class="outline-4">
+<h4 id="org1c99eb5"><span class="section-number-4">2.1.8.</span> Cluster, feature selection</h4>
 <div class="outline-text-4" id="text-2-1-8">
 </div>
 <ol class="org-ol">
-<li><a id="org121ea52"></a>Curse of dimensionality<br /></li>
-<li><a id="org478d68a"></a>Dimensionality reductions, from PCA to clustering<br />
+<li><a id="org2781fc5"></a>Curse of dimensionality<br /></li>
+<li><a id="orgedae770"></a>Dimensionality reductions, from PCA to clustering<br />
 <ol class="org-ol">
-<li><a id="orge869b29"></a>MDS<br />
+<li><a id="org03cddcf"></a>MDS<br />
 <div class="outline-text-6" id="text-2-1-8-2-1">
 <p>
 Multidimensional scaling is a visual representation of distances or
@@ -335,15 +342,15 @@ structures.
 </li>
 </ol>
 </li>
-<li><a id="orgdfbf817"></a>Bias-variance tradeoff,<br /></li>
+<li><a id="orgca78850"></a>Bias-variance tradeoff,<br /></li>
 </ol>
 </div>
-<div id="outline-container-org2a167b0" class="outline-4">
-<h4 id="org2a167b0"><span class="section-number-4">2.1.9.</span> Neural networks and deep learning, SVMc</h4>
+<div id="outline-container-org25be519" class="outline-4">
+<h4 id="org25be519"><span class="section-number-4">2.1.9.</span> Neural networks and deep learning, SVMc</h4>
 <div class="outline-text-4" id="text-2-1-9">
 </div>
 <ol class="org-ol">
-<li><a id="orga3bd9d3"></a>Convolutional Neural Networks<br />
+<li><a id="orgddcba64"></a>Convolutional Neural Networks<br />
 <div class="outline-text-5" id="text-2-1-9-1">
 <p>
 Designed for processing structured arrays. Used in computer vision and natural language
@@ -352,7 +359,7 @@ the convolutional layer)
 </p>
 </div>
 </li>
-<li><a id="org996929f"></a>Physics-informed neural networks (PINN)<br />
+<li><a id="org7a0e776"></a>Physics-informed neural networks (PINN)<br />
 <div class="outline-text-5" id="text-2-1-9-2">
 <ul class="org-ul">
 <li>Has a superior approximation and generalization capabilities, which
@@ -365,81 +372,81 @@ _
 </p>
 </div>
 </li>
-<li><a id="org9606fbb"></a>Recurrent Neural Networks and Autoencoders<br /></li>
-<li><a id="org9450a44"></a>Statistical language such as R, or Python-Python<br /></li>
-<li><a id="org8501e37"></a>Scripting languages as python, sh, php, perl<br /></li>
+<li><a id="orga8c342f"></a>Recurrent Neural Networks and Autoencoders<br /></li>
+<li><a id="org6777459"></a>Statistical language such as R, or Python-Python<br /></li>
+<li><a id="org3c0803e"></a>Scripting languages as python, sh, php, perl<br /></li>
 </ol>
 </div>
-<div id="outline-container-org0dd8069" class="outline-4">
-<h4 id="org0dd8069"><span class="section-number-4">2.1.10.</span> Boltzmann machines;</h4>
+<div id="outline-container-orgf674a24" class="outline-4">
+<h4 id="orgf674a24"><span class="section-number-4">2.1.10.</span> Boltzmann machines;</h4>
 </div>
-<div id="outline-container-orgdcc7c41" class="outline-4">
-<h4 id="orgdcc7c41"><span class="section-number-4">2.1.11.</span> Causal inference</h4>
+<div id="outline-container-orgec63664" class="outline-4">
+<h4 id="orgec63664"><span class="section-number-4">2.1.11.</span> Causal inference</h4>
 <div class="outline-text-4" id="text-2-1-11">
 <p>
 Machine learning concepts
 </p>
 </div>
 </div>
-<div id="outline-container-org4a6a29f" class="outline-4">
-<h4 id="org4a6a29f"><span class="section-number-4">2.1.12.</span> Decisions trees and random forests</h4>
+<div id="outline-container-orgcf75460" class="outline-4">
+<h4 id="orgcf75460"><span class="section-number-4">2.1.12.</span> Decisions trees and random forests</h4>
 </div>
-<div id="outline-container-org7752d30" class="outline-4">
-<h4 id="org7752d30"><span class="section-number-4">2.1.13.</span> Regression \(y(t, f)\) and classification (metric) (te, ve, algorithm m1)</h4>
+<div id="outline-container-orgee80e7a" class="outline-4">
+<h4 id="orgee80e7a"><span class="section-number-4">2.1.13.</span> Regression \(y(t, f)\) and classification (metric) (te, ve, algorithm m1)</h4>
 <div class="outline-text-4" id="text-2-1-13">
 <p>
 <b>*</b>
 </p>
 </div>
 </div>
-<div id="outline-container-org0d06b15" class="outline-4">
-<h4 id="org0d06b15"><span class="section-number-4">2.1.14.</span> Distance measures</h4>
+<div id="outline-container-orgd7c6073" class="outline-4">
+<h4 id="orgd7c6073"><span class="section-number-4">2.1.14.</span> Distance measures</h4>
 <div class="outline-text-4" id="text-2-1-14">
 </div>
 <ol class="org-ol">
-<li><a id="orga756195"></a>Euclidean<br /></li>
+<li><a id="org21836ee"></a>Euclidean<br /></li>
 
-<li><a id="org190a1ef"></a>Manhattan<br /></li>
+<li><a id="org0065866"></a>Manhattan<br /></li>
 
-<li><a id="org243916c"></a>Chebychev<br /></li>
+<li><a id="org644a841"></a>Chebychev<br /></li>
 
-<li><a id="org43100fb"></a>Minkowski<br /></li>
+<li><a id="orgb233a42"></a>Minkowski<br /></li>
 
-<li><a id="org48a1cee"></a>Cosine<br /></li>
+<li><a id="org60f3ee6"></a>Cosine<br /></li>
 
-<li><a id="orgef5bbc2"></a>Pearson<br /></li>
+<li><a id="orgd85f888"></a>Pearson<br /></li>
 
-<li><a id="orge86466a"></a>Mahalanobis<br /></li>
+<li><a id="org24a30a8"></a>Mahalanobis<br /></li>
 
-<li><a id="org70cdf4c"></a>SED<br /></li>
+<li><a id="org9ab66a6"></a>SED<br /></li>
 
-<li><a id="org9ba1dc1"></a>Jaccard<br /></li>
+<li><a id="orgad39acb"></a>Jaccard<br /></li>
 
-<li><a id="orgff3cc7e"></a>Levenshtein<br /></li>
+<li><a id="orgead515d"></a>Levenshtein<br /></li>
 
-<li><a id="orgbc04cb5"></a>Sorensen-Dice<br /></li>
+<li><a id="orga40dd04"></a>Sorensen-Dice<br /></li>
 
-<li><a id="org70d58ca"></a>Jensen-Shannon<br /></li>
+<li><a id="orge98be76"></a>Jensen-Shannon<br /></li>
 
-<li><a id="org2bab028"></a>Camberra<br /></li>
+<li><a id="org96a23b9"></a>Camberra<br /></li>
 
-<li><a id="org1b6d0be"></a>Hamming<br /></li>
+<li><a id="orged43382"></a>Hamming<br /></li>
 
-<li><a id="orgb4437f9"></a>Spearman<br /></li>
+<li><a id="org36e78c4"></a>Spearman<br /></li>
 
-<li><a id="org833823f"></a>Chi-Square<br /></li>
+<li><a id="org253d0a5"></a>Chi-Square<br /></li>
 </ol>
 </div>
-<div id="outline-container-orgbcdf9b9" class="outline-4">
-<h4 id="orgbcdf9b9"><span class="section-number-4">2.1.15.</span> Fourier Neural Operators</h4>
+<div id="outline-container-org1c7f06a" class="outline-4">
+<h4 id="org1c7f06a"><span class="section-number-4">2.1.15.</span> Fourier Neural Operators</h4>
 </div>
 
-<div id="outline-container-orgafe8535" class="outline-4">
-<h4 id="orgafe8535"><span class="section-number-4">2.1.16.</span> Tools</h4>
+<div id="outline-container-org468abc2" class="outline-4">
+<h4 id="org468abc2"><span class="section-number-4">2.1.16.</span> Tools</h4>
 <div class="outline-text-4" id="text-2-1-16">
 </div>
 <ol class="org-ol">
-<li><a id="org37c6c08"></a>Draw NN<br />
+<li><a id="org47dc0c2"></a>Draw NN<br />
 <div class="outline-text-5" id="text-2-1-16-1">
 <ul class="org-ul">
 <li><p>
@@ -465,8 +472,8 @@ Latex code for drawing neural networks for reports and presentation.
 </ol>
 </div>
 </div>
-<div id="outline-container-orgf75a918" class="outline-3">
-<h3 id="orgf75a918"><span class="section-number-3">2.2.</span> Techniques - Algorithms</h3>
+<div id="outline-container-orgf8bebfa" class="outline-3">
+<h3 id="orgf8bebfa"><span class="section-number-3">2.2.</span> Techniques - Algorithms</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 Grips of what a model is capable:
@@ -487,8 +494,8 @@ Understand how the model will be used.
 <li>Investigate relevant sub-populations within the dataset</li>
 </ol>
 </div>
-<div id="outline-container-org0c6c6e6" class="outline-4">
-<h4 id="org0c6c6e6"><span class="section-number-4">2.2.1.</span> Linear regression</h4>
+<div id="outline-container-org4411c3b" class="outline-4">
+<h4 id="org4411c3b"><span class="section-number-4">2.2.1.</span> Linear regression</h4>
 <div class="outline-text-4" id="text-2-2-1">
 <p>
 Is a linear approach to modelling the relationship between a scalar response and one or more
@@ -496,33 +503,33 @@ explanatory variables
 </p>
 </div>
 </div>
-<div id="outline-container-orgaa8e4b7" class="outline-4">
-<h4 id="orgaa8e4b7"><span class="section-number-4">2.2.2.</span> Logistic regression</h4>
+<div id="outline-container-org98318a0" class="outline-4">
+<h4 id="org98318a0"><span class="section-number-4">2.2.2.</span> Logistic regression</h4>
 </div>
 
-<div id="outline-container-org8e2447c" class="outline-4">
-<h4 id="org8e2447c"><span class="section-number-4">2.2.3.</span> Linear SVM and Kernel SVM</h4>
+<div id="outline-container-orgffd1558" class="outline-4">
+<h4 id="orgffd1558"><span class="section-number-4">2.2.3.</span> Linear SVM and Kernel SVM</h4>
 <div class="outline-text-4" id="text-2-2-3">
 <p>
 Linear Support Vector Machine (SVN) and Kernel SVN
 </p>
 </div>
 </div>
-<div id="outline-container-orga8ff8b5" class="outline-4">
-<h4 id="orga8ff8b5"><span class="section-number-4">2.2.4.</span> Trees and ensemble trees</h4>
+<div id="outline-container-org10ceb2f" class="outline-4">
+<h4 id="org10ceb2f"><span class="section-number-4">2.2.4.</span> Trees and ensemble trees</h4>
 </div>
-<div id="outline-container-orgd026186" class="outline-4">
-<h4 id="orgd026186"><span class="section-number-4">2.2.5.</span> Neural networks</h4>
+<div id="outline-container-orgbe7cd1d" class="outline-4">
+<h4 id="orgbe7cd1d"><span class="section-number-4">2.2.5.</span> Neural networks</h4>
 </div>
-<div id="outline-container-org1b95101" class="outline-4">
-<h4 id="org1b95101"><span class="section-number-4">2.2.6.</span> K-means/k-modes, GMM (Gaussian Mixture Model) Clustering</h4>
+<div id="outline-container-org623326d" class="outline-4">
+<h4 id="org623326d"><span class="section-number-4">2.2.6.</span> K-means/k-modes, GMM (Gaussian Mixture Model) Clustering</h4>
 </div>
-<div id="outline-container-orgd3592dd" class="outline-4">
-<h4 id="orgd3592dd"><span class="section-number-4">2.2.7.</span> DBSCAN</h4>
+<div id="outline-container-org3cf817d" class="outline-4">
+<h4 id="org3cf817d"><span class="section-number-4">2.2.7.</span> DBSCAN</h4>
 <div class="outline-text-4" id="text-2-2-7">
 </div>
 <ol class="org-ol">
-<li><a id="orga019e86"></a>Advantages of DBSCAN<br />
+<li><a id="org1f21b5b"></a>Advantages of DBSCAN<br />
 <div class="outline-text-5" id="text-2-2-7-1">
 <ul class="org-ul">
 <li>Is great at separating clusters of high density versus clusters of low density within a given dataset.</li>
@@ -530,7 +537,7 @@ Linear Support Vector Machine (SVN) and Kernel SVN
 </ul>
 </div>
 </li>
-<li><a id="org9caa540"></a>Disadvantages of DBSCAN<br />
+<li><a id="org5ef6607"></a>Disadvantages of DBSCAN<br />
 <div class="outline-text-5" id="text-2-2-7-2">
 <ul class="org-ul">
 <li>Does not work well when dealing with clusters of varying densities (struggles with clusters
@@ -541,12 +548,12 @@ of similar density), good at separating <i>high</i> from <i>low</i> density.</li
 </li>
 </ol>
 </div>
-<div id="outline-container-org24e1c90" class="outline-4">
-<h4 id="org24e1c90"><span class="section-number-4">2.2.8.</span> Hierarchical clustering</h4>
+<div id="outline-container-orge6ea4b9" class="outline-4">
+<h4 id="orge6ea4b9"><span class="section-number-4">2.2.8.</span> Hierarchical clustering</h4>
 <div class="outline-text-4" id="text-2-2-8">
 </div>
 <ol class="org-ol">
-<li><a id="org85c5272"></a>HDBSCAN<br />
+<li><a id="orgc32aa7a"></a>HDBSCAN<br />
 <div class="outline-text-5" id="text-2-2-8-1">
 <p>
 Hierarchical density-based spatial clustering of applications with noise. It extends DBSCAN by
@@ -557,47 +564,47 @@ flat clustering based in the stability of clusters.
 </li>
 </ol>
 </div>
-<div id="outline-container-org316042e" class="outline-4">
-<h4 id="org316042e"><span class="section-number-4">2.2.9.</span> PCA, SVD and LDA</h4>
+<div id="outline-container-org8d0ca9d" class="outline-4">
+<h4 id="org8d0ca9d"><span class="section-number-4">2.2.9.</span> PCA, SVD and LDA</h4>
 <div class="outline-text-4" id="text-2-2-9">
 </div>
 <ol class="org-ol">
-<li><a id="orgdc260af"></a>PCA - Unsupervised method to understand global properties<br />
+<li><a id="orgca0ce19"></a>PCA - Unsupervised method to understand global properties<br />
 <div class="outline-text-5" id="text-2-2-9-1">
 <p>
 Use Scipy, scikit-learn
 </p>
 </div>
 </li>
-<li><a id="orgbc4ff29"></a>Least squares and polynomial fitting for datasets with low dimensions<br />
+<li><a id="orgbcd1626"></a>Least squares and polynomial fitting for datasets with low dimensions<br />
 <div class="outline-text-5" id="text-2-2-9-2">
 <p>
 Use Numpy, sip
 </p>
 </div>
 </li>
-<li><a id="org90b5a0d"></a>Constrained linear regression, weights do not misbehave<br />
+<li><a id="org9427e2c"></a>Constrained linear regression, weights do not misbehave<br />
 <div class="outline-text-5" id="text-2-2-9-3">
 <p>
 Use scikit-learn
 </p>
 </div>
 </li>
-<li><a id="org858e2c4"></a>k-means, unsupervised clustering algorithm, expectation maximization algorithm<br />
+<li><a id="org6f53b6f"></a>k-means, unsupervised clustering algorithm, expectation maximization algorithm<br />
 <div class="outline-text-5" id="text-2-2-9-4">
 <p>
 Use scikit-learn
 </p>
 </div>
 </li>
-<li><a id="orgbf4766d"></a>Logistic regression, nonlinearity (sigmoid function), classification<br />
+<li><a id="org993941a"></a>Logistic regression, nonlinearity (sigmoid function), classification<br />
 <div class="outline-text-5" id="text-2-2-9-5">
 <p>
 Use scikit-learn
 </p>
 </div>
 </li>
-<li><a id="orgd406e0b"></a>SVM, support vector machines, linear models -&gt; Loss function<br />
+<li><a id="orgf06cd5b"></a>SVM, support vector machines, linear models -&gt; Loss function<br />
 <div class="outline-text-5" id="text-2-2-9-6">
 <p>
 Use scikit-learn
@@ -606,35 +613,35 @@ Use scikit-learn
 </li>
 </ol>
 </div>
-<div id="outline-container-orge84e207" class="outline-4">
-<h4 id="orge84e207"><span class="section-number-4">2.2.10.</span> Feedforward neural networks, Multilayered logistic regression classifiers many layers separated by non-linearity</h4>
+<div id="outline-container-org12fff31" class="outline-4">
+<h4 id="org12fff31"><span class="section-number-4">2.2.10.</span> Feedforward neural networks, Multilayered logistic regression classifiers many layers separated by non-linearity</h4>
 <div class="outline-text-4" id="text-2-2-10">
 <p>
 Use scikit-learn-&gt;Neural networks, keras
 </p>
 </div>
 </div>
-<div id="outline-container-org483410d" class="outline-4">
-<h4 id="org483410d"><span class="section-number-4">2.2.11.</span> Convolution neural networks, vision based machine learn, image classification</h4>
+<div id="outline-container-orgee976d3" class="outline-4">
+<h4 id="orgee976d3"><span class="section-number-4">2.2.11.</span> Convolution neural networks, vision based machine learn, image classification</h4>
 </div>
 </div>
-<div id="outline-container-org6762c65" class="outline-3">
-<h3 id="org6762c65"><span class="section-number-3">2.3.</span> Computational complexity theory</h3>
+<div id="outline-container-org5f6e370" class="outline-3">
+<h3 id="org5f6e370"><span class="section-number-3">2.3.</span> Computational complexity theory</h3>
 <div class="outline-text-3" id="text-2-3">
 </div>
-<div id="outline-container-orgd962238" class="outline-4">
-<h4 id="orgd962238"><span class="section-number-4">2.3.1.</span> NP - Completeness</h4>
+<div id="outline-container-org2a3517a" class="outline-4">
+<h4 id="org2a3517a"><span class="section-number-4">2.3.1.</span> NP - Completeness</h4>
 <div class="outline-text-4" id="text-2-3-1">
 </div>
 <ol class="org-ol">
-<li><a id="org60fe1d5"></a>Combinatorial optimization<br />
+<li><a id="orgb3f2fcc"></a>Combinatorial optimization<br />
 <div class="outline-text-5" id="text-2-3-1-1">
 <p>
 Finding optimal object from a finite set of objects.
 </p>
 </div>
 <ol class="org-ol">
-<li><a id="orga91f14f"></a>Typical problems:<br />
+<li><a id="orgd465b7b"></a>Typical problems:<br />
 <div class="outline-text-6" id="text-2-3-1-1-1">
 <ul class="org-ul">
 <li>Traveling salesman problem</li>
@@ -648,8 +655,8 @@ Finding optimal object from a finite set of objects.
 </ol>
 </div>
 </div>
-<div id="outline-container-orgdd4e2e7" class="outline-3">
-<h3 id="orgdd4e2e7"><span class="section-number-3">2.4.</span> Elements of AI</h3>
+<div id="outline-container-orgccfe080" class="outline-3">
+<h3 id="orgccfe080"><span class="section-number-3">2.4.</span> Elements of AI</h3>
 <div class="outline-text-3" id="text-2-4">
 <p>
 Predicting the stock market by fitting a curve to paste data about stock prices -&gt; Kind of AI -&gt;
@@ -739,32 +746,32 @@ System that improves their performance in a given task with more and more experi
 </ol>
 </div>
 <ol class="org-ol">
-<li><a id="org4e9573b"></a>State space -&gt; Set of possible solutions<br /></li>
+<li><a id="org5c8cc6b"></a>State space -&gt; Set of possible solutions<br /></li>
 
-<li><a id="org5eafe3e"></a>Transitions -&gt; possible moves between one state and another<br /></li>
+<li><a id="orgd5265f8"></a>Transitions -&gt; possible moves between one state and another<br /></li>
 
-<li><a id="org46459fd"></a>Costs -&gt; Transitions can differ in ways that make some transitions more preferable or cheaper.<br /></li>
+<li><a id="org2f9a948"></a>Costs -&gt; Transitions can differ in ways that make some transitions more preferable or cheaper.<br /></li>
 </ol>
 
 
 
-<div id="outline-container-orga8b4f5c" class="outline-4">
-<h4 id="orga8b4f5c"><span class="section-number-4">2.4.1.</span> Data science -&gt; Recent umbrella</h4>
+<div id="outline-container-orgaf5fd65" class="outline-4">
+<h4 id="orgaf5fd65"><span class="section-number-4">2.4.1.</span> Data science -&gt; Recent umbrella</h4>
 <div class="outline-text-4" id="text-2-4-1">
 <p>
 Covers:
 </p>
 </div>
 <ol class="org-ol">
-<li><a id="org42f9966"></a>Machine learning and statistics<br /></li>
+<li><a id="org36c3095"></a>Machine learning and statistics<br /></li>
 
-<li><a id="orgc1d1dc0"></a>Some aspects of CS<br />
+<li><a id="org86280d4"></a>Some aspects of CS<br />
 <ol class="org-ol">
-<li><a id="org721fe77"></a>Algorithms<br /></li>
+<li><a id="org3816040"></a>Algorithms<br /></li>
 
-<li><a id="org068accc"></a>Data storage<br /></li>
+<li><a id="org9bef28b"></a>Data storage<br /></li>
 
-<li><a id="org65a5721"></a>Web app dev<br />
+<li><a id="orge3d47b0"></a>Web app dev<br />
 <div class="outline-text-6" id="text-2-4-1-2-3">
 <p>
 Those needs CS and AI. However involve a lot of statistics, busines, law -&gt; Part of CS.
@@ -775,16 +782,16 @@ Those needs CS and AI. However involve a lot of statistics, busines, law -&gt; P
 </li>
 </ol>
 </div>
-<div id="outline-container-org93e8715" class="outline-4">
-<h4 id="org93e8715"><span class="section-number-4">2.4.2.</span> Euler diagram -&gt; Relates to Venn Diagrams</h4>
+<div id="outline-container-org4daa799" class="outline-4">
+<h4 id="org4daa799"><span class="section-number-4">2.4.2.</span> Euler diagram -&gt; Relates to Venn Diagrams</h4>
 <div class="outline-text-4" id="text-2-4-2">
 </div>
 <ol class="org-ol">
-<li><a id="org5eaa599"></a>CS -&gt; Relatively broad field. Includes: AI and others subfields such as distributed computing, human computer interaction, software engineering.<br /></li>
+<li><a id="orgb9a3fcd"></a>CS -&gt; Relatively broad field. Includes: AI and others subfields such as distributed computing, human computer interaction, software engineering.<br /></li>
 </ol>
 </div>
-<div id="outline-container-org14148b8" class="outline-4">
-<h4 id="org14148b8"><span class="section-number-4">2.4.3.</span> Natural Language Processing</h4>
+<div id="outline-container-org8e551af" class="outline-4">
+<h4 id="org8e551af"><span class="section-number-4">2.4.3.</span> Natural Language Processing</h4>
 <div class="outline-text-4" id="text-2-4-3">
 <p>
 Applications:
@@ -816,12 +823,12 @@ Help the companies in achieving the goal of smooth customer experience</li>
 </div>
 </div>
 </div>
-<div id="outline-container-org04cfa50" class="outline-2">
-<h2 id="org04cfa50"><span class="section-number-2">3.</span> Tools</h2>
+<div id="outline-container-org655a2d6" class="outline-2">
+<h2 id="org655a2d6"><span class="section-number-2">3.</span> Tools</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-orgdca77aa" class="outline-3">
-<h3 id="orgdca77aa"><span class="section-number-3">3.1.</span> Jupyter</h3>
+<div id="outline-container-org6e3ad74" class="outline-3">
+<h3 id="org6e3ad74"><span class="section-number-3">3.1.</span> Jupyter</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 `<a href="https://jupyter.org/">https://jupyter.org/</a>`
@@ -832,12 +839,12 @@ Project Jupyter is a project and community whose goal is to "develop open-source
 open-standards, and services for interactive computing across dozens of programming languages
 </p>
 </div>
-<div id="outline-container-org46b2c3c" class="outline-4">
-<h4 id="org46b2c3c"><span class="section-number-4">3.1.1.</span> Extensions:</h4>
+<div id="outline-container-org09035c2" class="outline-4">
+<h4 id="org09035c2"><span class="section-number-4">3.1.1.</span> Extensions:</h4>
 <div class="outline-text-4" id="text-3-1-1">
 </div>
 <ol class="org-ol">
-<li><a id="orge690112"></a>nbdime<br />
+<li><a id="org7556f76"></a>nbdime<br />
 <div class="outline-text-5" id="text-3-1-1-1">
 <p>
 `<a href="https://github.com/jupyter/nbdime">https://github.com/jupyter/nbdime</a>`
@@ -860,7 +867,7 @@ nbdime provides tools for diffing and merging of Jupyter Notebooks.
 </ul>
 </div>
 </li>
-<li><a id="org0a8b59e"></a>jupyterlab-drawio<br />
+<li><a id="orgc2bf8fb"></a>jupyterlab-drawio<br />
 <div class="outline-text-5" id="text-3-1-1-2">
 <p>
 `<a href="https://github.com/QuantStack/jupyterlab-drawio">https://github.com/QuantStack/jupyterlab-drawio</a>`
@@ -871,7 +878,7 @@ A JupyterLab extension for embedding drawio / mxgraph.
 </p>
 </div>
 </li>
-<li><a id="org356906e"></a>JupyterLab Top Bar<br />
+<li><a id="org77a4908"></a>JupyterLab Top Bar<br />
 <div class="outline-text-5" id="text-3-1-1-3">
 <p>
 `<a href="https://github.com/jupyterlab-contrib/jupyterlab-topbar">https://github.com/jupyterlab-contrib/jupyterlab-topbar</a>`
@@ -882,7 +889,7 @@ Monorepo to experiment with the top bar space in JupyterLab.
 </p>
 </div>
 </li>
-<li><a id="orgc9ac1e1"></a>jupyterlab-spellchecker<br />
+<li><a id="org84f7cf9"></a>jupyterlab-spellchecker<br />
 <div class="outline-text-5" id="text-3-1-1-4">
 <p>
 `<a href="https://github.com/jupyterlab-contrib/spellchecker">https://github.com/jupyterlab-contrib/spellchecker</a>`
@@ -894,7 +901,7 @@ the text files.
 </p>
 </div>
 </li>
-<li><a id="org453b795"></a>aquirdturtle<sub>collapsible</sub><sub>headings</sub><br />
+<li><a id="org2dfd1b9"></a>aquirdturtle<sub>collapsible</sub><sub>headings</sub><br />
 <div class="outline-text-5" id="text-3-1-1-5">
 <p>
 `<a href="https://github.com/aquirdTurtle/Collapsible_Headings">https://github.com/aquirdTurtle/Collapsible_Headings</a>`
@@ -906,7 +913,7 @@ notebooks.
 </p>
 </div>
 </li>
-<li><a id="org2c58ae9"></a>jupyterlab-git<br />
+<li><a id="org3eb4d87"></a>jupyterlab-git<br />
 <div class="outline-text-5" id="text-3-1-1-6">
 <p>
 `<a href="https://github.com/jupyterlab/jupyterlab-git">https://github.com/jupyterlab/jupyterlab-git</a>`
@@ -917,7 +924,7 @@ A JupyterLab extension for version control using Git
 </p>
 </div>
 </li>
-<li><a id="org70de308"></a>jupyterlab-go-to-definition<br />
+<li><a id="org7a83d91"></a>jupyterlab-go-to-definition<br />
 <div class="outline-text-5" id="text-3-1-1-7">
 <p>
 Jump to definition of a variable or function in JupyterLab notebook and file editor.
@@ -928,7 +935,7 @@ Jump to definition of a variable or function in JupyterLab notebook and file edi
 </p>
 </div>
 </li>
-<li><a id="orgff6c36d"></a>jupyterlab-jupytext<br />
+<li><a id="orgaeead14"></a>jupyterlab-jupytext<br />
 <div class="outline-text-5" id="text-3-1-1-8">
 <p>
 `<a href="https://jupytext.readthedocs.io/en/latest/">https://jupytext.readthedocs.io/en/latest/</a>`
@@ -956,19 +963,19 @@ Common use cases for Jupytext are:
 </li>
 </ol>
 </div>
-<div id="outline-container-org19d45c4" class="outline-4">
-<h4 id="org19d45c4"><span class="section-number-4">3.1.2.</span> Tricks</h4>
+<div id="outline-container-orgfc836d8" class="outline-4">
+<h4 id="orgfc836d8"><span class="section-number-4">3.1.2.</span> Tricks</h4>
 <div class="outline-text-4" id="text-3-1-2">
 </div>
 <ol class="org-ol">
-<li><a id="org8245ef1"></a>Shell commands<br />
+<li><a id="org1a7fb0f"></a>Shell commands<br />
 <div class="outline-text-5" id="text-3-1-2-1">
 <p>
 Exclamation mark before a command
 </p>
 </div>
 </li>
-<li><a id="org7ae6e16"></a>View a List of Shortcuts<br />
+<li><a id="orgb04f2ce"></a>View a List of Shortcuts<br />
 <div class="outline-text-5" id="text-3-1-2-2">
 <ol class="org-ol">
 <li>Open up a Jupyter Notebook.</li>
@@ -978,21 +985,21 @@ Exclamation mark before a command
 </ol>
 </div>
 </li>
-<li><a id="orgd59b3bf"></a>See the list of all the shortcuts.<br />
+<li><a id="org592a44a"></a>See the list of all the shortcuts.<br />
 <div class="outline-text-5" id="text-3-1-2-3">
 <p>
 % prefix - iew the list of all the available magic commands with %lsmagic
 </p>
 </div>
 </li>
-<li><a id="org441539f"></a>Measure Cell Execution Time<br />
+<li><a id="org5f66ff9"></a>Measure Cell Execution Time<br />
 <div class="outline-text-5" id="text-3-1-2-4">
 <p>
 %%time to get the elapsed time of running a cell of code.
 </p>
 </div>
 </li>
-<li><a id="orgcaa4197"></a>View the Documentation of a Method<br />
+<li><a id="org7535047"></a>View the Documentation of a Method<br />
 <div class="outline-text-5" id="text-3-1-2-5">
 <p>
 To view the documentation of a method, highlight the method and press <code>Shift + Tab</code>.
@@ -1002,8 +1009,8 @@ To view the documentation of a method, highlight the method and press <code>Shif
 </ol>
 </div>
 </div>
-<div id="outline-container-org74a0cb3" class="outline-3">
-<h3 id="org74a0cb3"><span class="section-number-3">3.2.</span> LIBSVM</h3>
+<div id="outline-container-org3d98b1b" class="outline-3">
+<h3 id="org3d98b1b"><span class="section-number-3">3.2.</span> LIBSVM</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 A Library for Support Vector Machines, `<a href="https://www.csie.ntu.edu.tw/~cjlin/libsvm/">https://www.csie.ntu.edu.tw/~cjlin/libsvm/</a>`
@@ -1011,26 +1018,26 @@ Interfaces and extensions to LIBSVM:
 </p>
 </div>
 <ol class="org-ol">
-<li><a id="orgfa9d444"></a>Python `<a href="https://www.csie.ntu.edu.tw/~cjlin/libsvm/#download">https://www.csie.ntu.edu.tw/~cjlin/libsvm/#download</a>`<br /></li>
-<li><a id="org54f0069"></a>Julia `<a href="https://github.com/mpastell/LIBSVM.jl">https://github.com/mpastell/LIBSVM.jl</a>` (SVR in Julia `<a href="https://github.com/madsjulia/SVR.jl">https://github.com/madsjulia/SVR.jl</a>`)<br /></li>
-<li><a id="org9d6fb9d"></a>CUDA `<a href="http://mklab.iti.gr/project/GPU-LIBSVM">http://mklab.iti.gr/project/GPU-LIBSVM</a>`<br /></li>
-<li><a id="orge5efe5d"></a>GO `<a href="https://github.com/ewalker544/libsvm-go">https://github.com/ewalker544/libsvm-go</a>`<br /></li>
+<li><a id="org6adc555"></a>Python `<a href="https://www.csie.ntu.edu.tw/~cjlin/libsvm/#download">https://www.csie.ntu.edu.tw/~cjlin/libsvm/#download</a>`<br /></li>
+<li><a id="org76f7469"></a>Julia `<a href="https://github.com/mpastell/LIBSVM.jl">https://github.com/mpastell/LIBSVM.jl</a>` (SVR in Julia `<a href="https://github.com/madsjulia/SVR.jl">https://github.com/madsjulia/SVR.jl</a>`)<br /></li>
+<li><a id="orge8f8596"></a>CUDA `<a href="http://mklab.iti.gr/project/GPU-LIBSVM">http://mklab.iti.gr/project/GPU-LIBSVM</a>`<br /></li>
+<li><a id="org6085e6c"></a>GO `<a href="https://github.com/ewalker544/libsvm-go">https://github.com/ewalker544/libsvm-go</a>`<br /></li>
 </ol>
 </div>
-<div id="outline-container-orgc276587" class="outline-3">
-<h3 id="orgc276587"><span class="section-number-3">3.3.</span> Python</h3>
+<div id="outline-container-org5943fd9" class="outline-3">
+<h3 id="org5943fd9"><span class="section-number-3">3.3.</span> Python</h3>
 <div class="outline-text-3" id="text-3-3">
 </div>
-<div id="outline-container-orge378587" class="outline-4">
-<h4 id="orge378587"><span class="section-number-4">3.3.1.</span> Numpy</h4>
+<div id="outline-container-orgf868460" class="outline-4">
+<h4 id="orgf868460"><span class="section-number-4">3.3.1.</span> Numpy</h4>
 <div class="outline-text-4" id="text-3-3-1">
 <p>
 Scientific tools for Python. `<a href="https://numpy.org/">https://numpy.org/</a>`
 </p>
 </div>
 </div>
-<div id="outline-container-orge757734" class="outline-4">
-<h4 id="orge757734"><span class="section-number-4">3.3.2.</span> Scipy</h4>
+<div id="outline-container-org31de5a1" class="outline-4">
+<h4 id="org31de5a1"><span class="section-number-4">3.3.2.</span> Scipy</h4>
 <div class="outline-text-4" id="text-3-3-2">
 <p>
  Open-source software for mathematics, science, and engineering.
@@ -1038,16 +1045,16 @@ Scientific tools for Python. `<a href="https://numpy.org/">https://numpy.org/</a
 </p>
 </div>
 </div>
-<div id="outline-container-org1c4f20c" class="outline-4">
-<h4 id="org1c4f20c"><span class="section-number-4">3.3.3.</span> Scikit-learn</h4>
+<div id="outline-container-org38f0dec" class="outline-4">
+<h4 id="org38f0dec"><span class="section-number-4">3.3.3.</span> Scikit-learn</h4>
 <div class="outline-text-4" id="text-3-3-3">
 <p>
 A set of python modules for machine learning and data mining `<a href="https://sklearn.org/">https://sklearn.org/</a>`
 </p>
 </div>
 </div>
-<div id="outline-container-orgfbc314e" class="outline-4">
-<h4 id="orgfbc314e"><span class="section-number-4">3.3.4.</span> Keras</h4>
+<div id="outline-container-orgb73fe9e" class="outline-4">
+<h4 id="orgb73fe9e"><span class="section-number-4">3.3.4.</span> Keras</h4>
 <div class="outline-text-4" id="text-3-3-4">
 <p>
 Keras is a deep learning API written in Python, running on top of the
@@ -1055,8 +1062,8 @@ machine learning platform TensorFlow. `<a href="https://keras.io/">https://keras
 </p>
 </div>
 </div>
-<div id="outline-container-orgb0c9997" class="outline-4">
-<h4 id="orgb0c9997"><span class="section-number-4">3.3.5.</span> Tensorflow</h4>
+<div id="outline-container-org7c86747" class="outline-4">
+<h4 id="org7c86747"><span class="section-number-4">3.3.5.</span> Tensorflow</h4>
 <div class="outline-text-4" id="text-3-3-5">
 <p>
 Library for computation using data flow graphs for scalable machine learning
@@ -1064,8 +1071,8 @@ Library for computation using data flow graphs for scalable machine learning
 </p>
 </div>
 </div>
-<div id="outline-container-org623f64a" class="outline-4">
-<h4 id="org623f64a"><span class="section-number-4">3.3.6.</span> PyMC</h4>
+<div id="outline-container-org0d60561" class="outline-4">
+<h4 id="org0d60561"><span class="section-number-4">3.3.6.</span> PyMC</h4>
 <div class="outline-text-4" id="text-3-3-6">
 <p>
 PyMC is a probabilistic programming library for Python that enables
@@ -1085,13 +1092,111 @@ involving uncertainty quantification and model inference.
 </p>
 </div>
 </div>
+<div id="outline-container-org0909d64" class="outline-4">
+<h4 id="org0909d64"><span class="section-number-4">3.3.7.</span> NumPyro</h4>
+<div class="outline-text-4" id="text-3-3-7">
+<p>
+NumPyro is a lightweight probabilistic programming library that provides
+a NumPy backend for Pyro. Rely on JAX for automatic differentiation
+and JIT compilation to GPU / CPU.
+</p>
+
+<p>
+`<a href="https://num.pyro.ai">https://num.pyro.ai</a>`
+</p>
 </div>
-<div id="outline-container-org4ce3d87" class="outline-3">
-<h3 id="org4ce3d87"><span class="section-number-3">3.4.</span> Julia</h3>
+</div>
+<div id="outline-container-org408b3ee" class="outline-4">
+<h4 id="org408b3ee"><span class="section-number-4">3.3.8.</span> Pyro</h4>
+<div class="outline-text-4" id="text-3-3-8">
+<p>
+Pyro is a flexible, scalable deep probabilistic programming library
+built on PyTorch.
+</p>
+
+<p>
+`<a href="https://github.com/pyro-ppl/pyro">https://github.com/pyro-ppl/pyro</a>`
+</p>
+</div>
+</div>
+<div id="outline-container-org6102ed4" class="outline-4">
+<h4 id="org6102ed4"><span class="section-number-4">3.3.9.</span> Pixi</h4>
+<div class="outline-text-4" id="text-3-3-9">
+<p>
+Fast, modern, and reproducible package management tool for developers of
+all backgrounds.
+</p>
+
+<p>
+`<a href="https://pixi.prefix.dev">https://pixi.prefix.dev</a>`
+</p>
+</div>
+</div>
+<div id="outline-container-orgdc8e5b8" class="outline-4">
+<h4 id="orgdc8e5b8"><span class="section-number-4">3.3.10.</span> Polars</h4>
+<div class="outline-text-4" id="text-3-3-10">
+<p>
+DataFrames for the new era. Polars is an open-source library for data
+manipulation, known for being one of the fastest data processing
+solutions on a single machine.
+</p>
+
+<p>
+`<a href="https://pola.rs/">https://pola.rs/</a>`
+</p>
+</div>
+</div>
+<div id="outline-container-org9fc1930" class="outline-4">
+<h4 id="org9fc1930"><span class="section-number-4">3.3.11.</span> BigFrames</h4>
+<div class="outline-text-4" id="text-3-3-11">
+<p>
+BigQuery DataFrames (also known as BigFrames) provides a Pythonic
+DataFrame and machine learning (ML) API powered by the BigQuery engine.
+</p>
+
+<p>
+`<a href="https://dataframes.bigquery.dev/">https://dataframes.bigquery.dev/</a>`
+</p>
+</div>
+</div>
+<div id="outline-container-org7d18cb9" class="outline-4">
+<h4 id="org7d18cb9"><span class="section-number-4">3.3.12.</span> Marimo</h4>
+<div class="outline-text-4" id="text-3-3-12">
+<p>
+marimo is an open-source reactive Python notebook: run a cell or
+interact with a UI element, and marimo automatically runs dependent
+cells (or marks them as stale), keeping code and outputs consistent and
+preventing bugs before they happen.
+</p>
+
+<p>
+`<a href="https://marimo.io/">https://marimo.io/</a>`
+</p>
+</div>
+</div>
+<div id="outline-container-org118f6ce" class="outline-4">
+<h4 id="org118f6ce"><span class="section-number-4">3.3.13.</span> DuckDB</h4>
+<div class="outline-text-4" id="text-3-3-13">
+<p>
+DuckDB is an open-source, in-process SQL database management system
+specifically built for high-performance analytical queries (OLAP). Often
+called the "SQLite for Analytics," it offers the same simplicity and
+portability as SQLite but is optimized for large-scale data processing
+rather than transactional app storage.
+</p>
+
+<p>
+`<a href="https://duckdb.org/">https://duckdb.org/</a>`
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orge6899fb" class="outline-3">
+<h3 id="orge6899fb"><span class="section-number-3">3.4.</span> Julia</h3>
 <div class="outline-text-3" id="text-3-4">
 </div>
-<div id="outline-container-orga125101" class="outline-4">
-<h4 id="orga125101"><span class="section-number-4">3.4.1.</span> JuliaML</h4>
+<div id="outline-container-org7245604" class="outline-4">
+<h4 id="org7245604"><span class="section-number-4">3.4.1.</span> JuliaML</h4>
 <div class="outline-text-4" id="text-3-4-1">
 <p>
 One-stop-shop for learning models from data. It provides general abstractions and
@@ -1100,16 +1205,16 @@ datasets, and much more `<a href="https://juliaml.github.io/">https://juliaml.gi
 </p>
 </div>
 </div>
-<div id="outline-container-orge4db13d" class="outline-4">
-<h4 id="orge4db13d"><span class="section-number-4">3.4.2.</span> MLJ</h4>
+<div id="outline-container-orga52d912" class="outline-4">
+<h4 id="orga52d912"><span class="section-number-4">3.4.2.</span> MLJ</h4>
 <div class="outline-text-4" id="text-3-4-2">
 <p>
 A Machine Learning Framework for Julia `<a href="https://github.com/alan-turing-institute/MLJ.jl">https://github.com/alan-turing-institute/MLJ.jl</a>`
 </p>
 </div>
 </div>
-<div id="outline-container-orgd1dffe0" class="outline-4">
-<h4 id="orgd1dffe0"><span class="section-number-4">3.4.3.</span> DataFrames.jl</h4>
+<div id="outline-container-org1a71731" class="outline-4">
+<h4 id="org1a71731"><span class="section-number-4">3.4.3.</span> DataFrames.jl</h4>
 <div class="outline-text-4" id="text-3-4-3">
 <p>
 DataFrames.jl provides a set of tools for working with tabular data in Julia. Its design and
@@ -1123,8 +1228,8 @@ Julia from R or Python.
 </p>
 </div>
 </div>
-<div id="outline-container-org1deb897" class="outline-4">
-<h4 id="org1deb897"><span class="section-number-4">3.4.4.</span> Turing.jl</h4>
+<div id="outline-container-org2c7e771" class="outline-4">
+<h4 id="org2c7e771"><span class="section-number-4">3.4.4.</span> Turing.jl</h4>
 <div class="outline-text-4" id="text-3-4-4">
 <p>
 Turing.jl is a Julia library for general-purpose probabilistic programming. Turing allows the
@@ -1146,8 +1251,8 @@ statistics, and data science.
 </p>
 </div>
 </div>
-<div id="outline-container-orge4db793" class="outline-4">
-<h4 id="orge4db793"><span class="section-number-4">3.4.5.</span> ScikitLearn.jl</h4>
+<div id="outline-container-org38e1017" class="outline-4">
+<h4 id="org38e1017"><span class="section-number-4">3.4.5.</span> ScikitLearn.jl</h4>
 <div class="outline-text-4" id="text-3-4-5">
 <p>
 implements the popular scikit-learn interface and algorithms in Julia, it supports both models
@@ -1159,8 +1264,8 @@ from the scikit-learn library vi PyCall and Julia scosystem
 </p>
 </div>
 </div>
-<div id="outline-container-org0e262e8" class="outline-4">
-<h4 id="org0e262e8"><span class="section-number-4">3.4.6.</span> FastAI</h4>
+<div id="outline-container-orgf00ff66" class="outline-4">
+<h4 id="orgf00ff66"><span class="section-number-4">3.4.6.</span> FastAI</h4>
 <div class="outline-text-4" id="text-3-4-6">
 <p>
 FastAI.jl is inspired by fastai, and is a repository of best practices for deep learning in
@@ -1172,8 +1277,8 @@ Julia.
 </p>
 </div>
 </div>
-<div id="outline-container-org553b86b" class="outline-4">
-<h4 id="org553b86b"><span class="section-number-4">3.4.7.</span> SmartTensors</h4>
+<div id="outline-container-org8e8f773" class="outline-4">
+<h4 id="org8e8f773"><span class="section-number-4">3.4.7.</span> SmartTensors</h4>
 <div class="outline-text-4" id="text-3-4-7">
 <p>
 SmartTensors is a general high-performance Unsupervised, Supervised and Physics-Informed Machine Learning and Artificial Intelligence (ML/AI).
@@ -1190,12 +1295,12 @@ etc.) coupled with constraints (sparsity, nonnegativity, physics, etc.).
 </div>
 </div>
 </div>
-<div id="outline-container-orgfe4c37b" class="outline-3">
-<h3 id="orgfe4c37b"><span class="section-number-3">3.5.</span> R</h3>
+<div id="outline-container-org5ae1dc1" class="outline-3">
+<h3 id="org5ae1dc1"><span class="section-number-3">3.5.</span> R</h3>
 <div class="outline-text-3" id="text-3-5">
 </div>
-<div id="outline-container-orgf335a1f" class="outline-4">
-<h4 id="orgf335a1f"><span class="section-number-4">3.5.1.</span> proxy</h4>
+<div id="outline-container-orgb4344d1" class="outline-4">
+<h4 id="orgb4344d1"><span class="section-number-4">3.5.1.</span> proxy</h4>
 <div class="outline-text-4" id="text-3-5-1">
 <p>
 Provides an extensible framework for the efficient calculation of auto- and cross-proximities, along
@@ -1207,8 +1312,8 @@ with implementations of the most popular ones.
 </p>
 </div>
 </div>
-<div id="outline-container-org3b3d181" class="outline-4">
-<h4 id="org3b3d181"><span class="section-number-4">3.5.2.</span> ggplot2</h4>
+<div id="outline-container-org6cae409" class="outline-4">
+<h4 id="org6cae409"><span class="section-number-4">3.5.2.</span> ggplot2</h4>
 <div class="outline-text-4" id="text-3-5-2">
 <p>
 ggplot2 is a system for declaratively creating graphics, based on The Grammar of Graphics. You
@@ -1221,8 +1326,8 @@ use, and it takes care of the details.
 </p>
 </div>
 </div>
-<div id="outline-container-orgdb82a66" class="outline-4">
-<h4 id="orgdb82a66"><span class="section-number-4">3.5.3.</span> tidyr</h4>
+<div id="outline-container-orge8296b8" class="outline-4">
+<h4 id="orge8296b8"><span class="section-number-4">3.5.3.</span> tidyr</h4>
 <div class="outline-text-4" id="text-3-5-3">
 <p>
 The goal of tidyr is to help you create tidy data. Tidy data is data where:
@@ -1245,8 +1350,8 @@ and more time working on your analysis. Learn more about tidy data in vignette("
 </p>
 </div>
 </div>
-<div id="outline-container-orge9aca8c" class="outline-4">
-<h4 id="orge9aca8c"><span class="section-number-4">3.5.4.</span> tm</h4>
+<div id="outline-container-org7cb3533" class="outline-4">
+<h4 id="org7cb3533"><span class="section-number-4">3.5.4.</span> tm</h4>
 <div class="outline-text-4" id="text-3-5-4">
 <p>
 A framework for text mining applications within R.
@@ -1257,8 +1362,8 @@ A framework for text mining applications within R.
 </p>
 </div>
 </div>
-<div id="outline-container-org16227be" class="outline-4">
-<h4 id="org16227be"><span class="section-number-4">3.5.5.</span> dplyr</h4>
+<div id="outline-container-org897223f" class="outline-4">
+<h4 id="org897223f"><span class="section-number-4">3.5.5.</span> dplyr</h4>
 <div class="outline-text-4" id="text-3-5-5">
 <p>
 A fast, consistent tool for working with data frame like objects, both in memory and out of
@@ -1270,8 +1375,8 @@ memory.
 </p>
 </div>
 </div>
-<div id="outline-container-org2edebd8" class="outline-4">
-<h4 id="org2edebd8"><span class="section-number-4">3.5.6.</span> tidytext</h4>
+<div id="outline-container-org2303c03" class="outline-4">
+<h4 id="org2303c03"><span class="section-number-4">3.5.6.</span> tidytext</h4>
 <div class="outline-text-4" id="text-3-5-6">
 <p>
 Using tidy data principles can make many text mining tasks easier
@@ -1282,8 +1387,8 @@ Using tidy data principles can make many text mining tasks easier
 </p>
 </div>
 </div>
-<div id="outline-container-org2ded3b8" class="outline-4">
-<h4 id="org2ded3b8"><span class="section-number-4">3.5.7.</span> tidyverse</h4>
+<div id="outline-container-org936b831" class="outline-4">
+<h4 id="org936b831"><span class="section-number-4">3.5.7.</span> tidyverse</h4>
 <div class="outline-text-4" id="text-3-5-7">
 <p>
 The tidyverse is an opinionated collection of R packages designed for data science
@@ -1294,8 +1399,8 @@ The tidyverse is an opinionated collection of R packages designed for data scien
 </p>
 </div>
 </div>
-<div id="outline-container-orgc624502" class="outline-4">
-<h4 id="orgc624502"><span class="section-number-4">3.5.8.</span> udpipe</h4>
+<div id="outline-container-org5ce3363" class="outline-4">
+<h4 id="org5ce3363"><span class="section-number-4">3.5.8.</span> udpipe</h4>
 <div class="outline-text-4" id="text-3-5-8">
 <p>
 Tokenization, Parts of Speech Tagging, Lemmatization and
@@ -1307,8 +1412,8 @@ Dependency Parsing with the 'UDPipe' 'NLP' Toolkit
 </p>
 </div>
 </div>
-<div id="outline-container-org945a305" class="outline-4">
-<h4 id="org945a305"><span class="section-number-4">3.5.9.</span> corpus</h4>
+<div id="outline-container-org423ca42" class="outline-4">
+<h4 id="org423ca42"><span class="section-number-4">3.5.9.</span> corpus</h4>
 <div class="outline-text-4" id="text-3-5-9">
 <p>
 Text corpus data analysis, with full support for international text (Unicode). Functions for
@@ -1322,39 +1427,39 @@ n-grams.
 </p>
 </div>
 </div>
-<div id="outline-container-org8cecbaa" class="outline-4">
-<h4 id="org8cecbaa"><span class="section-number-4">3.5.10.</span> DIY ML</h4>
+<div id="outline-container-org39516aa" class="outline-4">
+<h4 id="org39516aa"><span class="section-number-4">3.5.10.</span> DIY ML</h4>
 <div class="outline-text-4" id="text-3-5-10">
 </div>
 <ol class="org-ol">
-<li><a id="org93025ff"></a>(AtomAI)[<a href="https://github.com/pycroscopy/atomai">https://github.com/pycroscopy/atomai</a>]<br />
+<li><a id="org5ec907b"></a>(AtomAI)[<a href="https://github.com/pycroscopy/atomai">https://github.com/pycroscopy/atomai</a>]<br />
 <div class="outline-text-5" id="text-3-5-10-1">
 <p>
 AtomAI is a Pytorch-based package for deep and machine learning analysis of microscopy data
 </p>
 </div>
 </li>
-<li><a id="org38f31fb"></a>PyroVED<br /></li>
+<li><a id="orgd0361e4"></a>PyroVED<br /></li>
 
-<li><a id="org07cb88a"></a>GPim<br /></li>
+<li><a id="org0e8e99e"></a>GPim<br /></li>
 
-<li><a id="orgb076ea5"></a>gpax<br /></li>
+<li><a id="orgb38ab46"></a>gpax<br /></li>
 
-<li><a id="org4bb6a04"></a>PyCroscopy<br /></li>
+<li><a id="orgb24ed0d"></a>PyCroscopy<br /></li>
 </ol>
 </div>
 </div>
 </div>
-<div id="outline-container-org3b070d6" class="outline-2">
-<h2 id="org3b070d6"><span class="section-number-2">4.</span> To organize</h2>
+<div id="outline-container-org38073c9" class="outline-2">
+<h2 id="org38073c9"><span class="section-number-2">4.</span> To organize</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-orgf174573" class="outline-3">
-<h3 id="orgf174573"><span class="section-number-3">4.1.</span> Mineracao e big data</h3>
+<div id="outline-container-org6c0fdb8" class="outline-3">
+<h3 id="org6c0fdb8"><span class="section-number-3">4.1.</span> Mineracao e big data</h3>
 <div class="outline-text-3" id="text-4-1">
 </div>
-<div id="outline-container-orgd95935b" class="outline-4">
-<h4 id="orgd95935b"><span class="section-number-4">4.1.1.</span> Bit data:</h4>
+<div id="outline-container-orgdb1eb1f" class="outline-4">
+<h4 id="orgdb1eb1f"><span class="section-number-4">4.1.1.</span> Bit data:</h4>
 <div class="outline-text-4" id="text-4-1-1">
 <p>
 <b>Conjunto de metodologias</b> utilizadas para capturar, armazenar e processar <b>volume intenso de
@@ -1369,7 +1474,7 @@ e buscar vantagem competitiva.
 </ul>
 </div>
 <ol class="org-ol">
-<li><a id="org388f7d2"></a>Tipos de dados<br />
+<li><a id="org243dd80"></a>Tipos de dados<br />
 <div class="outline-text-6" id="text-4-1-1-0-1">
 <ul class="org-ul">
 <li>Dados estruturados</li>
@@ -1378,14 +1483,14 @@ e buscar vantagem competitiva.
 </ul>
 </div>
 <ol class="org-ol">
-<li><a id="org70b720e"></a>Dado estruturados<br />
+<li><a id="orga788185"></a>Dado estruturados<br />
 <div class="outline-text-7" id="text-4-1-1-0-1-1">
 <p>
 Informações armazenadas em bancos de dados com <b>dados estruturados</b>. A tabela é um exemplo.
 </p>
 </div>
 </li>
-<li><a id="org9214a5b"></a>Dado semiestruturado<br />
+<li><a id="org8c19b8a"></a>Dado semiestruturado<br />
 <div class="outline-text-7" id="text-4-1-1-0-1-2">
 <p>
 Dados <i>irregulares</i> com uma estrutura embutida. Estrutura heterogênea. <b>Facilidade de
@@ -1399,7 +1504,7 @@ de registros.
 </p>
 </div>
 </li>
-<li><a id="org8907312"></a>Dado não estruturado<br />
+<li><a id="org9f7969b"></a>Dado não estruturado<br />
 <div class="outline-text-7" id="text-4-1-1-0-1-3">
 <p>
 Dados sem <b>estrutura pré-definida</b>. Textos são exemplos, bem como fotos, vídeos e voz. Um
@@ -1413,7 +1518,7 @@ Maior quantidade de dados gerados são não estruturados.
 </li>
 </ol>
 </li>
-<li><a id="org131222f"></a>Ambiente favorável para o big data<br />
+<li><a id="org91883c1"></a>Ambiente favorável para o big data<br />
 <div class="outline-text-6" id="text-4-1-1-0-2">
 <p>
 O ambiente favorável para extração de informações dos dados são devido:
@@ -1426,7 +1531,7 @@ O ambiente favorável para extração de informações dos dados são devido:
 </ul>
 </div>
 <ol class="org-ol">
-<li><a id="org18dc0fe"></a>Na elaboração de um projeto de big data deve-se ter atenção:<br />
+<li><a id="org69af912"></a>Na elaboração de um projeto de big data deve-se ter atenção:<br />
 <div class="outline-text-7" id="text-4-1-1-0-2-1">
 <ol class="org-ol">
 <li>Volume
@@ -1495,7 +1600,7 @@ Projetos devem <b>gerar valor</b>
 </ol>
 </li>
 </ol>
-<li><a id="org54f0850"></a>Mineracao<br />
+<li><a id="orgf4aefa3"></a>Mineracao<br />
 <div class="outline-text-5" id="text-4-1-1-1">
 <p>
 Descobrir padrões usando
@@ -1528,70 +1633,70 @@ em transações financeiras).</li>
 </ul>
 </div>
 </li>
-<li><a id="org5c27626"></a>Aplicações<br />
+<li><a id="orgbab4e91"></a>Aplicações<br />
 <ol class="org-ol">
-<li><a id="org83481ae"></a>Gestão e vendas (sazonalidade no número de vendas)<br /></li>
+<li><a id="org9136c63"></a>Gestão e vendas (sazonalidade no número de vendas)<br /></li>
 
-<li><a id="org5d170c5"></a>Tecnologia (sugestões: netflix, amazon)<br /></li>
+<li><a id="org2467bb5"></a>Tecnologia (sugestões: netflix, amazon)<br /></li>
 
-<li><a id="orgd5bee84"></a>Adm e marketing (clientes)<br /></li>
+<li><a id="org5c3ad22"></a>Adm e marketing (clientes)<br /></li>
 
-<li><a id="org7f35465"></a>Educação<br /></li>
+<li><a id="org58d0d69"></a>Educação<br /></li>
 
-<li><a id="orgb04c7cb"></a>Saúde<br /></li>
+<li><a id="org8b2604a"></a>Saúde<br /></li>
 </ol>
 </li>
-<li><a id="org71811ec"></a>Bibliotecas para trabalhar com mineração de dados e big data<br />
+<li><a id="org453a877"></a>Bibliotecas para trabalhar com mineração de dados e big data<br />
 <ol class="org-ol">
-<li><a id="org32537ad"></a>Python: jupyter, numpy, matplotlib, pandas, scikit-learn, nltk, scrapy, pymongo.<br />
+<li><a id="orgf3c1c6c"></a>Python: jupyter, numpy, matplotlib, pandas, scikit-learn, nltk, scrapy, pymongo.<br />
 <div class="outline-text-6" id="text-4-1-1-3-1">
 <p>
 (Anaconda: plataforma para data science
 </p>
 </div>
 </li>
-<li><a id="orgfa248b3"></a>R<br /></li>
+<li><a id="org5494644"></a>R<br /></li>
 
-<li><a id="orge7adfdc"></a>(Projects -&gt; rapidminer, weka)<br /></li>
+<li><a id="org7876408"></a>(Projects -&gt; rapidminer, weka)<br /></li>
 
-<li><a id="orga3d3c5e"></a>Pandas: Dataframe -&gt; estrutura de dados<br /></li>
+<li><a id="org241cac1"></a>Pandas: Dataframe -&gt; estrutura de dados<br /></li>
 </ol>
 </li>
 </ol>
 </div>
-<div id="outline-container-org5f27e69" class="outline-4">
-<h4 id="org5f27e69"><span class="section-number-4">4.1.2.</span> Redes neurais artificiais</h4>
+<div id="outline-container-orgefad66c" class="outline-4">
+<h4 id="orgefad66c"><span class="section-number-4">4.1.2.</span> Redes neurais artificiais</h4>
 <div class="outline-text-4" id="text-4-1-2">
 </div>
 <ol class="org-ol">
-<li><a id="orga968f1d"></a>Ajuste de peso<br /></li>
+<li><a id="org36be11c"></a>Ajuste de peso<br /></li>
 
-<li><a id="org8019162"></a>Delta<br /></li>
+<li><a id="orga41cb6b"></a>Delta<br /></li>
 
-<li><a id="org0d6ad73"></a>Gradient descendet<br /></li>
+<li><a id="org554862f"></a>Gradient descendet<br /></li>
 
-<li><a id="org06def9c"></a>Backpropagation<br /></li>
+<li><a id="org54daab7"></a>Backpropagation<br /></li>
 
-<li><a id="orgee09f84"></a>Redes neurais com scikit-learn<br /></li>
+<li><a id="org96f0fc8"></a>Redes neurais com scikit-learn<br /></li>
 
-<li><a id="orgf24e8ec"></a>Perceptron de uma camada<br />
+<li><a id="org48cec67"></a>Perceptron de uma camada<br />
 <ol class="org-ol">
-<li><a id="org6165e55"></a>Aplicações de redes neurais<br /></li>
+<li><a id="orgcb7bfb2"></a>Aplicações de redes neurais<br /></li>
 
-<li><a id="org08a9a6c"></a>Tipos de aprendizado de máquinas<br /></li>
+<li><a id="org0699f81"></a>Tipos de aprendizado de máquinas<br /></li>
 
-<li><a id="org9d52345"></a>Perceptron<br /></li>
+<li><a id="orgdd5c7de"></a>Perceptron<br /></li>
 
-<li><a id="orgb8ee119"></a>Treinamento/ajuste de pesos em perceptrons<br /></li>
+<li><a id="org68677d6"></a>Treinamento/ajuste de pesos em perceptrons<br /></li>
 
-<li><a id="org17e14eb"></a>Implementação de uma rede neural com uma camada<br /></li>
+<li><a id="org2fb4abe"></a>Implementação de uma rede neural com uma camada<br /></li>
 </ol>
 </li>
 </ol>
 </div>
 </div>
-<div id="outline-container-org1d96eb6" class="outline-3">
-<h3 id="org1d96eb6"><span class="section-number-3">4.2.</span> SQL</h3>
+<div id="outline-container-org3dde2c9" class="outline-3">
+<h3 id="org3dde2c9"><span class="section-number-3">4.2.</span> SQL</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 Comando SELECT
@@ -1617,7 +1722,7 @@ sqlitebrowser
 </div>
 </div>
 <div id="postamble" class="status">
-Created by: Ronaldo V. Lobato on 2021-04-11. Last Updated: 2026-02-14 Sat 23:34
+Created by: Ronaldo V. Lobato on 2021-04-11. Last Updated: 2026-02-19 gio 02:27
 </div>
 </body>
 </html>
